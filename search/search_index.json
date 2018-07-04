@@ -1,0 +1,79 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Overview\n\n\nFinvu is providing a FIP simulator based on the \nReBIT API specs\n. We have also provided an API for inputting source data for FIP for different \nFIType\n . Kindly refer to the details of the FIP Data API to know more. \n\n\nWe are trying to keep upto the pace by implementing latest Rebit API specs, however if there any issues, do drop us a note at \ninfo@cookiejar.co.in\n\n\nVersion\n\n\nCurrently the FIP simulator adheres to the ReBit specs version 1.0.1\n\n\nAPI Key Request\n\n\nIn order to use the FIP API an api key is required to be passed. \n\n\nPlease send an email to \ninfo@cookiejar.co.in\n for the api key. \n\n\nRefer to the \nFIP API (Simulator)\n pages for more information.\n\n\nRoot API Endpoint\n\n\nThe root API end point is \nhttp://api.finvu.connecthub/<>",
+            "title": "Overview"
+        },
+        {
+            "location": "/#overview",
+            "text": "Finvu is providing a FIP simulator based on the  ReBIT API specs . We have also provided an API for inputting source data for FIP for different  FIType  . Kindly refer to the details of the FIP Data API to know more.   We are trying to keep upto the pace by implementing latest Rebit API specs, however if there any issues, do drop us a note at  info@cookiejar.co.in",
+            "title": "Overview"
+        },
+        {
+            "location": "/#version",
+            "text": "Currently the FIP simulator adheres to the ReBit specs version 1.0.1",
+            "title": "Version"
+        },
+        {
+            "location": "/#api-key-request",
+            "text": "In order to use the FIP API an api key is required to be passed.   Please send an email to  info@cookiejar.co.in  for the api key.   Refer to the  FIP API (Simulator)  pages for more information.",
+            "title": "API Key Request"
+        },
+        {
+            "location": "/#root-api-endpoint",
+            "text": "The root API end point is  http://api.finvu.connecthub/<>",
+            "title": "Root API Endpoint"
+        },
+        {
+            "location": "/fip_simulator/",
+            "text": "FIP API (Simulator)\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nAPI Request",
+            "title": "FIP API (Simulator)"
+        },
+        {
+            "location": "/fip_simulator/#fip-api-simulator",
+            "text": "For full documentation visit  mkdocs.org .",
+            "title": "FIP API (Simulator)"
+        },
+        {
+            "location": "/fip_simulator/#commands",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "Commands"
+        },
+        {
+            "location": "/fip_simulator/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/fip_simulator/#api-request",
+            "text": "",
+            "title": "API Request"
+        },
+        {
+            "location": "/fip_data_api/",
+            "text": "FIP Data API\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nAPI Request",
+            "title": "FIP Data API"
+        },
+        {
+            "location": "/fip_data_api/#fip-data-api",
+            "text": "For full documentation visit  mkdocs.org .",
+            "title": "FIP Data API"
+        },
+        {
+            "location": "/fip_data_api/#commands",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "Commands"
+        },
+        {
+            "location": "/fip_data_api/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/fip_data_api/#api-request",
+            "text": "",
+            "title": "API Request"
+        }
+    ]
+}
