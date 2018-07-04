@@ -28,7 +28,7 @@
         {
             "location": "/fip_simulator/",
             "text": "FIP API (Simulator)\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nAPI Request",
-            "title": "FIP API (Simulator)"
+            "title": "FIP API (Simulatorsss)"
         },
         {
             "location": "/fip_simulator/#fip-api-simulator",
