@@ -4,5 +4,5 @@ theme: 'material'
 # Page tree
 pages:
   - Overview: index.md
-  - FIP API (Simulatorsss): fip_simulator.md
+  - FIP API (Simulator): fip_simulator.md
   - FIP Data API: fip_data_api.md
