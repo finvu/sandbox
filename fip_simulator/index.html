@@ -226,6 +226,40 @@
     API Request
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-discover" title="Account Discover" class="md-nav__link">
+    Account Discover
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-linking" title="Account Linking" class="md-nav__link">
+    Account Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-confirm-token" title="Account Confirm Token" class="md-nav__link">
+    Account Confirm Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-request" title="FI request" class="md-nav__link">
+    FI request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -283,6 +317,40 @@
     API Request
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-discover" title="Account Discover" class="md-nav__link">
+    Account Discover
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-linking" title="Account Linking" class="md-nav__link">
+    Account Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-confirm-token" title="Account Confirm Token" class="md-nav__link">
+    Account Confirm Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-request" title="FI request" class="md-nav__link">
+    FI request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -327,6 +395,99 @@
 <h2 id="api-request">API Request</h2>
 <p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT FIP API Specs.</p>
 <p>Refer to the <a href="..">Root API Endpoint</a> for the base URI.</p>
+<h3 id="account-discover">Account Discover</h3>
+<p>URL: <code>&lt;Root API Endpoint&gt;/Accounts/discover</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;AccDiscoveryRequest xmlns=&quot;https://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-22T17:30:15.239Z&quot; txnid=&quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;&gt;
+&lt;Identifiers&gt;&lt;Identifier category=&quot;STRONG&quot; type=&quot;MOBILE&quot; value=&quot;7030608902&quot;&gt;&lt;/Identifier&gt;&lt;/Identifiers&gt;
+&lt;FIPDetails name=&quot;string&quot; id=&quot;string&quot;&gt;
+&lt;FITypes&gt;
+&lt;FIType1 name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType1&gt;
+&lt;FIType name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType&gt;
+&lt;/FITypes&gt;
+&lt;/FIPDetails&gt;
+&lt;Meta type=&quot;PERSON&quot; value=&quot;string&quot;&gt;
+&lt;DeviceInfo&gt;
+&lt;Tag name=&quot;MOBILE&quot; value=&quot;string&quot;&gt;&lt;/Tag&gt;
+&lt;Tag1 name=&quot;GEOCODE&quot; value=&quot;string&quot;&gt;&lt;/Tag1&gt;
+&lt;Tag3 name=&quot;LOCATION&quot; value=&quot;string&quot;&gt;&lt;/Tag3&gt;
+&lt;Tag4 name=&quot;IP&quot; value=&quot;string&quot;&gt;&lt;/Tag4&gt;
+&lt;Tag5 name=&quot;TYPE&quot; value=&quot;string&quot;&gt;&lt;/Tag5&gt;
+&lt;Tag6 name=&quot;ID&quot; value=&quot;string&quot;&gt;&lt;/Tag6&gt;
+&lt;Tag7 name=&quot;OS&quot; value=&quot;string&quot;&gt;&lt;/Tag7&gt;
+&lt;Tag8 name=&quot;APP&quot; value=&quot;string&quot;&gt;&lt;/Tag8&gt;
+&lt;Tag9 name=&quot;CAPABILITY&quot; value=&quot;string&quot;&gt;&lt;/Tag9&gt;
+&lt;Tag10 name=&quot;TELECOM&quot; value=&quot;string&quot;&gt;&lt;/Tag10&gt;
+&lt;/DeviceInfo&gt;
+&lt;/Meta&gt;
+&lt;/AccDiscoveryRequest&gt;
+
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;AccDiscoveryResponse&gt;&lt;timestamp&gt;1527010215239&lt;/timestamp&gt;&lt;txnid&gt;8399263c-4a15-11e8-bcd1-0277a9fbfedc&lt;/txnid&gt;&lt;AuthenticatorType/&gt;&lt;DiscoveredAccounts&gt;&lt;DiscoveredAccounts&gt;&lt;Account&gt;&lt;FIType&gt;DEPOSIT&lt;/FIType&gt;&lt;accType&gt;CURRENT&lt;/accType&gt;&lt;accRefNumber&gt;999&lt;/accRefNumber&gt;&lt;maskedAccNumber&gt;XXXXXXXXX3456&lt;/maskedAccNumber&gt;&lt;aeba&gt;N&lt;/aeba&gt;&lt;/Account&gt;&lt;/DiscoveredAccounts&gt;&lt;/DiscoveredAccounts&gt;&lt;/AccDiscoveryResponse&gt;
+</code></pre>
+
+<h3 id="account-linking">Account Linking</h3>
+<p>URL: <code>&lt;Root API Endpoint&gt;/Accounts/{AccountRefNo}</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;AccLinkRequest xmlns=&quot;https://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T17:51:18.412Z&quot; callbackURL=&quot;string&quot; txnid=&quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;&gt;
+&lt;AccDetails&gt;
+&lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;SBI111111111111&quot; aeba=&quot;Y&quot;&gt;&lt;/Account&gt;
+&lt;FIPDetails id=&quot;string&quot; name=&quot;string&quot;&gt;&lt;/FIPDetails&gt;
+&lt;/AccDetails&gt;
+&lt;/AccLinkRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;AccLinkResponse&gt;&lt;ver&gt;1.0&lt;/ver&gt;&lt;timestamp&gt;1529153879076&lt;/timestamp&gt;&lt;txnid&gt;f35761ac-4a18-11e8-96ff-0277a9fbfedc&lt;/txnid&gt;&lt;Account&gt;&lt;FIType&gt;DEPOSIT&lt;/FIType&gt;&lt;accType&gt;SAVINGS&lt;/accType&gt;&lt;accRefNumber&gt;999&lt;/accRefNumber&gt;&lt;maskedAccNumber&gt;XXXXXXXXX3456&lt;/maskedAccNumber&gt;&lt;aeba&gt;Y&lt;/aeba&gt;&lt;/Account&gt;&lt;/AccLinkResponse&gt;
+</code></pre>
+
+<h3 id="account-confirm-token">Account Confirm Token</h3>
+<p>URL: <code>&lt;Root API Endpoint&gt;/Accounts/{AccountRefNo}/confirm-token</code></p>
+<p>Request Body</p>
+<p>Put the SMS received on mobile in <token>{OTP sms}</token></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ConfirmLinkingRequest ver=&quot;1.0&quot;
+timestamp=&quot;2018-05-05T10:27:17.699Z&quot;
+txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
+&lt;token&gt;774265&lt;/token&gt;
+&lt;/ConfirmLinkingRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;ConfirmLinkingResponse&gt;&lt;ver&gt;1.0&lt;/ver&gt;&lt;timestamp&gt;1525516037699&lt;/timestamp&gt;&lt;txnid&gt;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&lt;/txnid&gt;&lt;/ConfirmLinkingResponse&gt;
+</code></pre>
+
+<h3 id="fi-request">FI request</h3>
+<p>URL: <code>&lt;Root API Endpoint&gt;/FI/request</code></p>
+<p>Request Body</p>
+<pre><code>&lt;FIRequest ver=&quot;1.0&quot; timestamp=&quot;2018-06-09T09:58:50.505Z&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
+    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
+        &lt;DataConsumer id=&quot;123456@finvu.in&quot; type=&quot;AA&quot; callbackURL=&quot;localhost:9090/AA/Test&quot;&gt;&lt;/DataConsumer&gt;
+    &lt;RequestFIParams&gt;
+        &lt;KeyMaterials&gt;
+            &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505Z&quot;&gt;
+                &lt;SessionID&gt;string&lt;/SessionID&gt;
+                &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505Z&quot;&gt;
+                    &lt;Parameters&gt;Param 1&lt;/Parameters&gt;
+                    &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
+                &lt;/DHPublicKey&gt;
+                &lt;Nonce&gt;12345&lt;/Nonce&gt;
+                &lt;Signature&gt; Signature Value
+                &lt;/Signature&gt;
+            &lt;/KeyMaterial&gt;
+        &lt;/KeyMaterials&gt;
+    &lt;/RequestFIParams&gt;
+&lt;/FIRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>TODO : 
+
+</code></pre>
                 
                   
                 
