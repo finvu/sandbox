@@ -27,53 +27,43 @@
         },
         {
             "location": "/fip_simulator/",
-            "text": "FIP API (Simulator)\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nAPI Request",
+            "text": "FIP API (Simulator)\n\n\nThis is a simulator implementation of the FIP API and can be used for testing the Account Aggregator flows as part of the ecosystem. \n\n\nRequest headers\n\n\nBelow \nhttp\n headers need to be set as part of each request\n\n\n\n\n\n\n\n\nKey\n\n\nValue\n\n\n\n\n\n\n\n\n\n\ncontent-Type\n\n\napplication/xml\n\n\n\n\n\n\naa_api_key\n\n\nPlease email us on info@cookiejar.co.in for obtaining the key\n\n\n\n\n\n\n\n\nAPI Request\n\n\nThe API URL to be used is \n<Root API Endpoint>/<FIP API>\n as per ReBIT FIP API Specs.\n\n\nRefer to the \nRoot API Endpoint\n for the base URI.",
             "title": "FIP API (Simulator)"
         },
         {
             "location": "/fip_simulator/#fip-api-simulator",
-            "text": "For full documentation visit  mkdocs.org .",
+            "text": "This is a simulator implementation of the FIP API and can be used for testing the Account Aggregator flows as part of the ecosystem.",
             "title": "FIP API (Simulator)"
         },
         {
-            "location": "/fip_simulator/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
-        },
-        {
-            "location": "/fip_simulator/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
+            "location": "/fip_simulator/#request-headers",
+            "text": "Below  http  headers need to be set as part of each request     Key  Value      content-Type  application/xml    aa_api_key  Please email us on info@cookiejar.co.in for obtaining the key",
+            "title": "Request headers"
         },
         {
             "location": "/fip_simulator/#api-request",
-            "text": "",
+            "text": "The API URL to be used is  <Root API Endpoint>/<FIP API>  as per ReBIT FIP API Specs.  Refer to the  Root API Endpoint  for the base URI.",
             "title": "API Request"
         },
         {
             "location": "/fip_data_api/",
-            "text": "FIP Data API\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nAPI Request",
+            "text": "FIP Data API\n\n\nThis API can be used to add sample data for accounts and associated transactions and can be called from an appropriate testing tool such as \nPostman\n\n\nRefer to the \nRoot API Endpoint\n for the base URI.\n\n\nAdding User Account\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nURL\n\n\nRoot API URI/Accounts/add\n\n\n\n\n\n\n\n\nRequest Body\n\n\n<UserAccountInfo>\n    <UserAccount accountRefNo=\"RefSBI002\" accountNo=\"SBI222222222\" accountTypeEnum=\"SAVINGS\">\n        <Identifiers pan=\"AFF34964FFF\" mobile=\"7000000000\" email=\"backend@gmail.com\" aadhar=\"3408030493453\"></Identifiers>  \n    </UserAccount>\n</UserAccountInfo>\n\n\n\n\nResponse Expected: \n\n\nUserAccountInfo [userAccounts=[UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, identifiers=Identifiers [pan=AFF34964FFF, mobile=7000000000, email=backend@gmail.com, aadhar=3408030493453]]]]\n\n\n\n\nAdding User Account Transaction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nURL\n\n\nRoot API URI/Accounts/Transaction/add\n\n\n\n\n\n\n\n\nRequest Body\n\n\n<UserAccountTrans>\n    <UserAccount> \n        <accountRefNo>RefSBI001</accountRefNo> \n        <accountNo>SBI111111111111</accountNo> \n        <accountTypeEnum>SAVINGS</accountTypeEnum>\n        <transactionRefNo>txn0001</transactionRefNo> \n        <accountBalance>10000.00</accountBalance> \n        <amount>300.00</amount> \n        <amountEntry>CR</amountEntry> \n        <transationNarration>salary</transationNarration>\n    </UserAccount>\n    <UserAccount> \n        <accountRefNo>RefSBI002</accountRefNo> \n        <accountNo>SBI222222222</accountNo> \n        <accountTypeEnum>SAVINGS</accountTypeEnum>\n        <transactionRefNo>txn0001</transactionRefNo> \n        <accountBalance>100.00</accountBalance> \n        <amount>300.00</amount> \n        <amountEntry>CR</amountEntry> \n        <transationNarration>salary</transationNarration>\n    </UserAccount>\n</UserAccountTrans>\n\n\n\n\nResponse Expected: \n\n\nUserAccountTrans [userAccounts=[UserAccount [accountRefNo=RefSBI001, accountNo=SBI111111111111, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=10000.0, amount=300.0, amountEntry=CR, transationNarration=salary], UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=100.0, amount=300.0, amountEntry=CR, transationNarration=salary]]]",
             "title": "FIP Data API"
         },
         {
             "location": "/fip_data_api/#fip-data-api",
-            "text": "For full documentation visit  mkdocs.org .",
+            "text": "This API can be used to add sample data for accounts and associated transactions and can be called from an appropriate testing tool such as  Postman  Refer to the  Root API Endpoint  for the base URI.",
             "title": "FIP Data API"
         },
         {
-            "location": "/fip_data_api/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
+            "location": "/fip_data_api/#adding-user-account",
+            "text": "URL  Root API URI/Accounts/add     Request Body  <UserAccountInfo>\n    <UserAccount accountRefNo=\"RefSBI002\" accountNo=\"SBI222222222\" accountTypeEnum=\"SAVINGS\">\n        <Identifiers pan=\"AFF34964FFF\" mobile=\"7000000000\" email=\"backend@gmail.com\" aadhar=\"3408030493453\"></Identifiers>  \n    </UserAccount>\n</UserAccountInfo>  Response Expected:   UserAccountInfo [userAccounts=[UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, identifiers=Identifiers [pan=AFF34964FFF, mobile=7000000000, email=backend@gmail.com, aadhar=3408030493453]]]]",
+            "title": "Adding User Account"
         },
         {
-            "location": "/fip_data_api/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
-        },
-        {
-            "location": "/fip_data_api/#api-request",
-            "text": "",
-            "title": "API Request"
+            "location": "/fip_data_api/#adding-user-account-transaction",
+            "text": "URL  Root API URI/Accounts/Transaction/add     Request Body  <UserAccountTrans>\n    <UserAccount> \n        <accountRefNo>RefSBI001</accountRefNo> \n        <accountNo>SBI111111111111</accountNo> \n        <accountTypeEnum>SAVINGS</accountTypeEnum>\n        <transactionRefNo>txn0001</transactionRefNo> \n        <accountBalance>10000.00</accountBalance> \n        <amount>300.00</amount> \n        <amountEntry>CR</amountEntry> \n        <transationNarration>salary</transationNarration>\n    </UserAccount>\n    <UserAccount> \n        <accountRefNo>RefSBI002</accountRefNo> \n        <accountNo>SBI222222222</accountNo> \n        <accountTypeEnum>SAVINGS</accountTypeEnum>\n        <transactionRefNo>txn0001</transactionRefNo> \n        <accountBalance>100.00</accountBalance> \n        <amount>300.00</amount> \n        <amountEntry>CR</amountEntry> \n        <transationNarration>salary</transationNarration>\n    </UserAccount>\n</UserAccountTrans>  Response Expected:   UserAccountTrans [userAccounts=[UserAccount [accountRefNo=RefSBI001, accountNo=SBI111111111111, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=10000.0, amount=300.0, amountEntry=CR, transationNarration=salary], UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=100.0, amount=300.0, amountEntry=CR, transationNarration=salary]]]",
+            "title": "Adding User Account Transaction"
         }
     ]
 }

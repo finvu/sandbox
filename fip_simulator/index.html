@@ -42,6 +42,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
       
     
     
@@ -59,7 +65,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -207,15 +215,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
+  <a href="#request-headers" title="Request headers" class="md-nav__link">
+    Request headers
   </a>
   
 </li>
@@ -271,15 +272,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
+  <a href="#request-headers" title="Request headers" class="md-nav__link">
+    Request headers
   </a>
   
 </li>
@@ -309,21 +303,30 @@
                 
                 
                 <h1 id="fip-api-simulator">FIP API (Simulator)</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+<p>This is a simulator implementation of the FIP API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
+<h2 id="request-headers">Request headers</h2>
+<p>Below <code>http</code> headers need to be set as part of each request</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td align="center"><code>application/xml</code></td>
+</tr>
+<tr>
+<td><code>aa_api_key</code></td>
+<td align="center"><code>Please email us on info@cookiejar.co.in for obtaining the key</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="api-request">API Request</h2>
+<p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT FIP API Specs.</p>
+<p>Refer to the <a href="..">Root API Endpoint</a> for the base URI.</p>
                 
                   
                 

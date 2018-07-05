@@ -42,6 +42,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
       
     
     
@@ -59,7 +65,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -219,22 +227,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#adding-user-account" title="Adding User Account" class="md-nav__link">
+    Adding User Account
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-request" title="API Request" class="md-nav__link">
-    API Request
+  <a href="#adding-user-account-transaction" title="Adding User Account Transaction" class="md-nav__link">
+    Adding User Account Transaction
   </a>
   
 </li>
@@ -271,22 +272,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#adding-user-account" title="Adding User Account" class="md-nav__link">
+    Adding User Account
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-request" title="API Request" class="md-nav__link">
-    API Request
+  <a href="#adding-user-account-transaction" title="Adding User Account Transaction" class="md-nav__link">
+    Adding User Account Transaction
   </a>
   
 </li>
@@ -309,21 +303,78 @@
                 
                 
                 <h1 id="fip-data-api">FIP Data API</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<p>This API can be used to add sample data for accounts and associated transactions and can be called from an appropriate testing tool such as <a href="https://www.getpostman.com">Postman</a></p>
+<p>Refer to the <a href="..">Root API Endpoint</a> for the base URI.</p>
+<h2 id="adding-user-account">Adding User Account</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td align="center"><code>Root API URI/Accounts/add</code></td>
+</tr>
+</tbody>
+</table>
+<p>Request Body</p>
+<pre><code>&lt;UserAccountInfo&gt;
+    &lt;UserAccount accountRefNo=&quot;RefSBI002&quot; accountNo=&quot;SBI222222222&quot; accountTypeEnum=&quot;SAVINGS&quot;&gt;
+        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;7000000000&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;3408030493453&quot;&gt;&lt;/Identifiers&gt;  
+    &lt;/UserAccount&gt;
+&lt;/UserAccountInfo&gt;
 </code></pre>
-<h2 id="api-request">API Request</h2>
+
+<p>Response Expected: </p>
+<pre><code>UserAccountInfo [userAccounts=[UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, identifiers=Identifiers [pan=AFF34964FFF, mobile=7000000000, email=backend@gmail.com, aadhar=3408030493453]]]]
+</code></pre>
+
+<h2 id="adding-user-account-transaction">Adding User Account Transaction</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td align="center"><code>Root API URI/Accounts/Transaction/add</code></td>
+</tr>
+</tbody>
+</table>
+<p>Request Body</p>
+<pre><code>&lt;UserAccountTrans&gt;
+    &lt;UserAccount&gt; 
+        &lt;accountRefNo&gt;RefSBI001&lt;/accountRefNo&gt; 
+        &lt;accountNo&gt;SBI111111111111&lt;/accountNo&gt; 
+        &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
+        &lt;transactionRefNo&gt;txn0001&lt;/transactionRefNo&gt; 
+        &lt;accountBalance&gt;10000.00&lt;/accountBalance&gt; 
+        &lt;amount&gt;300.00&lt;/amount&gt; 
+        &lt;amountEntry&gt;CR&lt;/amountEntry&gt; 
+        &lt;transationNarration&gt;salary&lt;/transationNarration&gt;
+    &lt;/UserAccount&gt;
+    &lt;UserAccount&gt; 
+        &lt;accountRefNo&gt;RefSBI002&lt;/accountRefNo&gt; 
+        &lt;accountNo&gt;SBI222222222&lt;/accountNo&gt; 
+        &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
+        &lt;transactionRefNo&gt;txn0001&lt;/transactionRefNo&gt; 
+        &lt;accountBalance&gt;100.00&lt;/accountBalance&gt; 
+        &lt;amount&gt;300.00&lt;/amount&gt; 
+        &lt;amountEntry&gt;CR&lt;/amountEntry&gt; 
+        &lt;transationNarration&gt;salary&lt;/transationNarration&gt;
+    &lt;/UserAccount&gt;
+&lt;/UserAccountTrans&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>UserAccountTrans [userAccounts=[UserAccount [accountRefNo=RefSBI001, accountNo=SBI111111111111, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=10000.0, amount=300.0, amountEntry=CR, transationNarration=salary], UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=100.0, amount=300.0, amountEntry=CR, transationNarration=salary]]]
+</code></pre>
                 
                   
                 
