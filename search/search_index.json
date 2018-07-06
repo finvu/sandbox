@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Overview\n\n\nFinvu is providing a FIP simulator based on the \nReBIT API specs\n. We have also provided an API for inputting source data for FIP for different \nFIType\n . Kindly refer to the details of the FIP Data API to know more. \n\n\nWe are trying to keep upto the pace by implementing latest Rebit API specs, however if there any issues, do drop us a note at \ninfo@cookiejar.co.in\n\n\nVersion\n\n\nCurrently the FIP simulator adheres to the ReBit specs version 1.0.1\n\n\nAPI Key Request\n\n\nIn order to use the FIP API an api key is required to be passed. \n\n\nPlease send an email to \ninfo@cookiejar.co.in\n for the api key. \n\n\nRefer to the \nFIP API (Simulator)\n pages for more information.\n\n\nRoot API Endpoint\n\n\nThe root API end point is \nhttp://api.finvu.in/ConnectHub/V1/",
+            "text": "Overview\n\n\nFinvu is providing a FIP simulator based on the \nReBIT API specs\n. We have also provided an API for inputting source data for FIP for different \nFIType\n . Kindly refer to the details of the FIP Data API to know more. \n\n\nWe are trying to keep upto the pace by implementing latest Rebit API specs, however if there any issues, do drop us a note at \ninfo@cookiejar.co.in\n\n\nVersion\n\n\nCurrently the FIP simulator adheres to the ReBit specs version 1.0.1\n\n\nFIP Data API\n\n\nPrior to using the FIP Simulator API, dummy FI data can be entered into FIP source data system using the \nFIP Data API\n\n\nAPI Key Request\n\n\nIn order to use the FIP API an api key is required to be passed. \n\n\nPlease send an email to \ninfo@cookiejar.co.in\n for the api key. \n\n\nRefer to the \nFIP API (Simulator)\n pages for more information.\n\n\nRoot API Endpoint\n\n\nThe root API end point is \nhttp://api.finvu.in/ConnectHub/V1/",
             "title": "Overview"
         },
         {
@@ -14,6 +14,11 @@
             "location": "/#version",
             "text": "Currently the FIP simulator adheres to the ReBit specs version 1.0.1",
             "title": "Version"
+        },
+        {
+            "location": "/#fip-data-api",
+            "text": "Prior to using the FIP Simulator API, dummy FI data can be entered into FIP source data system using the  FIP Data API",
+            "title": "FIP Data API"
         },
         {
             "location": "/#api-key-request",
