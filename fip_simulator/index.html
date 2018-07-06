@@ -439,10 +439,22 @@
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;AccDiscoveryResponse&gt;&lt;timestamp&gt;1527010215239&lt;/timestamp&gt;&lt;txnid&gt;8399263c-4a15-11e8-bcd1-0277a9fbfedc&lt;/txnid&gt;&lt;AuthenticatorType/&gt;&lt;DiscoveredAccounts&gt;&lt;DiscoveredAccounts&gt;&lt;Account&gt;&lt;FIType&gt;DEPOSIT&lt;/FIType&gt;&lt;accType&gt;CURRENT&lt;/accType&gt;&lt;accRefNumber&gt;999&lt;/accRefNumber&gt;&lt;maskedAccNumber&gt;XXXXXXXXX3456&lt;/maskedAccNumber&gt;&lt;aeba&gt;N&lt;/aeba&gt;&lt;/Account&gt;&lt;/DiscoveredAccounts&gt;&lt;/DiscoveredAccounts&gt;&lt;/AccDiscoveryResponse&gt;
+<pre><code>&lt;AccDiscoveryResponse&gt;&lt;timestamp&gt;1527010215239&lt;/timestamp&gt;&lt;txnid&gt;8399263c-4a15-11e8-bcd1-0277a9fbfedc&lt;/txnid&gt;
+&lt;AuthenticatorType/&gt;
+&lt;DiscoveredAccounts&gt;
+&lt;DiscoveredAccounts&gt;
+&lt;Account&gt;&lt;FIType&gt;DEPOSIT&lt;/FIType&gt;&lt;accType&gt;CURRENT&lt;/accType&gt;
+&lt;accRefNumber&gt;999&lt;/accRefNumber&gt;
+&lt;maskedAccNumber&gt;XXXXXXXXX3456&lt;/maskedAccNumber&gt;
+&lt;aeba&gt;N&lt;/aeba&gt;
+&lt;/Account&gt;
+&lt;/DiscoveredAccounts&gt;
+&lt;/DiscoveredAccounts&gt;
+&lt;/AccDiscoveryResponse&gt;
 </code></pre>
 
 <h3 id="account-linking">Account Linking</h3>
+<p>The account authentication is TOKEN based and an OTP is sent to the mobile no of the account holder.</p>
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -455,7 +467,15 @@
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;AccLinkResponse&gt;&lt;ver&gt;1.0&lt;/ver&gt;&lt;timestamp&gt;1529153879076&lt;/timestamp&gt;&lt;txnid&gt;f35761ac-4a18-11e8-96ff-0277a9fbfedc&lt;/txnid&gt;&lt;Account&gt;&lt;FIType&gt;DEPOSIT&lt;/FIType&gt;&lt;accType&gt;SAVINGS&lt;/accType&gt;&lt;accRefNumber&gt;999&lt;/accRefNumber&gt;&lt;maskedAccNumber&gt;XXXXXXXXX3456&lt;/maskedAccNumber&gt;&lt;aeba&gt;Y&lt;/aeba&gt;&lt;/Account&gt;&lt;/AccLinkResponse&gt;
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;AccLinkResponse&gt;&lt;ver&gt;1.0&lt;/ver&gt;&lt;timestamp&gt;1529153879076&lt;/timestamp&gt;&lt;txnid&gt;f35761ac-4a18-11e8-96ff-0277a9fbfedc&lt;/txnid&gt;
+&lt;Account&gt;&lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
+&lt;accType&gt;SAVINGS&lt;/accType&gt;
+&lt;accRefNumber&gt;999&lt;/accRefNumber&gt;
+&lt;maskedAccNumber&gt;XXXXXXXXX3456&lt;/maskedAccNumber&gt;
+&lt;aeba&gt;Y&lt;/aeba&gt;
+&lt;/Account&gt;
+&lt;/AccLinkResponse&gt;
 </code></pre>
 
 <h3 id="account-confirm-token">Account Confirm Token</h3>
