@@ -409,6 +409,7 @@
 <h2 id="api-request">API Request</h2>
 <p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT FIP API Specs.</p>
 <h3 id="account-discover">Account Discover</h3>
+<p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/discover</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -454,7 +455,8 @@
 </code></pre>
 
 <h3 id="account-linking">Account Linking</h3>
-<p>The account authentication is TOKEN based and an OTP is sent to the mobile no of the account holder.</p>
+<p>For simulation purpose, the customer account authentication is TOKEN based and an OTP is sent to the mobile no of the account holder. </p>
+<p>HTTP METHOD: <code>PUT</code></p>
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -479,6 +481,7 @@
 </code></pre>
 
 <h3 id="account-confirm-token">Account Confirm Token</h3>
+<p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}/confirm-token</code></p>
 <p>Request Body</p>
 <p>Put the SMS received on mobile in <token>{OTP sms}</token></p>
@@ -496,6 +499,7 @@ txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
 </code></pre>
 
 <h3 id="fi-request">FI request</h3>
+<p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/FI/request</code></p>
 <p>Request Body</p>
 <pre><code>&lt;FIRequest ver=&quot;1.0&quot; timestamp=&quot;2018-06-09T09:58:50.505Z&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
@@ -531,9 +535,9 @@ txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
 </code></pre>
 
 <h3 id="fi-fetch">FI Fetch</h3>
+<p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/FI/fetch/{SessionID}</code></p>
 <p>Request Body</p>
-<p>Put the Session ID received in response <code>&lt;ConsentID&gt;{SessionID}&lt;/ConsentID&gt;</code> from API request <code>http://api.finvu.in/ConnectHub/V1/FI/request</code> </p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
     &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
