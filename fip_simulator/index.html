@@ -573,12 +573,56 @@ txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;FIFetchResponse timestamp=&quot;1529154796883&quot; txnID=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot; ver=&quot;1.0&quot;&gt;&lt;responseCode/&gt;&lt;FIPId/&gt;&lt;Account&gt;&lt;id&gt;123456&lt;/id&gt;&lt;type&gt;string&lt;/type&gt;&lt;FIPId&gt;12345@hdfc.co.in&lt;/FIPId&gt;&lt;FIs&gt;&lt;FI&gt;&lt;EncryptedFI&gt;c1l2V2xRazh2OVdtS3JqWklBQk5zVm1xUFhucGRQc0xJVDZuYjFKa1JBMGlmUzVZTUZxdkRQbmI1
-WU9mdit0UE9KbTBxYmNDMFpFdlVrQnBuWFBHdGc9PQ==&lt;/EncryptedFI&gt;&lt;KeyMaterial&gt;&lt;SessionID/&gt;&lt;startTime&gt;1528537218744&lt;/startTime&gt;&lt;DHPublicKey&gt;&lt;expiry&gt;1528537218744&lt;/expiry&gt;&lt;Parameters&gt;Param 1&lt;/Parameters&gt;&lt;KeyValue&gt;KuhybmYeGpWh/VfCFmZAkIwDUfFtfRt2rcCVYZLxUEM=&lt;/KeyValue&gt;&lt;/DHPublicKey&gt;&lt;Nonce&gt;1&lt;/Nonce&gt;&lt;Signature&gt;Signature Value&lt;/Signature&gt;&lt;/KeyMaterial&gt;&lt;/FI&gt;&lt;/FIs&gt;&lt;/Account&gt;&lt;Signature xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;SignedInfo&gt;&lt;CanonicalizationMethod Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/&gt;&lt;SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/&gt;&lt;Reference URI=&quot;&quot;&gt;&lt;Transforms&gt;&lt;Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/&gt;&lt;/Transforms&gt;&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;&lt;DigestValue&gt;PQP16tttmO+UFsU5GNu0krjPqcQ=&lt;/DigestValue&gt;&lt;/Reference&gt;&lt;/SignedInfo&gt;&lt;SignatureValue&gt;cpNw25twspqZK9Qdaa2xyMumNdzxHv7J24HJPFqXk4OLKjTo1hgK+cldFCN1jStauSDPyABiUMVE
-FXC669ObNbD7hfCd6jdUO7RuvYx0Qq87ahZC7M+czG2RSreB/KScNz1lBWdCS0D80vGpYl4WhLzf
-SyhSM1sMB/TMDGUP9BLoX/kOcnfVq15mDxgs8riuC4sx/dpbmr9fmI2HUw27TVF2SCQ9K+b5Fdse
-aGAn8zxZ0/2leWM+MzzAJk9Zx2jexijTMvFKRxGvlC9A7g6USiJpFK9wcxDMhuLh36HatQPxVUyt
-wHAvVax+DK52c67Q14WFIIfegNgY9PJu1jgATQ==&lt;/SignatureValue&gt;&lt;KeyInfo&gt;&lt;X509Data&gt;&lt;X509SubjectName&gt;CN=PP,OU=CTPL,O=CTPL,L=Pune,ST=Maharashtra,C=IN&lt;/X509SubjectName&gt;&lt;X509Certificate&gt;MIIDWTCCAkGgAwIBAgIEdZ+fzDANBgkqhkiG9w0BAQsFADBdMQswCQYDVQQGEwJJTjEUMBIGA1UE
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;FIFetchResponse timestamp=&quot;2018-07-07T14:17:20.949+0000&quot; txnID=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot; ver=&quot;1.0&quot;&gt;
+    &lt;Account FIPId=&quot;fip@sbi.co.in&quot; id=&quot;SBI111111111111&quot; type=&quot;SAVINGS&quot;&gt;
+        &lt;FIs&gt;
+            &lt;FI&gt;
+                &lt;EncryptedFI&gt;SytTWUNmcDhXN1I3b00yWW9EeEFWMTlZYytIaE95dTgxWVdXUlVxNmEwd3RiVEhxRzFGcnc3Q0NL
+UmlXeVIxZlJoa0FoamJiYzA4cXFXQ01yWnRQWjZKYWt6RTVkTk8wbFdhWHFqR3NIejM3Y3hKdjJw
+MktsQXJ2eHVZajAvS0FIWlNJREtMQWM2R1ZzUWw4WTR3S3p5MWtOMHZvSlE5Si9OR0VabzBFQitO
+VlRsUUFqQjM1OC82RDJZSFd6QUg3cUNIZUVRSFRuVGk2WUVvVDQyTXp5dWdweCtsVFdpZ2VjeC93
+S3pkM2RJaUhqMng3cFpMK2c3N25sakwrc3oyOTM1TjN0dTRCa1pzWUhIZzcweHl1NEhwNjFNSW5p
+d0o3Qmd1aFVDSkxJMTRZQzhYbXZxODhaOVJLV1pjOVp0bTR6UEp5S016Q0NUbDJQQXJac3Q3VkNL
+VUUrWkl2bHgvMEZKY2RGR1NzSFhNemVwZ2x1dlVmUkVOTGxGWXFnOHV0QzZsNEFGaTlTMUlnTXBG
+VVFwcHpLc3hVT1g5bG1NK3ozaTllTEJxZmZVZ21RMW5WY1RsN05tWVFTaVE3UGpYWVVrbUFDZHlN
+Z1hHa3MyVTRUbXMyVlJPQ0g3T3c0RDFsemhVSHJLNExITkNkaS9WZTU2V1gzeXNSZkxIQWFhdmNs
+cytLMmlXKzN2VHNpNGRLamN2NkpKcTMrcW5tcy9QeWtESHlRVDdCK1ZpUnQyMGFQcDhPcFgzUWxF
+M05LZWs1&lt;/EncryptedFI&gt;
+                &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505+0000&quot;&gt;
+                    &lt;SessionID/&gt;
+                    &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505+0000&quot;&gt;
+                        &lt;Parameters&gt;Param 1&lt;/Parameters&gt;
+                        &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
+                    &lt;/DHPublicKey&gt;
+                    &lt;Nonce&gt;12345&lt;/Nonce&gt;
+                    &lt;Signature&gt; Signature Value
+                &lt;/Signature&gt;
+                &lt;/KeyMaterial&gt;
+            &lt;/FI&gt;
+        &lt;/FIs&gt;
+    &lt;/Account&gt;
+    &lt;Signature xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        &lt;SignedInfo&gt;
+            &lt;CanonicalizationMethod Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/&gt;
+            &lt;SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/&gt;
+            &lt;Reference URI=&quot;&quot;&gt;
+                &lt;Transforms&gt;
+                    &lt;Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/&gt;
+                &lt;/Transforms&gt;
+                &lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;
+                &lt;DigestValue&gt;42WWu5X0m7UGpcTZdLmAuBVILDo=&lt;/DigestValue&gt;
+            &lt;/Reference&gt;
+        &lt;/SignedInfo&gt;
+        &lt;SignatureValue&gt;cAxxuZdaoRw5GMfyQfzjuLLqD8nRfGg7YP7ZvaR4Ad7XcNH8OqE/c7prR4/9KlfT15K0q/n8Sya3
+sSRHTxGpOtRpvRtLtEim5ocQ4DrOupOnS7T/QWnHWvrmQsMuitQPVvpeuA/q/dKBKlGhw1uI2hz0
+V/JVfJl06vpyZXaM7RZrGu8Arh/mD2G29hfYnvBRmhFfxgMPnQQBWitUgMRAkzV9J7d+QunfqQPj
+KWgBaAL+9TB1RP1kutv3BNNFcjP3HLTr0LdpAelEY8gdMwbH+9cwKzgULrpbJT0Hx5yeVjZ8sEpI
+/DTMY/n9AlEb61vM/MNEE+EfN4raWRDbIriNjw==&lt;/SignatureValue&gt;
+        &lt;KeyInfo&gt;
+            &lt;X509Data&gt;
+                &lt;X509SubjectName&gt;CN=PP,OU=CTPL,O=CTPL,L=Pune,ST=Maharashtra,C=IN&lt;/X509SubjectName&gt;
+                &lt;X509Certificate&gt;MIIDWTCCAkGgAwIBAgIEdZ+fzDANBgkqhkiG9w0BAQsFADBdMQswCQYDVQQGEwJJTjEUMBIGA1UE
 CBMLTWFoYXJhc2h0cmExDTALBgNVBAcTBFB1bmUxDTALBgNVBAoTBENUUEwxDTALBgNVBAsTBENU
 UEwxCzAJBgNVBAMTAlBQMB4XDTE4MDUzMDE3MTE0MloXDTE5MDUyNTE3MTE0MlowXTELMAkGA1UE
 BhMCSU4xFDASBgNVBAgTC01haGFyYXNodHJhMQ0wCwYDVQQHEwRQdW5lMQ0wCwYDVQQKEwRDVFBM
@@ -593,7 +637,11 @@ hU/9itFomim7X/TMAT6lYzpvJKyBLKN1l/mZQulkV+yRVdY5ETDnvKVHHfBE7OVSES8JYJXe/41L
 v0OQYTLEFcJwVSR+b6yOUgWBh2xdpkat358UwItQ5NIuVAU1EIbgfejHmMvJlUf/gWj1wD6+Hx9L
 UJn6SSo59xjPxbTEsh8PLMEipM2eI7cXG/uGMpyBg41YfvW2JQrXa4ILokQ1fbtc3iZZtfYZMVC0
 BaMXz5VPVRb8PrdxAt2szi93yS7HJ9UHYRbBmbRjbulFtrSXKd3GqvRfjht4174iKcBVkpNOpIQs
-syBiW1qx&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/Signature&gt;&lt;/FIFetchResponse&gt;
+syBiW1qx&lt;/X509Certificate&gt;
+            &lt;/X509Data&gt;
+        &lt;/KeyInfo&gt;
+    &lt;/Signature&gt;
+&lt;/FIFetchResponse&gt;
 </code></pre>
 
 <h3 id="notification">Notification</h3>
