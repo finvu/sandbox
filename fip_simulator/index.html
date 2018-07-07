@@ -264,6 +264,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#notification" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heartbeat" title="Heartbeat" class="md-nav__link">
+    Heartbeat
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -358,6 +372,20 @@
           <li class="md-nav__item">
   <a href="#fi-fetch" title="FI Fetch" class="md-nav__link">
     FI Fetch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heartbeat" title="Heartbeat" class="md-nav__link">
+    Heartbeat
   </a>
   
 </li>
@@ -566,6 +594,39 @@ v0OQYTLEFcJwVSR+b6yOUgWBh2xdpkat358UwItQ5NIuVAU1EIbgfejHmMvJlUf/gWj1wD6+Hx9L
 UJn6SSo59xjPxbTEsh8PLMEipM2eI7cXG/uGMpyBg41YfvW2JQrXa4ILokQ1fbtc3iZZtfYZMVC0
 BaMXz5VPVRb8PrdxAt2szi93yS7HJ9UHYRbBmbRjbulFtrSXKd3GqvRfjht4174iKcBVkpNOpIQs
 syBiW1qx&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/Signature&gt;&lt;/FIFetchResponse&gt;
+</code></pre>
+
+<h3 id="notification">Notification</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Notification</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Notification xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T08:04:28.541Z&quot; txnid=&quot;eccdfcb0-a7aa-4168-9634-aba34ac5e086&quot;&gt;
+    &lt;From type=&quot;AA&quot; value=&quot;123456@finvu.in&quot; name=&quot;Finvu Account Aggregator&quot; id=&quot;123456@finvu.in&quot;&gt;
+    &lt;/From&gt;
+    &lt;To type=&quot;FIP&quot; value=&quot;12345@hdfc.co.in&quot; name=&quot;HDFC&quot; id=&quot;12345@hdfc.co.in&quot;&gt;
+    &lt;/To&gt;
+    &lt;Event type=&quot;CONSENT-REVOKED&quot;&gt;
+    &lt;/Event&gt;
+    &lt;Consent id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
+    &lt;/Consent&gt;
+    &lt;Payload&gt;string&lt;/Payload&gt;
+&lt;/Notification&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>200 OK
+</code></pre>
+
+<h3 id="heartbeat">Heartbeat</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Heartbeat</code></p>
+<p>Request Body</p>
+<pre><code>No Request Body expected
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>200 OK
 </code></pre>
                 
                   
