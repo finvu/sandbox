@@ -325,8 +325,11 @@
 </table>
 <p>Request Body</p>
 <pre><code>&lt;UserAccountInfo&gt;
-    &lt;UserAccount accountRefNo=&quot;RefSBI002&quot; accountNo=&quot;SBI222222222&quot; accountTypeEnum=&quot;SAVINGS&quot;&gt;
-        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;7000000000&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;3408030493453&quot;&gt;&lt;/Identifiers&gt;  
+    &lt;UserAccount accountRefNo=&quot;RefSBI001&quot; accountNo=&quot;SBI111111111111&quot; accountTypeEnum=&quot;SAVINGS&quot;&gt;
+        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;7030608902&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;3408030493453&quot;&gt;&lt;/Identifiers&gt;  
+    &lt;/UserAccount&gt;
+    &lt;UserAccount accountRefNo=&quot;RefSBI002&quot; accountNo=&quot;SBI222222222&quot; accountTypeEnum=&quot;CURRENT&quot;&gt;
+        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;7030608902&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;3408030493453&quot;&gt;&lt;/Identifiers&gt;  
     &lt;/UserAccount&gt;
 &lt;/UserAccountInfo&gt;
 </code></pre>
@@ -356,27 +359,27 @@
 </table>
 <p>Request Body</p>
 <pre><code>&lt;UserAccountTrans&gt;
-    &lt;UserAccount&gt; 
-        &lt;accountRefNo&gt;RefSBI001&lt;/accountRefNo&gt; 
-        &lt;accountNo&gt;SBI111111111111&lt;/accountNo&gt; 
-        &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
-        &lt;transactionRefNo&gt;txn0001&lt;/transactionRefNo&gt; 
-        &lt;accountBalance&gt;10000.00&lt;/accountBalance&gt; 
-        &lt;amount&gt;300.00&lt;/amount&gt; 
-        &lt;amountEntry&gt;CR&lt;/amountEntry&gt; 
-        &lt;transationNarration&gt;salary&lt;/transationNarration&gt;
-    &lt;/UserAccount&gt;
-    &lt;UserAccount&gt; 
-        &lt;accountRefNo&gt;RefSBI002&lt;/accountRefNo&gt; 
-        &lt;accountNo&gt;SBI222222222&lt;/accountNo&gt; 
-        &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
-        &lt;transactionRefNo&gt;txn0001&lt;/transactionRefNo&gt; 
-        &lt;accountBalance&gt;100.00&lt;/accountBalance&gt; 
-        &lt;amount&gt;300.00&lt;/amount&gt; 
-        &lt;amountEntry&gt;CR&lt;/amountEntry&gt; 
-        &lt;transationNarration&gt;salary&lt;/transationNarration&gt;
-    &lt;/UserAccount&gt;
-&lt;/UserAccountTrans&gt;
+        &lt;UserAccount&gt; 
+            &lt;accountRefNo&gt;RefSBI001&lt;/accountRefNo&gt; 
+            &lt;accountNo&gt;SBI111111111111&lt;/accountNo&gt; 
+            &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
+            &lt;transactionRefNo&gt;txn0001&lt;/transactionRefNo&gt; 
+            &lt;accountBalance&gt;10000.00&lt;/accountBalance&gt; 
+            &lt;amount&gt;300.00&lt;/amount&gt; 
+            &lt;amountEntry&gt;CR&lt;/amountEntry&gt; 
+            &lt;transationNarration&gt;salary&lt;/transationNarration&gt;
+        &lt;/UserAccount&gt;
+        &lt;UserAccount&gt; 
+            &lt;accountRefNo&gt;RefSBI002&lt;/accountRefNo&gt; 
+            &lt;accountNo&gt;SBI222222222&lt;/accountNo&gt; 
+            &lt;accountTypeEnum&gt;CURRENT&lt;/accountTypeEnum&gt;
+            &lt;transactionRefNo&gt;txn0001&lt;/transactionRefNo&gt; 
+            &lt;accountBalance&gt;100.00&lt;/accountBalance&gt; 
+            &lt;amount&gt;300.00&lt;/amount&gt; 
+            &lt;amountEntry&gt;CR&lt;/amountEntry&gt; 
+            &lt;transationNarration&gt;salary&lt;/transationNarration&gt;
+        &lt;/UserAccount&gt;
+    &lt;/UserAccountTrans&gt;
 </code></pre>
 
 <p>Response Expected: </p>
