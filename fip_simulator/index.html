@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#welcome-to-finvu" tabindex="1" class="md-skip">
+      <a href="#fip-api-simulator" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -215,13 +215,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#software-prerequisite" title="Software prerequisite" class="md-nav__link">
-    Software prerequisite
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#request-headers" title="Request headers" class="md-nav__link">
     Request headers
   </a>
@@ -244,8 +237,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-to-enter-your-own-sample-data" title="API to enter your own sample data" class="md-nav__link">
-    API to enter your own sample data
+  <a href="#account-linking" title="Account Linking" class="md-nav__link">
+    Account Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-confirm-token" title="Account Confirm Token" class="md-nav__link">
+    Account Confirm Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-request" title="FI request" class="md-nav__link">
+    FI request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-fetch" title="FI Fetch" class="md-nav__link">
+    FI Fetch
   </a>
   
 </li>
@@ -313,13 +327,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#software-prerequisite" title="Software prerequisite" class="md-nav__link">
-    Software prerequisite
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#request-headers" title="Request headers" class="md-nav__link">
     Request headers
   </a>
@@ -342,8 +349,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-to-enter-your-own-sample-data" title="API to enter your own sample data" class="md-nav__link">
-    API to enter your own sample data
+  <a href="#account-linking" title="Account Linking" class="md-nav__link">
+    Account Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-confirm-token" title="Account Confirm Token" class="md-nav__link">
+    Account Confirm Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-request" title="FI request" class="md-nav__link">
+    FI request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-fetch" title="FI Fetch" class="md-nav__link">
+    FI Fetch
   </a>
   
 </li>
@@ -384,13 +412,8 @@
               
                 
                 
-                <h1 id="welcome-to-finvu">Welcome to Finvu</h1>
-<h4 id="software-prerequisite"><strong>Software prerequisite</strong></h4>
-<ul>
-<li>Postman    <em>(URL : https://www.getpostman.com/)</em></li>
-</ul>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-This is a simulator implementation of the FIP API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
+                <h1 id="fip-api-simulator">FIP API (Simulator)</h1>
+<p>This is a simulator implementation of the FIP API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
 <h2 id="request-headers">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -417,367 +440,119 @@ This is a simulator implementation of the FIP API and can be used for testing th
 <p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/discover</code></p>
 <p>Request Body</p>
-<p>=======</p>
-<h3 id="api-to-enter-your-own-sample-data"><strong>API to enter your own sample data</strong></h3>
-<ul>
-<li><strong>Adding User Account API</strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URL</td>
-<td align="center"><em>http://&lt;&lt;0.0.0.0&gt;&gt;:&lt;&lt;0000&gt;&gt;/Accounts/add</em></td>
-</tr>
-</tbody>
-</table>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;AccDiscoveryRequest xmlns=&quot;https://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-22T17:30:15.239Z&quot; txnid=&quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;&gt;
+&lt;Identifiers&gt;&lt;Identifier category=&quot;STRONG&quot; type=&quot;MOBILE&quot; value=&quot;7030608902&quot;&gt;&lt;/Identifier&gt;&lt;/Identifiers&gt;
+&lt;FIPDetails name=&quot;string&quot; id=&quot;string&quot;&gt;
+&lt;FITypes&gt;
+&lt;FIType1 name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType1&gt;
+&lt;FIType name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType&gt;
+&lt;/FITypes&gt;
+&lt;/FIPDetails&gt;
+&lt;Meta type=&quot;PERSON&quot; value=&quot;string&quot;&gt;
+&lt;DeviceInfo&gt;
+&lt;Tag name=&quot;MOBILE&quot; value=&quot;string&quot;&gt;&lt;/Tag&gt;
+&lt;Tag1 name=&quot;GEOCODE&quot; value=&quot;string&quot;&gt;&lt;/Tag1&gt;
+&lt;Tag3 name=&quot;LOCATION&quot; value=&quot;string&quot;&gt;&lt;/Tag3&gt;
+&lt;Tag4 name=&quot;IP&quot; value=&quot;string&quot;&gt;&lt;/Tag4&gt;
+&lt;Tag5 name=&quot;TYPE&quot; value=&quot;string&quot;&gt;&lt;/Tag5&gt;
+&lt;Tag6 name=&quot;ID&quot; value=&quot;string&quot;&gt;&lt;/Tag6&gt;
+&lt;Tag7 name=&quot;OS&quot; value=&quot;string&quot;&gt;&lt;/Tag7&gt;
+&lt;Tag8 name=&quot;APP&quot; value=&quot;string&quot;&gt;&lt;/Tag8&gt;
+&lt;Tag9 name=&quot;CAPABILITY&quot; value=&quot;string&quot;&gt;&lt;/Tag9&gt;
+&lt;Tag10 name=&quot;TELECOM&quot; value=&quot;string&quot;&gt;&lt;/Tag10&gt;
+&lt;/DeviceInfo&gt;
+&lt;/Meta&gt;
+&lt;/AccDiscoveryRequest&gt;
+
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;AccDiscoveryResponse ver=&quot;1.0&quot; timestamp=&quot;2018-05-22T17:30:15.239+0000&quot; txnid=&quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;&gt;
+    &lt;AuthenticatorType&gt;TOKEN&lt;/AuthenticatorType&gt;
+    &lt;DiscoveredAccounts&gt;
+        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;XXXXXXXXXXX1111&quot;/&gt;
+    &lt;/DiscoveredAccounts&gt;
+    &lt;DiscoveredAccounts&gt;
+        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;CURRENT&quot; accRefNumber=&quot;RefSBI002&quot; maskedAccNumber=&quot;XXXXXXXX2222&quot;/&gt;
+    &lt;/DiscoveredAccounts&gt;
+&lt;/AccDiscoveryResponse&gt;
+</code></pre>
+
+<h3 id="account-linking">Account Linking</h3>
+<p>For simulation purpose, the customer account authentication is TOKEN based and an OTP is sent to the mobile no of the account holder. </p>
+<p>HTTP METHOD: <code>PUT</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}</code></p>
 <p>Request Body</p>
-<pre><code>&lt;UserAccountInfo&gt;
-    &lt;UserAccount accountRefNo=&quot;RefSBI002&quot; accountNo=&quot;SBI222222222&quot; accountTypeEnum=&quot;SAVINGS&quot;&gt;
-        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;7000000000&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;3408030493453&quot;&gt;&lt;/Identifiers&gt;  
-    &lt;/UserAccount&gt;
-&lt;/UserAccountInfo&gt;
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;AccLinkRequest xmlns=&quot;https://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T17:51:18.412Z&quot; callbackURL=&quot;string&quot; txnid=&quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;&gt;
+&lt;AccDetails&gt;
+&lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;SBI111111111111&quot;&gt;&lt;/Account&gt;
+&lt;FIPDetails id=&quot;string&quot; name=&quot;string&quot;&gt;&lt;/FIPDetails&gt;
+&lt;/AccDetails&gt;
+&lt;/AccLinkRequest&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>UserAccountInfo [userAccounts=[UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, identifiers=Identifiers [pan=AFF34964FFF, mobile=7000000000, email=backend@gmail.com, aadhar=3408030493453]]]]
-  ```
-
-
- - **Adding User Account Transaction data API**
-
-  |          |             |
-  | ------------- |:-------------:|
-  | URL      | _http://&lt;&lt;0.0.0.0&gt;&gt;:&lt;&lt;0000&gt;&gt;/Accounts/Transaction/add_ |
-
-  Request Body
-
-
+<pre><code>&lt;AccLinkResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T14:05:39.592+0000&quot; txnid=&quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;&gt;
+    &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;XXXXXXXXXXX1111&quot;/&gt;
+&lt;/AccLinkResponse&gt;
 </code></pre>
 
-<p><UserAccountTrans>
-    <UserAccount> 
-        <accountRefNo>RefSBI001</accountRefNo> 
-        <accountNo>SBI111111111111</accountNo> 
-        <accountTypeEnum>SAVINGS</accountTypeEnum>
-        <transactionRefNo>txn0001</transactionRefNo> 
-        <accountBalance>10000.00</accountBalance> 
-        <amount>300.00</amount> 
-        <amountEntry>CR</amountEntry> 
-        <transationNarration>salary</transationNarration>
-    </UserAccount>
-    <UserAccount> 
-        <accountRefNo>RefSBI002</accountRefNo> 
-        <accountNo>SBI222222222</accountNo> 
-        <accountTypeEnum>SAVINGS</accountTypeEnum>
-        <transactionRefNo>txn0001</transactionRefNo> 
-        <accountBalance>100.00</accountBalance> 
-        <amount>300.00</amount> 
-        <amountEntry>CR</amountEntry> 
-        <transationNarration>salary</transationNarration>
-    </UserAccount>
-</UserAccountTrans></p>
-<pre><code>Response Expected: 
-</code></pre>
-
-<p>UserAccountTrans [userAccounts=[UserAccount [accountRefNo=RefSBI001, accountNo=SBI111111111111, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=10000.0, amount=300.0, amountEntry=CR, transationNarration=salary], UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=100.0, amount=300.0, amountEntry=CR, transationNarration=salary]]]</p>
-<pre><code>
-### **Financial Information Provider API**
-
-
-  - **Account Discover API**
-
-  |          |             |
-  | ------------- |:-------------:|
-  | URL      | _http://&lt;&lt;0.0.0.0&gt;&gt;:&lt;&lt;0000&gt;&gt;/ConnectHub/V1/Accounts/discover_ |
-  | Key      | ```x-access-token```      |
-  | Value | ```Please email us on info@cookiejar.co.in for value of key``` |
-
-  Request Body
-
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; dedca11bb1847fa6da3157a2134c18fbe714b35c
-
-</code></pre>
-
-<?xml version="1.0" encoding="UTF-8"?>
-<AccDiscoveryRequest xmlns="https://standards.rebit.org.in/aa" ver="1.0" timestamp="2018-05-22T17:30:15.239Z" txnid="8399263c-4a15-11e8-bcd1-0277a9fbfedc">
-<Identifiers><Identifier category="STRONG" type="MOBILE" value="7030608902"></Identifier></Identifiers>
-<FIPDetails name="string" id="string">
-<FITypes>
-<FIType1 name="DEPOSIT" value="string"></FIType1>
-<FIType name="DEPOSIT" value="string"></FIType>
-</FITypes>
-</FIPDetails>
-<Meta type="PERSON" value="string">
-<DeviceInfo>
-<Tag name="MOBILE" value="string"></Tag>
-<Tag1 name="GEOCODE" value="string"></Tag1>
-<Tag3 name="LOCATION" value="string"></Tag3>
-<Tag4 name="IP" value="string"></Tag4>
-<Tag5 name="TYPE" value="string"></Tag5>
-<Tag6 name="ID" value="string"></Tag6>
-<Tag7 name="OS" value="string"></Tag7>
-<Tag8 name="APP" value="string"></Tag8>
-<Tag9 name="CAPABILITY" value="string"></Tag9>
-<Tag10 name="TELECOM" value="string"></Tag10>
-</DeviceInfo>
-</Meta>
-</AccDiscoveryRequest>
-<<<<<<< HEAD
-
-<pre><code>Response Expected: 
-</code></pre>
-
-<p><AccDiscoveryResponse ver="1.0" timestamp="2018-05-22T17:30:15.239+0000" txnid="8399263c-4a15-11e8-bcd1-0277a9fbfedc">
-    <AuthenticatorType>TOKEN</AuthenticatorType>
-    <DiscoveredAccounts>
-        <Account FIType="DEPOSIT" accType="SAVINGS" accRefNumber="RefSBI001" maskedAccNumber="XXXXXXXXXXX1111"/>
-    </DiscoveredAccounts>
-    <DiscoveredAccounts>
-        <Account FIType="DEPOSIT" accType="CURRENT" accRefNumber="RefSBI002" maskedAccNumber="XXXXXXXX2222"/>
-    </DiscoveredAccounts>
-</AccDiscoveryResponse></p>
-<pre><code>
-### Account Linking
-
-For simulation purpose, the customer account authentication is TOKEN based and an OTP is sent to the mobile no of the account holder. 
-
-HTTP METHOD: `PUT`
-
-URL: `http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}`
-
-Request Body
-
-=======
+<h3 id="account-confirm-token">Account Confirm Token</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}/confirm-token</code></p>
+<p>Request Body</p>
+<p>Put the SMS received on mobile in <token>{OTP sms}</token></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ConfirmLinkingRequest ver=&quot;1.0&quot;
+timestamp=&quot;2018-05-05T10:27:17.699Z&quot;
+txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
+&lt;token&gt;774265&lt;/token&gt;
+&lt;/ConfirmLinkingRequest&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;AccDiscoveryResponse&gt;&lt;timestamp&gt;1527010215239&lt;/timestamp&gt;&lt;txnid&gt;8399263c-4a15-11e8-bcd1-0277a9fbfedc&lt;/txnid&gt;&lt;AuthenticatorType/&gt;&lt;DiscoveredAccounts&gt;&lt;DiscoveredAccounts&gt;&lt;Account&gt;&lt;FIType&gt;DEPOSIT&lt;/FIType&gt;&lt;accType&gt;CURRENT&lt;/accType&gt;&lt;accRefNumber&gt;999&lt;/accRefNumber&gt;&lt;maskedAccNumber&gt;XXXXXXXXX3456&lt;/maskedAccNumber&gt;&lt;aeba&gt;N&lt;/aeba&gt;&lt;/Account&gt;&lt;/DiscoveredAccounts&gt;&lt;/DiscoveredAccounts&gt;&lt;/AccDiscoveryResponse&gt;
-  ```
+<pre><code>&lt;ConfirmLinkingResponse ver=&quot;1.0&quot; timestamp=&quot;2018-05-05T10:27:17.699+0000&quot; txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;/&gt;
+</code></pre>
 
+<h3 id="fi-request">FI request</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/FI/request</code></p>
+<p>Request Body</p>
+<pre><code>&lt;FIRequest ver=&quot;1.0&quot; timestamp=&quot;2018-06-09T09:58:50.505Z&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
+    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
+        &lt;DataConsumer id=&quot;123456@finvu.in&quot; type=&quot;AA&quot; callbackURL=&quot;http://localhost:9090/AA/Test&quot;&gt;&lt;/DataConsumer&gt;
+    &lt;RequestFIParams&gt;
+        &lt;KeyMaterials&gt;
+            &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505Z&quot;&gt;
+                &lt;SessionID&gt;string&lt;/SessionID&gt;
+                &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505Z&quot;&gt;
+                    &lt;Parameters&gt;Param 1&lt;/Parameters&gt;
+                    &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
+                &lt;/DHPublicKey&gt;
+                &lt;Nonce&gt;12345&lt;/Nonce&gt;
+                &lt;Signature&gt; Signature Value
+                &lt;/Signature&gt;
+            &lt;/KeyMaterial&gt;
+        &lt;/KeyMaterials&gt;
+    &lt;/RequestFIParams&gt;
+&lt;/FIRequest&gt;
+</code></pre>
 
-  - **Account Linking API**
-
-  |          |             |
-  | ------------- |:-------------:|
-  | URL      | _http://&lt;&lt;0.0.0.0&gt;&gt;:&lt;&lt;0000&gt;&gt;/ConnectHub/V1/Accounts/{AccountRefNo}_ |
-  | Key      | ```x-access-token```      |
-  | Value | ```Please email us on info@cookiejar.co.in for value of key``` |
-
-  e.g. URL : http://192.168.0.1:9090/ConnectHub/V1/Accounts/RefSBI004
-
-  Request Body
-
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; dedca11bb1847fa6da3157a2134c18fbe714b35c
+<p>Response Expected: </p>
+<pre><code>&lt;FIResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-08T10:40:53.307+0000&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot; ConsentID=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
+    &lt;Sessions&gt;
+        &lt;SessionID&gt;6633fb91-35ca-47b8-8db0-e289d17f180a&lt;/SessionID&gt;
+    &lt;/Sessions&gt;
+&lt;/FIResponse&gt;
 
 </code></pre>
 
-<?xml version="1.0" encoding="UTF-8"?>
-<AccLinkRequest xmlns="https://standards.rebit.org.in/aa" ver="1.0" timestamp="2018-05-09T17:51:18.412Z" callbackURL="string" txnid="f35761ac-4a18-11e8-96ff-0277a9fbfedc">
-<AccDetails>
-<<<<<<< HEAD
-<Account FIType="DEPOSIT" accType="SAVINGS" accRefNumber="RefSBI001" maskedAccNumber="SBI111111111111"></Account>
-=======
-<Account FIType="DEPOSIT" accType="SAVINGS" accRefNumber="RefSBI001" maskedAccNumber="SBI111111111111" aeba="Y"></Account>
->>>>>>> dedca11bb1847fa6da3157a2134c18fbe714b35c
-<FIPDetails id="string" name="string"></FIPDetails>
-</AccDetails>
-</AccLinkRequest>
-
-<pre><code>Response Expected: 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-</code></pre>
-
-<p><AccLinkResponse ver="1.0" timestamp="2018-07-07T14:05:39.592+0000" txnid="f35761ac-4a18-11e8-96ff-0277a9fbfedc">
-    <Account FIType="DEPOSIT" accType="SAVINGS" accRefNumber="RefSBI001" maskedAccNumber="XXXXXXXXXXX1111"/>
-</AccLinkResponse></p>
-<pre><code>
-### Account Confirm Token
-
-HTTP METHOD: `POST`
-
-URL: `http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}/confirm-token`
-
-Request Body
-
-Put the SMS received on mobile in &lt;token&gt;{OTP sms}&lt;/token&gt;
-=======
-
-</code></pre>
-
-<p><AccLinkResponse><ver>1.0</ver><timestamp>1529153879076</timestamp><txnid>f35761ac-4a18-11e8-96ff-0277a9fbfedc</txnid><Account><FIType>DEPOSIT</FIType><accType>SAVINGS</accType><accRefNumber>999</accRefNumber><maskedAccNumber>XXXXXXXXX3456</maskedAccNumber><aeba>Y</aeba></Account></AccLinkResponse></p>
-<pre><code>
-
-  - **Account Confirm Token API**
-
-  |          |             |
-  | ------------- |:-------------:|
-  | URL      | _http://&lt;&lt;0.0.0.0&gt;&gt;:&lt;&lt;0000&gt;&gt;/ConnectHub/V1/Accounts/{AccountRefNo}/confirm-token_ |
-  | Key      | ```x-access-token```      |
-  | Value | ```Please email us on info@cookiejar.co.in for value of key``` |
-
-  e.g. URL : http://192.168.0.1:9090/ConnectHub/V1/Accounts/RefSBI001/confirm-token
-
-  Request Body
-  Put the SMS received on mobile in &lt;token&gt;{OTP sms}&lt;/token&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; dedca11bb1847fa6da3157a2134c18fbe714b35c
-
-
-</code></pre>
-
-<?xml version="1.0" encoding="UTF-8"?>
-<ConfirmLinkingRequest ver="1.0"
-timestamp="2018-05-05T10:27:17.699Z"
-txnid="410c2d2e-4a1e-11e8-960e-0277a9fbfedc">
-<token>774265</token>
-</ConfirmLinkingRequest>
-
-<pre><code>Response Expected: 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-</code></pre>
-
-<p><ConfirmLinkingResponse ver="1.0" timestamp="2018-05-05T10:27:17.699+0000" txnid="410c2d2e-4a1e-11e8-960e-0277a9fbfedc"/></p>
-<pre><code>
-### FI request
-
-HTTP METHOD: `POST`
-
-URL: `http://api.finvu.in/ConnectHub/V1/FI/request`
-
-Request Body
-=======
-
-</code></pre>
-
-<p><ConfirmLinkingResponse><ver>1.0</ver><timestamp>1525516037699</timestamp><txnid>410c2d2e-4a1e-11e8-960e-0277a9fbfedc</txnid></ConfirmLinkingResponse></p>
-<pre><code>
-
-
-  - **Account FI request API**
-
-  |          |             |
-  | ------------- |:-------------:|
-  | URL      | _http://&lt;&lt;0.0.0.0&gt;&gt;:&lt;&lt;0000&gt;&gt;/ConnectHub/V1/FI/request_ |
-  | Key      | ```x-access-token```      |
-  | Value | ```Please email us on info@cookiejar.co.in for value of key``` |
-
-
-  Request Body
-  Put the SMS received on mobile in &lt;token&gt;{OTP sms}&lt;/token&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; dedca11bb1847fa6da3157a2134c18fbe714b35c
-
-
-</code></pre>
-
-<p><FIRequest ver="1.0" timestamp="2018-06-09T09:58:50.505Z" txnid="c5a1450c-d08a-45b4-a475-0468bd10e380">
-    <ConsentID>c4a1450c-d08a-45b4-a475-0468bd10e380</ConsentID>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-        <DataConsumer id="123456@finvu.in" type="AA" callbackURL="http://localhost:9090/AA/Test"></DataConsumer>
-=======
-        <DataConsumer id="123456@finvu.in" type="AA" callbackURL="localhost:9090/AA/Test"></DataConsumer></p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>dedca11bb1847fa6da3157a2134c18fbe714b35c
-    <RequestFIParams>
-        <KeyMaterials>
-            <KeyMaterial startTime="2018-06-01T09:58:50.505Z">
-                <SessionID>string</SessionID>
-                <DHPublicKey expiry="2019-06-01T09:58:50.505Z">
-                    <Parameters>Param 1</Parameters>
-                    <KeyValue>W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=</KeyValue>
-                </DHPublicKey>
-                <Nonce>12345</Nonce>
-                <Signature> Signature Value
-                </Signature>
-            </KeyMaterial>
-        </KeyMaterials>
-    </RequestFIParams>
-</FIRequest></p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<pre><code>Response Expected: 
-
-</code></pre>
-
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<FIResponse ver="1.0" timestamp="2018-07-08T10:40:53.307+0000" txnid="c5a1450c-d08a-45b4-a475-0468bd10e380" ConsentID="c4a1450c-d08a-45b4-a475-0468bd10e380">
-    <Sessions>
-        <SessionID>6633fb91-35ca-47b8-8db0-e289d17f180a</SessionID>
-    </Sessions>
-</FIResponse></p>
-<pre><code>
-### FI Fetch
-
-HTTP METHOD: `POST`
-
-URL: `http://api.finvu.in/ConnectHub/V1/FI/fetch/{SessionID}`
-
-Request Body
-=======
-TODO : 
-
-</code></pre>
-
-<ul>
-<li><strong>Account FI Fetch API</strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URL</td>
-<td align="center"><em>http://&lt;&lt;0.0.0.0&gt;&gt;:&lt;&lt;0000&gt;&gt;/ConnectHub/V1/FI/fetch/{SessionID}</em></td>
-</tr>
-<tr>
-<td>Key</td>
-<td align="center"><code>x-access-token</code></td>
-</tr>
-<tr>
-<td>Value</td>
-<td align="center"><code>Please email us on info@cookiejar.co.in for value of key</code></td>
-</tr>
-</tbody>
-</table>
-<p>Request Body
-  Put the Session ID from FI - Request response in <ConsentID>{SessionID}</ConsentID>
-  e.g. http://192.168.0.1:9090/ConnectHub/V1/FI/fetch/17dbec77-3b43-4e67-9370-c347d7402671</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>dedca11bb1847fa6da3157a2134c18fbe714b35c</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<h3 id="fi-fetch">FI Fetch</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/FI/fetch/{SessionID}</code></p>
+<p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
     &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
@@ -785,8 +560,7 @@ TODO :
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;FIFetchResponse timestamp=&quot;2018-07-07T14:17:20.949+0000&quot; txnID=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot; ver=&quot;1.0&quot;&gt;
     &lt;Account FIPId=&quot;fip@sbi.co.in&quot; id=&quot;SBI111111111111&quot; type=&quot;SAVINGS&quot;&gt;
         &lt;FIs&gt;
@@ -836,14 +610,6 @@ KWgBaAL+9TB1RP1kutv3BNNFcjP3HLTr0LdpAelEY8gdMwbH+9cwKzgULrpbJT0Hx5yeVjZ8sEpI
             &lt;X509Data&gt;
                 &lt;X509SubjectName&gt;CN=PP,OU=CTPL,O=CTPL,L=Pune,ST=Maharashtra,C=IN&lt;/X509SubjectName&gt;
                 &lt;X509Certificate&gt;MIIDWTCCAkGgAwIBAgIEdZ+fzDANBgkqhkiG9w0BAQsFADBdMQswCQYDVQQGEwJJTjEUMBIGA1UE
-=======
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;FIFetchResponse timestamp=&quot;1529154796883&quot; txnID=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot; ver=&quot;1.0&quot;&gt;&lt;responseCode/&gt;&lt;FIPId/&gt;&lt;Account&gt;&lt;id&gt;123456&lt;/id&gt;&lt;type&gt;string&lt;/type&gt;&lt;FIPId&gt;12345@hdfc.co.in&lt;/FIPId&gt;&lt;FIs&gt;&lt;FI&gt;&lt;EncryptedFI&gt;c1l2V2xRazh2OVdtS3JqWklBQk5zVm1xUFhucGRQc0xJVDZuYjFKa1JBMGlmUzVZTUZxdkRQbmI1
-WU9mdit0UE9KbTBxYmNDMFpFdlVrQnBuWFBHdGc9PQ==&lt;/EncryptedFI&gt;&lt;KeyMaterial&gt;&lt;SessionID/&gt;&lt;startTime&gt;1528537218744&lt;/startTime&gt;&lt;DHPublicKey&gt;&lt;expiry&gt;1528537218744&lt;/expiry&gt;&lt;Parameters&gt;Param 1&lt;/Parameters&gt;&lt;KeyValue&gt;KuhybmYeGpWh/VfCFmZAkIwDUfFtfRt2rcCVYZLxUEM=&lt;/KeyValue&gt;&lt;/DHPublicKey&gt;&lt;Nonce&gt;1&lt;/Nonce&gt;&lt;Signature&gt;Signature Value&lt;/Signature&gt;&lt;/KeyMaterial&gt;&lt;/FI&gt;&lt;/FIs&gt;&lt;/Account&gt;&lt;Signature xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;SignedInfo&gt;&lt;CanonicalizationMethod Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/&gt;&lt;SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/&gt;&lt;Reference URI=&quot;&quot;&gt;&lt;Transforms&gt;&lt;Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/&gt;&lt;/Transforms&gt;&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;&lt;DigestValue&gt;PQP16tttmO+UFsU5GNu0krjPqcQ=&lt;/DigestValue&gt;&lt;/Reference&gt;&lt;/SignedInfo&gt;&lt;SignatureValue&gt;cpNw25twspqZK9Qdaa2xyMumNdzxHv7J24HJPFqXk4OLKjTo1hgK+cldFCN1jStauSDPyABiUMVE
-FXC669ObNbD7hfCd6jdUO7RuvYx0Qq87ahZC7M+czG2RSreB/KScNz1lBWdCS0D80vGpYl4WhLzf
-SyhSM1sMB/TMDGUP9BLoX/kOcnfVq15mDxgs8riuC4sx/dpbmr9fmI2HUw27TVF2SCQ9K+b5Fdse
-aGAn8zxZ0/2leWM+MzzAJk9Zx2jexijTMvFKRxGvlC9A7g6USiJpFK9wcxDMhuLh36HatQPxVUyt
-wHAvVax+DK52c67Q14WFIIfegNgY9PJu1jgATQ==&lt;/SignatureValue&gt;&lt;KeyInfo&gt;&lt;X509Data&gt;&lt;X509SubjectName&gt;CN=PP,OU=CTPL,O=CTPL,L=Pune,ST=Maharashtra,C=IN&lt;/X509SubjectName&gt;&lt;X509Certificate&gt;MIIDWTCCAkGgAwIBAgIEdZ+fzDANBgkqhkiG9w0BAQsFADBdMQswCQYDVQQGEwJJTjEUMBIGA1UE
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; dedca11bb1847fa6da3157a2134c18fbe714b35c
 CBMLTWFoYXJhc2h0cmExDTALBgNVBAcTBFB1bmUxDTALBgNVBAoTBENUUEwxDTALBgNVBAsTBENU
 UEwxCzAJBgNVBAMTAlBQMB4XDTE4MDUzMDE3MTE0MloXDTE5MDUyNTE3MTE0MlowXTELMAkGA1UE
 BhMCSU4xFDASBgNVBAgTC01haGFyYXNodHJhMQ0wCwYDVQQHEwRQdW5lMQ0wCwYDVQQKEwRDVFBM
@@ -858,7 +624,6 @@ hU/9itFomim7X/TMAT6lYzpvJKyBLKN1l/mZQulkV+yRVdY5ETDnvKVHHfBE7OVSES8JYJXe/41L
 v0OQYTLEFcJwVSR+b6yOUgWBh2xdpkat358UwItQ5NIuVAU1EIbgfejHmMvJlUf/gWj1wD6+Hx9L
 UJn6SSo59xjPxbTEsh8PLMEipM2eI7cXG/uGMpyBg41YfvW2JQrXa4ILokQ1fbtc3iZZtfYZMVC0
 BaMXz5VPVRb8PrdxAt2szi93yS7HJ9UHYRbBmbRjbulFtrSXKd3GqvRfjht4174iKcBVkpNOpIQs
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 syBiW1qx&lt;/X509Certificate&gt;
             &lt;/X509Data&gt;
         &lt;/KeyInfo&gt;
@@ -897,9 +662,6 @@ syBiW1qx&lt;/X509Certificate&gt;
 
 <p>Response Expected: </p>
 <pre><code>200 OK
-=======
-syBiW1qx&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/Signature&gt;&lt;/FIFetchResponse&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; dedca11bb1847fa6da3157a2134c18fbe714b35c
 </code></pre>
                 
                   
