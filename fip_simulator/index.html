@@ -442,39 +442,40 @@
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;AccDiscoveryRequest xmlns=&quot;https://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-22T17:30:15.239Z&quot; txnid=&quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;&gt;
-&lt;Identifiers&gt;&lt;Identifier category=&quot;STRONG&quot; type=&quot;MOBILE&quot; value=&quot;7030608902&quot;&gt;&lt;/Identifier&gt;&lt;/Identifiers&gt;
-&lt;FIPDetails name=&quot;string&quot; id=&quot;string&quot;&gt;
-&lt;FITypes&gt;
-&lt;FIType1 name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType1&gt;
-&lt;FIType name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType&gt;
-&lt;/FITypes&gt;
-&lt;/FIPDetails&gt;
-&lt;Meta type=&quot;PERSON&quot; value=&quot;string&quot;&gt;
-&lt;DeviceInfo&gt;
-&lt;Tag name=&quot;MOBILE&quot; value=&quot;string&quot;&gt;&lt;/Tag&gt;
-&lt;Tag1 name=&quot;GEOCODE&quot; value=&quot;string&quot;&gt;&lt;/Tag1&gt;
-&lt;Tag3 name=&quot;LOCATION&quot; value=&quot;string&quot;&gt;&lt;/Tag3&gt;
-&lt;Tag4 name=&quot;IP&quot; value=&quot;string&quot;&gt;&lt;/Tag4&gt;
-&lt;Tag5 name=&quot;TYPE&quot; value=&quot;string&quot;&gt;&lt;/Tag5&gt;
-&lt;Tag6 name=&quot;ID&quot; value=&quot;string&quot;&gt;&lt;/Tag6&gt;
-&lt;Tag7 name=&quot;OS&quot; value=&quot;string&quot;&gt;&lt;/Tag7&gt;
-&lt;Tag8 name=&quot;APP&quot; value=&quot;string&quot;&gt;&lt;/Tag8&gt;
-&lt;Tag9 name=&quot;CAPABILITY&quot; value=&quot;string&quot;&gt;&lt;/Tag9&gt;
-&lt;Tag10 name=&quot;TELECOM&quot; value=&quot;string&quot;&gt;&lt;/Tag10&gt;
-&lt;/DeviceInfo&gt;
-&lt;/Meta&gt;
+    &lt;Identifiers&gt;&lt;Identifier category=&quot;STRONG&quot; type=&quot;MOBILE&quot; value=&quot;7030608902&quot;&gt;&lt;/Identifier&gt;&lt;/Identifiers&gt;
+    &lt;FIPDetails name=&quot;HDFC&quot; id=&quot;fipHDFC555&quot;&gt;
+        &lt;FITypes&gt;
+            &lt;FIType name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType&gt;
+        &lt;/FITypes&gt;
+    &lt;/FIPDetails&gt;
+    &lt;Meta type=&quot;PERSON&quot; value=&quot;string&quot;&gt;
+        &lt;DeviceInfo&gt;
+            &lt;Tag name=&quot;MOBILE&quot; value=&quot;string&quot;&gt;&lt;/Tag&gt;
+            &lt;Tag1 name=&quot;GEOCODE&quot; value=&quot;string&quot;&gt;&lt;/Tag1&gt;
+            &lt;Tag3 name=&quot;LOCATION&quot; value=&quot;string&quot;&gt;&lt;/Tag3&gt;
+            &lt;Tag4 name=&quot;IP&quot; value=&quot;string&quot;&gt;&lt;/Tag4&gt;
+            &lt;Tag5 name=&quot;TYPE&quot; value=&quot;string&quot;&gt;&lt;/Tag5&gt;
+            &lt;Tag6 name=&quot;ID&quot; value=&quot;string&quot;&gt;&lt;/Tag6&gt;
+            &lt;Tag7 name=&quot;OS&quot; value=&quot;string&quot;&gt;&lt;/Tag7&gt;
+            &lt;Tag8 name=&quot;APP&quot; value=&quot;string&quot;&gt;&lt;/Tag8&gt;
+            &lt;Tag9 name=&quot;CAPABILITY&quot; value=&quot;string&quot;&gt;&lt;/Tag9&gt;
+            &lt;Tag10 name=&quot;TELECOM&quot; value=&quot;string&quot;&gt;&lt;/Tag10&gt;
+        &lt;/DeviceInfo&gt;
+    &lt;/Meta&gt;
 &lt;/AccDiscoveryRequest&gt;
-
 </code></pre>
 
 <p>Response Expected: </p>
 <pre><code>&lt;AccDiscoveryResponse ver=&quot;1.0&quot; timestamp=&quot;2018-05-22T17:30:15.239+0000&quot; txnid=&quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;&gt;
     &lt;AuthenticatorType&gt;TOKEN&lt;/AuthenticatorType&gt;
     &lt;DiscoveredAccounts&gt;
-        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;XXXXXXXXXXX1111&quot;/&gt;
+        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;HDFC11111111&quot; maskedAccNumber=&quot;XXXXXXXX1111&quot;/&gt;
     &lt;/DiscoveredAccounts&gt;
     &lt;DiscoveredAccounts&gt;
-        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;CURRENT&quot; accRefNumber=&quot;RefSBI002&quot; maskedAccNumber=&quot;XXXXXXXX2222&quot;/&gt;
+        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;CURRENT&quot; accRefNumber=&quot;HDFC22222222&quot; maskedAccNumber=&quot;XXXXXXXX2222&quot;/&gt;
+    &lt;/DiscoveredAccounts&gt;
+    &lt;DiscoveredAccounts&gt;
+        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;SBI11111111&quot; maskedAccNumber=&quot;XXXXXXX1111&quot;/&gt;
     &lt;/DiscoveredAccounts&gt;
 &lt;/AccDiscoveryResponse&gt;
 </code></pre>
@@ -482,33 +483,44 @@
 <h3 id="account-linking">Account Linking</h3>
 <p>For simulation purpose, the customer account authentication is TOKEN based and an OTP is sent to the mobile no of the account holder. </p>
 <p>HTTP METHOD: <code>PUT</code></p>
-<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/link</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;AccLinkRequest xmlns=&quot;https://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T17:51:18.412Z&quot; callbackURL=&quot;string&quot; txnid=&quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;&gt;
-&lt;AccDetails&gt;
-&lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;SBI111111111111&quot;&gt;&lt;/Account&gt;
-&lt;FIPDetails id=&quot;string&quot; name=&quot;string&quot;&gt;&lt;/FIPDetails&gt;
-&lt;/AccDetails&gt;
+    &lt;AccDetails&gt;
+        &lt;Accounts&gt;
+  &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;HDFC11111111&quot; maskedAccNumber=&quot;HDFC22222222&quot;/&gt;
+        &lt;/Accounts&gt;
+        &lt;Accounts&gt;
+ &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;HDFC22222222&quot; maskedAccNumber=&quot;HDFC22222222&quot;/&gt;
+        &lt;/Accounts&gt;
+        &lt;FIPDetails id=&quot;fipHDFC555&quot; name=&quot;HDFC&quot;&gt;&lt;/FIPDetails&gt;
+    &lt;/AccDetails&gt;
 &lt;/AccLinkRequest&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;AccLinkResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T14:05:39.592+0000&quot; txnid=&quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;&gt;
-    &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;XXXXXXXXXXX1111&quot;/&gt;
+<pre><code>&lt;AccLinkResponse ver=&quot;1.0&quot; timestamp=&quot;2018-09-22T06:13:30.967+0000&quot; txnid=&quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;&gt;
+    &lt;AuthenticatorType&gt;TOKEN&lt;/AuthenticatorType&gt;
+    &lt;AccountsLinkingRefNumber&gt;b4bee7d2-58c3-4170-8db1-c811490b864f&lt;/AccountsLinkingRefNumber&gt;
 &lt;/AccLinkResponse&gt;
 </code></pre>
 
 <h3 id="account-confirm-token">Account Confirm Token</h3>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}/confirm-token</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/confirm-token</code></p>
 <p>Request Body</p>
 <p>Put the SMS received on mobile in <token>{OTP sms}</token></p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;ConfirmLinkingRequest ver=&quot;1.0&quot;
-timestamp=&quot;2018-05-05T10:27:17.699Z&quot;
-txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
-&lt;token&gt;774265&lt;/token&gt;
+&lt;ConfirmLinkingRequest ver=&quot;1.0&quot; timestamp=&quot;2018-05-05T10:27:17.699Z&quot; txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
+    &lt;Accounts&gt;
+        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;HDFC11111111&quot; maskedAccNumber=&quot;XXXXXXX1212&quot;/&gt;
+    &lt;/Accounts&gt;
+    &lt;Accounts&gt;
+ &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;CURRENT&quot; accRefNumber=&quot;HDFC22222222&quot; maskedAccNumber=&quot;XXXXXXX1313&quot;/&gt;
+    &lt;/Accounts&gt;
+    &lt;token&gt;071092&lt;/token&gt;
+    &lt;AccountsLinkingRefNumber&gt;b4bee7d2-58c3-4170-8db1-c811490b864f&lt;/AccountsLinkingRefNumber&gt;
 &lt;/ConfirmLinkingRequest&gt;
 </code></pre>
 
@@ -521,10 +533,9 @@ txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/FI/request</code></p>
 <p>Request Body</p>
 <pre><code>&lt;FIRequest ver=&quot;1.0&quot; timestamp=&quot;2018-06-09T09:58:50.505Z&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
-    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
-        &lt;DataConsumer id=&quot;123456@finvu.in&quot; type=&quot;AA&quot; callbackURL=&quot;http://localhost:9090/AA/Test&quot;&gt;&lt;/DataConsumer&gt;
-    &lt;RequestFIParams&gt;
-        &lt;KeyMaterials&gt;
+    &lt;ConsentID&gt;6cfd5898-bf81-45bb-9b9d-c177af994964&lt;/ConsentID&gt;
+        &lt;DataConsumer id=&quot;123456@finvu.in&quot; type=&quot;AA&quot; callbackURL=&quot;localhost:9090/AA/Test&quot;&gt;&lt;/DataConsumer&gt;
+    &lt;KeyMaterialList&gt;
             &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505Z&quot;&gt;
                 &lt;SessionID&gt;string&lt;/SessionID&gt;
                 &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505Z&quot;&gt;
@@ -532,21 +543,18 @@ txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
                     &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
                 &lt;/DHPublicKey&gt;
                 &lt;Nonce&gt;12345&lt;/Nonce&gt;
-                &lt;Signature&gt; Signature Value
-                &lt;/Signature&gt;
+                &lt;!--&lt;Signature&gt; Signature Value&lt;/Signature&gt;--&gt;
             &lt;/KeyMaterial&gt;
-        &lt;/KeyMaterials&gt;
-    &lt;/RequestFIParams&gt;
+    &lt;/KeyMaterialList&gt;
 &lt;/FIRequest&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;FIResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-08T10:40:53.307+0000&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot; ConsentID=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
+<pre><code>&lt;FIResponse ver=&quot;1.0&quot; timestamp=&quot;2018-09-22T06:18:35.851+0000&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot; ConsentID=&quot;6cfd5898-bf81-45bb-9b9d-c177af994964&quot;&gt;
     &lt;Sessions&gt;
-        &lt;SessionID&gt;6633fb91-35ca-47b8-8db0-e289d17f180a&lt;/SessionID&gt;
+        &lt;SessionID&gt;17c3f9fe-528d-4c5e-8e4d-1e28640ad5ae&lt;/SessionID&gt;
     &lt;/Sessions&gt;
 &lt;/FIResponse&gt;
-
 </code></pre>
 
 <h3 id="fi-fetch">FI Fetch</h3>
@@ -555,27 +563,22 @@ txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
-    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
+    &lt;ConsentID&gt;6cfd5898-bf81-45bb-9b9d-c177af994964&lt;/ConsentID&gt;
 &lt;/FetchFIRequest&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;FIFetchResponse timestamp=&quot;2018-07-07T14:17:20.949+0000&quot; txnID=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot; ver=&quot;1.0&quot;&gt;
-    &lt;Account FIPId=&quot;fip@sbi.co.in&quot; id=&quot;SBI111111111111&quot; type=&quot;SAVINGS&quot;&gt;
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;FIFetchResponse timestamp=&quot;2018-09-22T06:21:03.083+0000&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot; ver=&quot;1.0&quot;&gt;
+    &lt;Account FIPId=&quot;manoja@cookiejar.co.in&quot; id=&quot;HDFC11111111&quot; type=&quot;SAVINGS&quot;&gt;
         &lt;FIs&gt;
             &lt;FI&gt;
-                &lt;EncryptedFI&gt;SytTWUNmcDhXN1I3b00yWW9EeEFWMTlZYytIaE95dTgxWVdXUlVxNmEwd3RiVEhxRzFGcnc3Q0NL
-UmlXeVIxZlJoa0FoamJiYzA4cXFXQ01yWnRQWjZKYWt6RTVkTk8wbFdhWHFqR3NIejM3Y3hKdjJw
-MktsQXJ2eHVZajAvS0FIWlNJREtMQWM2R1ZzUWw4WTR3S3p5MWtOMHZvSlE5Si9OR0VabzBFQitO
-VlRsUUFqQjM1OC82RDJZSFd6QUg3cUNIZUVRSFRuVGk2WUVvVDQyTXp5dWdweCtsVFdpZ2VjeC93
-S3pkM2RJaUhqMng3cFpMK2c3N25sakwrc3oyOTM1TjN0dTRCa1pzWUhIZzcweHl1NEhwNjFNSW5p
-d0o3Qmd1aFVDSkxJMTRZQzhYbXZxODhaOVJLV1pjOVp0bTR6UEp5S016Q0NUbDJQQXJac3Q3VkNL
-VUUrWkl2bHgvMEZKY2RGR1NzSFhNemVwZ2x1dlVmUkVOTGxGWXFnOHV0QzZsNEFGaTlTMUlnTXBG
-VVFwcHpLc3hVT1g5bG1NK3ozaTllTEJxZmZVZ21RMW5WY1RsN05tWVFTaVE3UGpYWVVrbUFDZHlN
-Z1hHa3MyVTRUbXMyVlJPQ0g3T3c0RDFsemhVSHJLNExITkNkaS9WZTU2V1gzeXNSZkxIQWFhdmNs
-cytLMmlXKzN2VHNpNGRLamN2NkpKcTMrcW5tcy9QeWtESHlRVDdCK1ZpUnQyMGFQcDhPcFgzUWxF
-M05LZWs1&lt;/EncryptedFI&gt;
+                &lt;DateTimeRange/&gt;
+                &lt;EncryptedFI&gt;RkxzMlJmMEovUnlhQVZGUUlWcnBwU3BtUTMxUFNhQzBPSW9aQWhEMG1SdFgyOWJGalZkUTkxR2Fn
+eCtLNklCR2xiRmliUVc4eWVITDIyRkFOSFRPWTRKRlMrTTlKSG5UdHdObFJmYlh1RjdmaVA0OXFU
+N2JYYjJpQmduZitOTlVPUU1xU0V0SVdGMG5PZGF0aE1xSTRGYytQY2FTdWNzWFkxamFKcTlpOHp3
+U2VPN1JYRmo4dE9jcTIwK2V5TWNaT3lnRUtucXRGNTc2WTIzRXQzbTJrWlFwWEZ6UUwzY216Nmlr
+eHAxSnZyQ09RQytINUV2cXBTay9ZS0xEY3RXOEVGdHFXcnpNYllMVFhMSDdNelpUY3c9PQ==&lt;/EncryptedFI&gt;
                 &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505+0000&quot;&gt;
                     &lt;SessionID/&gt;
                     &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505+0000&quot;&gt;
@@ -583,8 +586,7 @@ M05LZWs1&lt;/EncryptedFI&gt;
                         &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
                     &lt;/DHPublicKey&gt;
                     &lt;Nonce&gt;12345&lt;/Nonce&gt;
-                    &lt;Signature&gt; Signature Value
-                &lt;/Signature&gt;
+                    &lt;Signature/&gt;
                 &lt;/KeyMaterial&gt;
             &lt;/FI&gt;
         &lt;/FIs&gt;
@@ -598,14 +600,14 @@ M05LZWs1&lt;/EncryptedFI&gt;
                     &lt;Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/&gt;
                 &lt;/Transforms&gt;
                 &lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;
-                &lt;DigestValue&gt;42WWu5X0m7UGpcTZdLmAuBVILDo=&lt;/DigestValue&gt;
+                &lt;DigestValue&gt;ra6c+LwH47DoYbFauZ6STzx7+eI=&lt;/DigestValue&gt;
             &lt;/Reference&gt;
         &lt;/SignedInfo&gt;
-        &lt;SignatureValue&gt;cAxxuZdaoRw5GMfyQfzjuLLqD8nRfGg7YP7ZvaR4Ad7XcNH8OqE/c7prR4/9KlfT15K0q/n8Sya3
-sSRHTxGpOtRpvRtLtEim5ocQ4DrOupOnS7T/QWnHWvrmQsMuitQPVvpeuA/q/dKBKlGhw1uI2hz0
-V/JVfJl06vpyZXaM7RZrGu8Arh/mD2G29hfYnvBRmhFfxgMPnQQBWitUgMRAkzV9J7d+QunfqQPj
-KWgBaAL+9TB1RP1kutv3BNNFcjP3HLTr0LdpAelEY8gdMwbH+9cwKzgULrpbJT0Hx5yeVjZ8sEpI
-/DTMY/n9AlEb61vM/MNEE+EfN4raWRDbIriNjw==&lt;/SignatureValue&gt;
+        &lt;SignatureValue&gt;QUWYCLOzqHFEgNDyr4yh34iWWlTQaZ+yGEMrgeyejSOP+Cf5w1UOGlzGv9unyklsErbAJt4GI5E7
+vVqF52C846ugD6eNEXsVzMMoPG6q7vTa+06DlBF/OagICFNEFYJI72anqH227ZsXkDSGuv5HA7jd
+UUt39wLoX8c/y3qZyJPLpyPuRJlxxSjvDaEjlD50Lc7v9nW5LBGCxM4x8jriq/SV//0qRYCCI8iI
+pW+8JuPpzoF2A8OtZ8B2WzuH2EyuNUMul3UUL29u/Y/onmbzN0EEASA/3q0h7TS7xZ0QVpod3l5M
+orInql9N3sWzejwRflJL3fCwwpHa3dPazxDxhw==&lt;/SignatureValue&gt;
         &lt;KeyInfo&gt;
             &lt;X509Data&gt;
                 &lt;X509SubjectName&gt;CN=PP,OU=CTPL,O=CTPL,L=Pune,ST=Maharashtra,C=IN&lt;/X509SubjectName&gt;
@@ -636,15 +638,11 @@ syBiW1qx&lt;/X509Certificate&gt;
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/Notification</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Notification xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T08:04:28.541Z&quot; txnid=&quot;eccdfcb0-a7aa-4168-9634-aba34ac5e086&quot;&gt;
-    &lt;From type=&quot;AA&quot; value=&quot;123456@finvu.in&quot; name=&quot;Finvu Account Aggregator&quot; id=&quot;123456@finvu.in&quot;&gt;
-    &lt;/From&gt;
-    &lt;To type=&quot;FIP&quot; value=&quot;12345@hdfc.co.in&quot; name=&quot;HDFC&quot; id=&quot;12345@hdfc.co.in&quot;&gt;
-    &lt;/To&gt;
-    &lt;Event type=&quot;CONSENT-REVOKED&quot;&gt;
-    &lt;/Event&gt;
-    &lt;Consent id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
-    &lt;/Consent&gt;
+&lt;Notification xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-06-16T06:54:54.435Z&quot; txnid=&quot;eccdfcb0-a7aa-4168-9634-aba34ac5e086&quot;&gt;
+    &lt;From type=&quot;string&quot; value=&quot;string&quot; name=&quot;string&quot; id=&quot;123456@finvu.in&quot;/&gt;
+    &lt;To type=&quot;string&quot; value=&quot;string&quot; name=&quot;string&quot; id=&quot;123456@finvu.in&quot;/&gt;
+    &lt;Event type=&quot;CONSENT-REVOKED&quot;/&gt;
+    &lt;Consent id=&quot;fd65ec71-db15-4ef4-b2dd-ec29090c6473&quot;&gt;&lt;/Consent&gt;
     &lt;Payload&gt;string&lt;/Payload&gt;
 &lt;/Notification&gt;
 </code></pre>
@@ -661,7 +659,11 @@ syBiW1qx&lt;/X509Certificate&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>200 OK
+<pre><code>&lt;HeartbeatResponse ver=&quot;1.0&quot;&gt;
+    &lt;timestamp&gt;2018-06-25T22:58:01.000+0000&lt;/timestamp&gt;
+    &lt;Error errMsg=&quot;OK&quot; errCode=&quot;200&quot;/&gt;
+    &lt;Status&gt;UP&lt;/Status&gt;
+&lt;/HeartbeatResponse&gt;
 </code></pre>
                 
                   

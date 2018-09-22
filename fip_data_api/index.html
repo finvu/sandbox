@@ -325,17 +325,46 @@
 </table>
 <p>Request Body</p>
 <pre><code>&lt;UserAccountInfo&gt;
-    &lt;UserAccount accountRefNo=&quot;RefSBI001&quot; accountNo=&quot;SBI111111111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
-        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;9822289017&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;5555530495555&quot;&gt;&lt;/Identifiers&gt;  
+  &lt;FIPDetails id=&quot;fipHDFC555&quot; name=&quot;HDFC&quot; authenticatorType=&quot;TOKEN&quot; fipAccessToken=&quot;fip_api_key&quot; fipEndpointUri=&quot;http://api.finvu.in/ConnectHub/V1&quot;&gt;
+    &lt;UserAccount accountRefNo=&quot;HDFC11111111&quot; accountNo=&quot;HDFC11111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
+      &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
     &lt;/UserAccount&gt;
-    &lt;UserAccount accountRefNo=&quot;RefSBI002&quot; accountNo=&quot;SBI222222222222&quot; accountTypeEnum=&quot;CURRENT&quot; FIType=&quot;DEPOSIT&quot;&gt;
-        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;9822289017&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;5555530495555&quot;&gt;&lt;/Identifiers&gt;  
+    &lt;UserAccount accountRefNo=&quot;HDFC22222222&quot; accountNo=&quot;HDFC22222222&quot; accountTypeEnum=&quot;CURRENT&quot; FIType=&quot;DEPOSIT&quot;&gt;
+      &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
     &lt;/UserAccount&gt;
+  &lt;/FIPDetails&gt;
+  &lt;FIPDetails id=&quot;fipSBI4545&quot; name=&quot;SBI&quot; authenticatorType=&quot;DIRECT&quot; fipAccessToken=&quot;fip_api_key&quot; fipEndpointUri=&quot;http://api.finvu.in/ConnectHub/V1&quot;&gt;
+    &lt;UserAccount accountRefNo=&quot;SBI11111111&quot; accountNo=&quot;SBI11111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
+      &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
+    &lt;/UserAccount&gt;
+  &lt;/FIPDetails&gt;
 &lt;/UserAccountInfo&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>User account added.
+<pre><code>User account(s) added.
+
+  Account Reference Number : HDFC11111111
+  Account Number : HDFC11111111
+  Consent Id : 1f6a52e8-dab8-4bf9-9191-ee1729f36e09
+  FIP Name : HDFC
+  FIP Id : fipHDFC555  (It use in Account Discovery.)
+
+
+  Account Reference Number : HDFC22222222
+  Account Number : HDFC22222222
+  Consent Id : d1c99586-96d5-4529-b5be-4c27e1807522
+  FIP Name : HDFC
+  FIP Id : fipHDFC555  (It use in Account Discovery.)
+
+
+  Account Reference Number : SBI11111111
+  Account Number : SBI11111111
+  Consent Id : fa29ba18-1214-4a4d-aa58-608f82f63976
+  FIP Name : SBI
+  FIP Id : fipSBI4545  (It use in Account Discovery.)
+
+ Please save this information for FI request API calls.
 </code></pre>
 
 <h2 id="adding-user-account-transaction">Adding User Account Transaction</h2>
@@ -360,23 +389,23 @@
 <p>Request Body</p>
 <pre><code>&lt;UserAccountTrans&gt;
         &lt;UserAccount&gt; 
-            &lt;accountRefNo&gt;RefSBI002&lt;/accountRefNo&gt; 
-            &lt;accountNo&gt;SBI222222222222&lt;/accountNo&gt; 
+            &lt;accountRefNo&gt;RefHDFC0001&lt;/accountRefNo&gt; 
+            &lt;accountNo&gt;HDFC111111111111&lt;/accountNo&gt; 
             &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
-            &lt;accountTypeEnum&gt;CURRENT&lt;/accountTypeEnum&gt;
+            &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
             &lt;accountData&gt;
-            &lt;![CDATA[
-            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-            &lt;Account xmlns=&quot;http://api.rebit.org.in/FISchema/deposit&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://api.rebit.org.in/FISchema/deposit ../FISchema/deposit.xsd&quot; id=&quot;accountNumber&quot; type=&quot;deposit&quot;&gt;
-                &lt;Summary type=&quot;current&quot; openingDate=&quot;2002-09-24&quot; ifscCode=&quot;AIRP0000001&quot; micrCode=&quot;&quot; branch=&quot;&quot; facility=&quot;OD&quot; currentBalance=&quot;&quot;    currentODLimit=&quot;&quot;&gt;
-                &lt;Holders type=&quot;single&quot;&gt;
-                    &lt;Holder order=&quot;1|2&quot; name=&quot;&quot; aadhaar=&quot;123456789012&quot; mobile=&quot;&quot; landline=&quot;&quot; address=&quot;&quot; email=&quot;qw.1234@co.in&quot; pan=&quot;AAAPL1234C&quot;/&gt;&lt;/Holders&gt;
-                &lt;/Summary&gt;
-                &lt;Transactions startDate=&quot;2002-09-24&quot; endDate=&quot;2002-09-24&quot;&gt;
-                    &lt;Transaction id=&quot;&quot; date=&quot;2002-09-24&quot; narration=&quot;&quot; reference=&quot;&quot; amount=&quot;800&quot; balance=&quot;90&quot;/&gt;
-            &lt;/Transactions&gt;
-            &lt;/Account&gt;
-            ]]&gt;
+    &lt;![CDATA[
+      &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;Account xmlns=&quot;http://api.rebit.org.in/FISchema/deposit&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://api.rebit.org.in/FISchema/deposit ../FISchema/deposit.xsd&quot; id=&quot;accountNumber&quot; type=&quot;deposit&quot;&gt;
+    &lt;Summary type=&quot;current&quot; openingDate=&quot;2002-09-24&quot; ifscCode=&quot;AIRP0000001&quot; micrCode=&quot;&quot; branch=&quot;&quot; facility=&quot;OD&quot; currentBalance=&quot;&quot;    currentODLimit=&quot;&quot;&gt;
+          &lt;Holders type=&quot;single&quot;&gt;
+    &lt;Holder order=&quot;1|2&quot; name=&quot;&quot; aadhaar=&quot;123456789012&quot; mobile=&quot;&quot; landline=&quot;&quot; address=&quot;&quot; email=&quot;qw.1234@co.in&quot; pan=&quot;AAAPL1234C&quot;/&gt;&lt;/Holders&gt;
+    &lt;/Summary&gt;
+    &lt;Transactions startDate=&quot;2002-09-24&quot; endDate=&quot;2002-09-24&quot;&gt;
+          &lt;Transaction id=&quot;&quot; date=&quot;2002-09-24&quot; narration=&quot;&quot; reference=&quot;&quot; amount=&quot;800&quot; balance=&quot;90&quot;/&gt;
+  &lt;/Transactions&gt;
+      &lt;/Account&gt;
+    ]]&gt;
             &lt;/accountData&gt;
         &lt;/UserAccount&gt;
 &lt;/UserAccountTrans&gt;
