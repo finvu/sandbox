@@ -1,0 +1,747 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>AA API Simulator - Finvu API Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#aa-api-simulator" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Finvu API Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../images/finvu_logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Finvu API Docs
+              </span>
+              <span class="md-header-nav__topic">
+                AA API Simulator
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../images/finvu_logo.png" width="48" height="48">
+      
+    </span>
+    Finvu API Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_simulator/" title="FIP API (Simulator)" class="md-nav__link">
+      FIP API (Simulator)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_data_api/" title="FIP Data API" class="md-nav__link">
+      FIP Data API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        AA API Simulator
+      </label>
+    
+    <a href="./" title="AA API Simulator" class="md-nav__link md-nav__link--active">
+      AA API Simulator
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#request-headers" title="Request headers" class="md-nav__link">
+    Request headers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-request" title="API Request" class="md-nav__link">
+    API Request
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consents" title="Consents" class="md-nav__link">
+    Consents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consentsconsentshandle" title="Consents/{consentsHandle}" class="md-nav__link">
+    Consents/{consentsHandle}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consentsid" title="Consents/{id}" class="md-nav__link">
+    Consents/{id}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firequest" title="/FI/request" class="md-nav__link">
+    /FI/request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifetchsessionid" title="/FI/fetch/{sessionId}" class="md-nav__link">
+    /FI/fetch/{sessionId}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heartbeat" title="Heartbeat" class="md-nav__link">
+    Heartbeat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#request-headers" title="Request headers" class="md-nav__link">
+    Request headers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-request" title="API Request" class="md-nav__link">
+    API Request
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consents" title="Consents" class="md-nav__link">
+    Consents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consentsconsentshandle" title="Consents/{consentsHandle}" class="md-nav__link">
+    Consents/{consentsHandle}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consentsid" title="Consents/{id}" class="md-nav__link">
+    Consents/{id}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firequest" title="/FI/request" class="md-nav__link">
+    /FI/request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifetchsessionid" title="/FI/fetch/{sessionId}" class="md-nav__link">
+    /FI/fetch/{sessionId}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heartbeat" title="Heartbeat" class="md-nav__link">
+    Heartbeat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="aa-api-simulator">AA API (Simulator)</h1>
+<p>This is a simulator implementation of the AA API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
+<h2 id="request-headers">Request headers</h2>
+<p>Below <code>http</code> headers need to be set as part of each request</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td align="center"><code>application/xml</code></td>
+</tr>
+<tr>
+<td><code>aa_api_key</code></td>
+<td align="center"><code>Please email us on info@cookiejar.co.in for obtaining the key</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="api-request">API Request</h2>
+<p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT AA API Specs.</p>
+<h3 id="consents">Consents</h3>
+<p>For simulation purpose, this API is intended for AA Client to request generation of digitally signed consent artefacts.</p>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://215.216.217.71:9090/API/V1/Consents</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ConsentsRequest xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606Z&quot; txnid=&quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;&gt;
+    &lt;FIP id=&quot;fip-1&quot;&gt;&lt;/FIP&gt;
+    &lt;FIU id=&quot;fiu-1&quot;&gt;&lt;/FIU&gt;
+    &lt;AA id=&quot;aa-1&quot;&gt;&lt;/AA&gt;
+    &lt;Customer idTypes=&quot;string&quot; id=&quot;string&quot;&gt;&lt;/Customer&gt;
+    &lt;FITypes&gt;
+        &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
+    &lt;/FITypes&gt;
+    &lt;Data-Items&gt;
+        &lt;Data id=&quot;string&quot; type=&quot;TRANSACTIONAL&quot;&gt;
+            &lt;Access mode=&quot;STORE&quot;&gt;&lt;/Access&gt;
+            &lt;DateTimeRange from=&quot;2017-07-13T11:33:34.509Z&quot; to=&quot;2018-07-13T11:33:34.509Z&quot;&gt;&lt;/DateTimeRange&gt;
+            &lt;DataLife unit=&quot;MONTH&quot; value=&quot;string&quot;&gt;&lt;/DataLife&gt;
+            &lt;Frequency unit=&quot;DAILY&quot;&gt;&lt;/Frequency&gt;
+            &lt;Datafilter&gt;&lt;/Datafilter&gt;
+        &lt;/Data&gt;
+    &lt;/Data-Items&gt;
+    &lt;ConsentUse logUri=&quot;string&quot;&gt;&lt;/ConsentUse&gt;
+    &lt;DataAccess logUri=&quot;string&quot;&gt;&lt;/DataAccess&gt;
+    &lt;Purpose code=&quot;string&quot; refUri=&quot;string&quot; text=&quot;string&quot;&gt;
+        &lt;Category type=&quot;string&quot;&gt;&lt;/Category&gt;
+    &lt;/Purpose&gt;
+    &lt;Signature&gt;c3RyaW5n&lt;/Signature&gt;
+&lt;/ConsentsRequest&gt;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ConsentsRequest xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606Z&quot; txnid=&quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;&gt;
+    &lt;FIP id=&quot;fip-1&quot;&gt;&lt;/FIP&gt;
+    &lt;FIU id=&quot;fiu-1&quot;&gt;&lt;/FIU&gt;
+    &lt;AA id=&quot;aa-1&quot;&gt;&lt;/AA&gt;
+    &lt;Customer idTypes=&quot;string&quot; id=&quot;string&quot;&gt;&lt;/Customer&gt;
+    &lt;FITypes&gt;
+        &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
+    &lt;/FITypes&gt;
+    &lt;Data-Items&gt;
+        &lt;Data id=&quot;string&quot; type=&quot;TRANSACTIONAL&quot;&gt;
+            &lt;Access mode=&quot;STORE&quot;&gt;&lt;/Access&gt;
+            &lt;DateTimeRange from=&quot;2017-07-13T11:33:34.509Z&quot; to=&quot;2018-07-13T11:33:34.509Z&quot;&gt;&lt;/DateTimeRange&gt;
+            &lt;DataLife unit=&quot;MONTH&quot; value=&quot;string&quot;&gt;&lt;/DataLife&gt;
+            &lt;Frequency unit=&quot;DAILY&quot;&gt;&lt;/Frequency&gt;
+            &lt;Datafilter&gt;&lt;/Datafilter&gt;
+        &lt;/Data&gt;
+    &lt;/Data-Items&gt;
+    &lt;ConsentUse logUri=&quot;string&quot;&gt;&lt;/ConsentUse&gt;
+    &lt;DataAccess logUri=&quot;string&quot;&gt;&lt;/DataAccess&gt;
+    &lt;Purpose code=&quot;string&quot; refUri=&quot;string&quot; text=&quot;string&quot;&gt;
+        &lt;Category type=&quot;string&quot;&gt;&lt;/Category&gt;
+    &lt;/Purpose&gt;
+    &lt;Signature&gt;c3RyaW5n&lt;/Signature&gt;
+&lt;/ConsentsRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;ConsentsResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606+0000&quot; id=&quot;string&quot; type=&quot;string&quot;&gt;
+    &lt;ConsentsHandle&gt;e2376170-0e47-4e67-9ceb-66073bac393d&lt;/ConsentsHandle&gt;
+&lt;/ConsentsResponse&gt;
+</code></pre>
+
+<h3 id="consentsconsentshandle">Consents/{consentsHandle}</h3>
+<p>For simulation purpose, this API is intended for checking the status of a previously submitted Consent Artefacts creation request</p>
+<p>HTTP METHOD: <code>GET</code></p>
+<p>URL: <code>http://215.216.217.71:9090/API/V1/Consents/{consentsHandle}</code></p>
+<p>Request Body</p>
+<pre><code>No Request Body expected
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;ConsentStatus ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606+0000&quot;&gt;
+    &lt;ConsentsHandle&gt;e2376170-0e47-4e67-9ceb-66073bac393d&lt;/ConsentsHandle&gt;
+    &lt;Status/&gt;
+    &lt;Consents&gt;
+        &lt;Consents/&gt;&lt;/Consents&gt;
+&lt;/ConsentStatus&gt;
+</code></pre>
+
+<h3 id="consentsid">Consents/{id}</h3>
+<p>For simulation purpose, This API is intended for fetching the information associated with the specific consent.</p>
+<p>HTTP METHOD: <code>GET</code></p>
+<p>URL: <code>http://215.216.217.71:9090/API/V1/Consents/Consent/{id}</code></p>
+<p>Request Body</p>
+<pre><code>No Request Body expected
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;ConsentArtefact ver=&quot;1.0&quot; id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot; createTime=&quot;2018-10-08T09:29:23.034+0000&quot; startTime=&quot;2018-10-08T09:29:23.034+0000&quot; expireTime=&quot;2020-07-07T05:48:14.000+0000&quot;&gt;
+    &lt;FIP id=&quot;fip@sbi.co.in&quot;/&gt;
+    &lt;AA id=&quot;123456@finvu.in&quot;/&gt;
+    &lt;User idTypes=&quot;MOBILE&quot; id=&quot;9822289017&quot;/&gt;
+    &lt;Account FIType=&quot;DEPOSIT&quot; FIPId=&quot;fip@sbi.co.in&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;SBI123456&quot; maskedAccNumber=&quot;SBI111111111111&quot;/&gt;
+    &lt;Data-Items&gt;
+        &lt;Data id=&quot;data123&quot; type=&quot;PROFILE&quot;&gt;
+            &lt;Access mode=&quot;VIEW&quot;/&gt;
+            &lt;DateTimeRange from=&quot;2017-07-13T06:03:34.000+0000&quot; to=&quot;2018-07-13T06:03:34.000+0000&quot;/&gt;
+            &lt;DataLife value=&quot;data_life_value&quot;/&gt;
+            &lt;Frequency unit=&quot;MONTHLY&quot;/&gt;
+            &lt;Datafilter/&gt;
+        &lt;/Data&gt;
+    &lt;/Data-Items&gt;
+    &lt;ConsentUse logUri=&quot;consent_use_loguri&quot;/&gt;
+    &lt;DataAccess logUri=&quot;dataaccess_loguri&quot;/&gt;
+    &lt;Purpose code=&quot;consent_purpose_code&quot; refUri=&quot;consent_purpose_refuri&quot; text=&quot;consent_purpose_free_text&quot;&gt;
+        &lt;Category type=&quot;type&quot;/&gt;
+    &lt;/Purpose&gt;
+    &lt;Signature&gt;AA signature&lt;/Signature&gt;
+&lt;/ConsentArtefact&gt;
+</code></pre>
+
+<h3 id="firequest">/FI/request</h3>
+<p>For simulation purpose, the FIU or the User submits the Consent IDs of the consents required for fetching financial information from the FIP(s).</p>
+<p>HTTP METHOD: <code>consent_purpose_free_text</code></p>
+<p>URL: <code>http://215.216.217.71:9090/API/V1/FI/request</code></p>
+<p>Request Body</p>
+<pre><code>&lt;FIRequest timestamp=&quot;2018-07-10T15:04:39.066Z&quot; ver=&quot;v1.0&quot; txnid=&quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;&gt;
+    &lt;DataConsumer id=&quot;string&quot; type=&quot;FIU&quot; callbackURL=&quot;string&quot;&gt;&lt;/DataConsumer&gt;
+    &lt;DateTimeRange from=&quot;2017-10-08T11:00:34.169Z&quot; to=&quot;2018-10-08T11:00:34.169Z&quot;&gt;&lt;/DateTimeRange&gt;
+    &lt;FIRequestParams&gt;
+        &lt;Consent id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot; status=&quot;READY&quot;&gt;&lt;/Consent&gt;
+        &lt;KeyMaterials&gt;
+            &lt;KeyMaterial startTime=&quot;2018-10-08T11:00:34.169Z&quot; cryptoAlg=&quot;ECDHE&quot; curve=&quot;Curve25519&quot; params=&quot;string&quot;&gt;
+                &lt;Session sessionId=&quot;caa2f259-2dc2-4075-87aa-6d81018b6183&quot; status=&quot;string&quot;&gt;&lt;/Session&gt;
+                &lt;DHPublicKey expiry=&quot;1531236622970&quot;&gt;
+                    &lt;Parameters&gt;params&lt;/Parameters&gt;
+                    &lt;KeyValue&gt;keyvalue&lt;/KeyValue&gt;
+                &lt;/DHPublicKey&gt;
+                &lt;Nonce&gt;0&lt;/Nonce&gt;
+                &lt;Signature&gt;signature12&lt;/Signature&gt;
+            &lt;/KeyMaterial&gt;
+        &lt;/KeyMaterials&gt;
+    &lt;/FIRequestParams&gt;
+&lt;/FIRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;FIResponse ver=&quot;v1.0&quot; timestamp=&quot;2018-10-13T09:29:08.243+0000&quot; txnid=&quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;&gt;
+    &lt;ScheduledFIRequests&gt;
+        &lt;ScheduledFIRequest&gt;
+            &lt;Consent id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot;/&gt;
+            &lt;Sessions&gt;
+                &lt;Sessions sessionId=&quot;2fc5d57b-34fa-485d-a1d4-240f8bf36dc3&quot;/&gt;&lt;/Sessions&gt;
+        &lt;/ScheduledFIRequest&gt;
+    &lt;/ScheduledFIRequests&gt;
+&lt;/FIResponse&gt;
+</code></pre>
+
+<h3 id="fifetchsessionid">/FI/fetch/{sessionId}</h3>
+<p>For simulation purpose, Once FIU receives the notification <Data-Ready> from AA, using digitally signed consent request received from AA, this API can be used to fetch the financial information from the AA.</p>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://215.216.217.71:9090/API/V1/FI/fetch/{sessionId}</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
+    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
+&lt;/FetchFIRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;FIFetchResponse&gt;
+    &lt;Session sessionId=&quot;d07d6e93-0e3d-489f-92fd-ec6a5523fd82&quot;/&gt;
+    &lt;KeyMaterial startTime=&quot;2018-05-31T22:58:50.000+0000&quot; cryptoAlg=&quot;cryptoAlg&quot; curve=&quot;Curve&quot; params=&quot;key param&quot;&gt;
+        &lt;Session sessionId=&quot;string&quot;/&gt;
+        &lt;DHPublicKey expiry=&quot;2019-05-31T22:58:50.000+0000&quot;&gt;
+            &lt;Parameters&gt;parameters&lt;/Parameters&gt;
+            &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
+        &lt;/DHPublicKey&gt;
+        &lt;Nonce&gt;123&lt;/Nonce&gt;
+        &lt;Signature&gt;Signature Value&lt;/Signature&gt;
+    &lt;/KeyMaterial&gt;
+    &lt;FIs&gt;
+        &lt;FI&gt;
+            &lt;EncryptedData/&gt;
+            &lt;Account FIType=&quot;DEPOSIT&quot; FIPId=&quot;fip@sbi.co.in&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;SBI123456&quot; maskedAccNumber=&quot;SBI111111111111&quot;/&gt;
+        &lt;/FI&gt;
+    &lt;/FIs&gt;
+&lt;/FIFetchResponse&gt;
+</code></pre>
+
+<h3 id="notification">Notification</h3>
+<p>For simulation purpose, API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://215.216.217.71:9090/API/V1/Notification</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
+    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
+&lt;/FetchFIRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;FIFetchResponse&gt;
+    &lt;Session sessionId=&quot;d07d6e93-0e3d-489f-92fd-ec6a5523fd82&quot;/&gt;
+    &lt;KeyMaterial startTime=&quot;2018-05-31T22:58:50.000+0000&quot; cryptoAlg=&quot;cryptoAlg&quot; curve=&quot;Curve&quot; params=&quot;key param&quot;&gt;
+        &lt;Session sessionId=&quot;string&quot;/&gt;
+        &lt;DHPublicKey expiry=&quot;2019-05-31T22:58:50.000+0000&quot;&gt;
+            &lt;Parameters&gt;parameters&lt;/Parameters&gt;
+            &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
+        &lt;/DHPublicKey&gt;
+        &lt;Nonce&gt;123&lt;/Nonce&gt;
+        &lt;Signature&gt;Signature Value&lt;/Signature&gt;
+    &lt;/KeyMaterial&gt;
+    &lt;FIs&gt;
+        &lt;FI&gt;
+            &lt;EncryptedData/&gt;
+            &lt;Account FIType=&quot;DEPOSIT&quot; FIPId=&quot;fip@sbi.co.in&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;SBI123456&quot; maskedAccNumber=&quot;SBI111111111111&quot;/&gt;
+        &lt;/FI&gt;
+    &lt;/FIs&gt;
+&lt;/FIFetchResponse&gt;
+</code></pre>
+
+<h3 id="heartbeat">Heartbeat</h3>
+<p>For simulation purpose, This API is used by FIUs to check availability of AAs.</p>
+<p>HTTP METHOD: <code>GET</code></p>
+<p>URL: <code>http://215.216.217.71:9090/API/V1/Heartbeat</code></p>
+<p>Request Body</p>
+<pre><code>No Request Body expected
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;HeartbeatResponse ver=&quot;1.0&quot; timestamp=&quot;2018-06-26T04:28:01.000+0000&quot;&gt;
+    &lt;Error errMsg=&quot;OK&quot; errCode=&quot;200&quot;/&gt;
+    &lt;Status&gt;UP&lt;/Status&gt;
+&lt;/HeartbeatResponse&gt;
+</code></pre>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../fip_data_api/" title="FIP Data API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                FIP Data API
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 Cookiejar Technologies Pvt Ltd.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
