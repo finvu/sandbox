@@ -36,7 +36,7 @@
     
     
       
-        <title>AA API Simulator - Finvu API Docs</title>
+        <title>AA API Sandbox - Finvu API Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#aa-api-simulator" tabindex="1" class="md-skip">
+      <a href="#aa-api-sandbox" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
                 Finvu API Docs
               </span>
               <span class="md-header-nav__topic">
-                AA API Simulator
+                AA API Sandbox
               </span>
             
           
@@ -221,11 +221,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        AA API Simulator
+        AA API Sandbox
       </label>
     
-    <a href="./" title="AA API Simulator" class="md-nav__link md-nav__link--active">
-      AA API Simulator
+    <a href="./" title="AA API Sandbox" class="md-nav__link md-nav__link--active">
+      AA API Sandbox
     </a>
     
       
@@ -424,8 +424,8 @@
               
                 
                 
-                <h1 id="aa-api-simulator">AA API (Simulator)</h1>
-<p>This is a simulator implementation of the AA API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
+                <h1 id="aa-api-sandbox">AA API Sandbox</h1>
+<p>This is a Sandbox implementation of the AA API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
 <h2 id="request-headers">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -449,7 +449,7 @@
 <h2 id="api-request">API Request</h2>
 <p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT AA API Specs.</p>
 <h3 id="consents">Consents</h3>
-<p>For simulation purpose, this API is intended for AA Client to request generation of digitally signed consent artefacts.</p>
+<p>This API is intended for AA Client to request generation of digitally signed consent artefacts.</p>
 <p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://215.216.217.71:9090/API/V1/Consents</code></p>
 <p>Request Body</p>
@@ -511,7 +511,7 @@
 </code></pre>
 
 <h3 id="consentsconsentshandle">Consents/{consentsHandle}</h3>
-<p>For simulation purpose, this API is intended for checking the status of a previously submitted Consent Artefacts creation request</p>
+<p>This API is intended for checking the status of a previously submitted Consent Artefacts creation request</p>
 <p>HTTP METHOD: <code>GET</code></p>
 <p>URL: <code>http://215.216.217.71:9090/API/V1/Consents/{consentsHandle}</code></p>
 <p>Request Body</p>
@@ -528,7 +528,7 @@
 </code></pre>
 
 <h3 id="consentsid">Consents/{id}</h3>
-<p>For simulation purpose, This API is intended for fetching the information associated with the specific consent.</p>
+<p>This API is intended for fetching the information associated with the specific consent.</p>
 <p>HTTP METHOD: <code>GET</code></p>
 <p>URL: <code>http://215.216.217.71:9090/API/V1/Consents/Consent/{id}</code></p>
 <p>Request Body</p>
@@ -560,7 +560,7 @@
 </code></pre>
 
 <h3 id="firequest">/FI/request</h3>
-<p>For simulation purpose, the FIU or the User submits the Consent IDs of the consents required for fetching financial information from the FIP(s).</p>
+<p>The FIU or the User submits the Consent IDs of the consents required for fetching financial information from the FIP(s).</p>
 <p>HTTP METHOD: <code>consent_purpose_free_text</code></p>
 <p>URL: <code>http://215.216.217.71:9090/API/V1/FI/request</code></p>
 <p>Request Body</p>
@@ -597,7 +597,7 @@
 </code></pre>
 
 <h3 id="fifetchsessionid">/FI/fetch/{sessionId}</h3>
-<p>For simulation purpose, Once FIU receives the notification <Data-Ready> from AA, using digitally signed consent request received from AA, this API can be used to fetch the financial information from the AA.</p>
+<p>Once FIU receives the notification <Data-Ready> from AA, using digitally signed consent request received from AA, this API can be used to fetch the financial information from the AA.</p>
 <p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://215.216.217.71:9090/API/V1/FI/fetch/{sessionId}</code></p>
 <p>Request Body</p>
@@ -629,7 +629,7 @@
 </code></pre>
 
 <h3 id="notification">Notification</h3>
-<p>For simulation purpose, API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
+<p>API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
 <p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://215.216.217.71:9090/API/V1/Notification</code></p>
 <p>Request Body</p>
@@ -661,7 +661,7 @@
 </code></pre>
 
 <h3 id="heartbeat">Heartbeat</h3>
-<p>For simulation purpose, This API is used by FIUs to check availability of AAs.</p>
+<p>This API is used by FIUs to check availability of AAs.</p>
 <p>HTTP METHOD: <code>GET</code></p>
 <p>URL: <code>http://215.216.217.71:9090/API/V1/Heartbeat</code></p>
 <p>Request Body</p>
