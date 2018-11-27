@@ -451,33 +451,9 @@
 <h3 id="consents">Consents</h3>
 <p>This API is intended for AA Client to request generation of digitally signed consent artefacts.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://215.216.217.71:9090/API/V1/Consents</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Consents</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;ConsentsRequest xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606Z&quot; txnid=&quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;&gt;
-    &lt;FIP id=&quot;fip-1&quot;&gt;&lt;/FIP&gt;
-    &lt;FIU id=&quot;fiu-1&quot;&gt;&lt;/FIU&gt;
-    &lt;AA id=&quot;aa-1&quot;&gt;&lt;/AA&gt;
-    &lt;Customer idTypes=&quot;string&quot; id=&quot;string&quot;&gt;&lt;/Customer&gt;
-    &lt;FITypes&gt;
-        &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
-    &lt;/FITypes&gt;
-    &lt;Data-Items&gt;
-        &lt;Data id=&quot;string&quot; type=&quot;TRANSACTIONAL&quot;&gt;
-            &lt;Access mode=&quot;STORE&quot;&gt;&lt;/Access&gt;
-            &lt;DateTimeRange from=&quot;2017-07-13T11:33:34.509Z&quot; to=&quot;2018-07-13T11:33:34.509Z&quot;&gt;&lt;/DateTimeRange&gt;
-            &lt;DataLife unit=&quot;MONTH&quot; value=&quot;string&quot;&gt;&lt;/DataLife&gt;
-            &lt;Frequency unit=&quot;DAILY&quot;&gt;&lt;/Frequency&gt;
-            &lt;Datafilter&gt;&lt;/Datafilter&gt;
-        &lt;/Data&gt;
-    &lt;/Data-Items&gt;
-    &lt;ConsentUse logUri=&quot;string&quot;&gt;&lt;/ConsentUse&gt;
-    &lt;DataAccess logUri=&quot;string&quot;&gt;&lt;/DataAccess&gt;
-    &lt;Purpose code=&quot;string&quot; refUri=&quot;string&quot; text=&quot;string&quot;&gt;
-        &lt;Category type=&quot;string&quot;&gt;&lt;/Category&gt;
-    &lt;/Purpose&gt;
-    &lt;Signature&gt;c3RyaW5n&lt;/Signature&gt;
-&lt;/ConsentsRequest&gt;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;ConsentsRequest xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606Z&quot; txnid=&quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;&gt;
     &lt;FIP id=&quot;fip-1&quot;&gt;&lt;/FIP&gt;
     &lt;FIU id=&quot;fiu-1&quot;&gt;&lt;/FIU&gt;
@@ -513,7 +489,7 @@
 <h3 id="consentsconsentshandle">Consents/{consentsHandle}</h3>
 <p>This API is intended for checking the status of a previously submitted Consent Artefacts creation request</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://215.216.217.71:9090/API/V1/Consents/{consentsHandle}</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Consents/{consentsHandle}</code></p>
 <p>Request Body</p>
 <pre><code>No Request Body expected
 </code></pre>
@@ -530,7 +506,7 @@
 <h3 id="consentsid">Consents/{id}</h3>
 <p>This API is intended for fetching the information associated with the specific consent.</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://215.216.217.71:9090/API/V1/Consents/Consent/{id}</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Consents/Consent/{id}</code></p>
 <p>Request Body</p>
 <pre><code>No Request Body expected
 </code></pre>
@@ -562,7 +538,7 @@
 <h3 id="firequest">/FI/request</h3>
 <p>The FIU or the User submits the Consent IDs of the consents required for fetching financial information from the FIP(s).</p>
 <p>HTTP METHOD: <code>consent_purpose_free_text</code></p>
-<p>URL: <code>http://215.216.217.71:9090/API/V1/FI/request</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/FI/request</code></p>
 <p>Request Body</p>
 <pre><code>&lt;FIRequest timestamp=&quot;2018-07-10T15:04:39.066Z&quot; ver=&quot;v1.0&quot; txnid=&quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;&gt;
     &lt;DataConsumer id=&quot;string&quot; type=&quot;FIU&quot; callbackURL=&quot;string&quot;&gt;&lt;/DataConsumer&gt;
@@ -599,7 +575,7 @@
 <h3 id="fifetchsessionid">/FI/fetch/{sessionId}</h3>
 <p>Once FIU receives the notification <Data-Ready> from AA, using digitally signed consent request received from AA, this API can be used to fetch the financial information from the AA.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://215.216.217.71:9090/API/V1/FI/fetch/{sessionId}</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/FI/fetch/{sessionId}</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
@@ -631,39 +607,27 @@
 <h3 id="notification">Notification</h3>
 <p>API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://215.216.217.71:9090/API/V1/Notification</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Notification</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
-    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
-&lt;/FetchFIRequest&gt;
+&lt;Notification xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-06T04:37:19.509Z&quot; txnid=&quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;&gt;
+    &lt;From type=&quot;string&quot; value=&quot;string&quot; name=&quot;SBI&quot; id=&quot;fip123&quot;&gt;&lt;/From&gt;
+    &lt;To type=&quot;string&quot; value=&quot;string&quot; name=&quot;string&quot; id=&quot;string&quot;&gt;&lt;/To&gt;
+    &lt;Event type=&quot;FI-READY&quot;&gt;&lt;/Event&gt;
+    &lt;Consent id=&quot;687c3620-6bb4-43c4-9b9e-39f36c7617fb&quot; status=&quot;string&quot;&gt;&lt;/Consent&gt;
+    &lt;Session sessionId=&quot;9afdacdd-215b-4c17-af18-cdccebfb7d1a&quot; status=&quot;string&quot;&gt;&lt;/Session&gt;
+    &lt;Payload&gt;string&lt;/Payload&gt;
+&lt;/Notification&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;FIFetchResponse&gt;
-    &lt;Session sessionId=&quot;d07d6e93-0e3d-489f-92fd-ec6a5523fd82&quot;/&gt;
-    &lt;KeyMaterial startTime=&quot;2018-05-31T22:58:50.000+0000&quot; cryptoAlg=&quot;cryptoAlg&quot; curve=&quot;Curve&quot; params=&quot;key param&quot;&gt;
-        &lt;Session sessionId=&quot;string&quot;/&gt;
-        &lt;DHPublicKey expiry=&quot;2019-05-31T22:58:50.000+0000&quot;&gt;
-            &lt;Parameters&gt;parameters&lt;/Parameters&gt;
-            &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
-        &lt;/DHPublicKey&gt;
-        &lt;Nonce&gt;123&lt;/Nonce&gt;
-        &lt;Signature&gt;Signature Value&lt;/Signature&gt;
-    &lt;/KeyMaterial&gt;
-    &lt;FIs&gt;
-        &lt;FI&gt;
-            &lt;EncryptedData/&gt;
-            &lt;Account FIType=&quot;DEPOSIT&quot; FIPId=&quot;fip@sbi.co.in&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;SBI123456&quot; maskedAccNumber=&quot;SBI111111111111&quot;/&gt;
-        &lt;/FI&gt;
-    &lt;/FIs&gt;
-&lt;/FIFetchResponse&gt;
+<pre><code>200 OK
 </code></pre>
 
 <h3 id="heartbeat">Heartbeat</h3>
 <p>This API is used by FIUs to check availability of AAs.</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://215.216.217.71:9090/API/V1/Heartbeat</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Heartbeat</code></p>
 <p>Request Body</p>
 <pre><code>No Request Body expected
 </code></pre>
