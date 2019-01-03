@@ -337,44 +337,37 @@
 </table>
 <p>Request Body</p>
 <pre><code>&lt;UserAccountInfo&gt;
-  &lt;FIPDetails id=&quot;fipHDFC555&quot; name=&quot;HDFC&quot; authenticatorType=&quot;TOKEN&quot; fipAccessToken=&quot;fip_api_key&quot; fipEndpointUri=&quot;http://api.finvu.in/ConnectHub/V1&quot;&gt;
-    &lt;UserAccount accountRefNo=&quot;HDFC11111111&quot; accountNo=&quot;HDFC11111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
+    &lt;UserAccount accountRefNo=&quot;RefHDFC0001&quot; accountNo=&quot;HDFC11111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
       &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
     &lt;/UserAccount&gt;
-    &lt;UserAccount accountRefNo=&quot;HDFC22222222&quot; accountNo=&quot;HDFC22222222&quot; accountTypeEnum=&quot;CURRENT&quot; FIType=&quot;DEPOSIT&quot;&gt;
+    &lt;UserAccount accountRefNo=&quot;RefHDFC0002&quot; accountNo=&quot;HDFC22222222&quot; accountTypeEnum=&quot;CURRENT&quot; FIType=&quot;DEPOSIT&quot;&gt;
       &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
     &lt;/UserAccount&gt;
-  &lt;/FIPDetails&gt;
-  &lt;FIPDetails id=&quot;fipSBI4545&quot; name=&quot;SBI&quot; authenticatorType=&quot;DIRECT&quot; fipAccessToken=&quot;fip_api_key&quot; fipEndpointUri=&quot;http://api.finvu.in/ConnectHub/V1&quot;&gt;
-    &lt;UserAccount accountRefNo=&quot;SBI11111111&quot; accountNo=&quot;SBI11111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
+    &lt;UserAccount accountRefNo=&quot;RefSBI0001&quot; accountNo=&quot;SBI11111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
       &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
     &lt;/UserAccount&gt;
-  &lt;/FIPDetails&gt;
 &lt;/UserAccountInfo&gt;
 </code></pre>
 
 <p>Response Expected: </p>
 <pre><code>User account(s) added.
 
-  Account Reference Number : HDFC11111111
+  Account Reference Number : RefHDFC0001
   Account Number : HDFC11111111
-  Consent Id : 1f6a52e8-dab8-4bf9-9191-ee1729f36e09
-  FIP Name : HDFC
-  FIP Id : fipHDFC555  (It use in Account Discovery.)
+  Consent Id : 2c84eba9-4637-45f5-b42e-00e67c128258
+ (It use in Account Discovery.)
 
 
-  Account Reference Number : HDFC22222222
+  Account Reference Number : RefHDFC0002
   Account Number : HDFC22222222
-  Consent Id : d1c99586-96d5-4529-b5be-4c27e1807522
-  FIP Name : HDFC
-  FIP Id : fipHDFC555  (It use in Account Discovery.)
+  Consent Id : 09670e7c-7dbb-4d45-8e15-dfcc829caab6
+ (It use in Account Discovery.)
 
 
-  Account Reference Number : SBI11111111
+  Account Reference Number : RefSBI0001
   Account Number : SBI11111111
-  Consent Id : fa29ba18-1214-4a4d-aa58-608f82f63976
-  FIP Name : SBI
-  FIP Id : fipSBI4545  (It use in Account Discovery.)
+  Consent Id : b583190a-d51e-4ce2-9981-f51d0e010af9
+ (It use in Account Discovery.)
 
  Please save this information for FI request API calls.
 </code></pre>
@@ -402,7 +395,7 @@
 <pre><code>&lt;UserAccountTrans&gt;
         &lt;UserAccount&gt; 
             &lt;accountRefNo&gt;RefHDFC0001&lt;/accountRefNo&gt; 
-            &lt;accountNo&gt;HDFC111111111111&lt;/accountNo&gt; 
+            &lt;accountNo&gt;HDFC11111111&lt;/accountNo&gt; 
             &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
             &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
             &lt;accountData&gt;
