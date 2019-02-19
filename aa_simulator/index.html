@@ -580,21 +580,36 @@
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;FIFetchResponse&gt;
-    &lt;Session sessionId=&quot;d07d6e93-0e3d-489f-92fd-ec6a5523fd82&quot;/&gt;
-    &lt;KeyMaterial startTime=&quot;2018-05-31T22:58:50.000+0000&quot; cryptoAlg=&quot;cryptoAlg&quot; curve=&quot;Curve&quot; params=&quot;key param&quot;&gt;
-        &lt;Session sessionId=&quot;string&quot;/&gt;
-        &lt;DHPublicKey expiry=&quot;2019-05-31T22:58:50.000+0000&quot;&gt;
-            &lt;Parameters&gt;parameters&lt;/Parameters&gt;
-            &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
+<pre><code>&lt;FIFetchResponse ver=&quot;1.0&quot; timestamp=&quot;2019-02-19T10:17:40.757+0000&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
+    &lt;KeyMaterial startTime=&quot;2019-02-19T10:17:00.254+0000&quot; cryptoAlg=&quot;ECDHE&quot; curve=&quot;Curve25519&quot; params=&quot;None&quot;&gt;
+        &lt;Session sessionId=&quot;f1e02863-4830-47a4-94e7-f8ef665b9887&quot; status=&quot;SESSION-RESUMED&quot;/&gt;
+        &lt;DHPublicKey expiry=&quot;2019-02-20T00:00:00.000+0000&quot;&gt;
+            &lt;Parameters&gt;BBArzwyRRrS7/h1MVDs6QV6H&lt;/Parameters&gt;
+            &lt;KeyValue&gt;x30xgyLxVpKe3VGBsC37mRluKcaWz5mXNMpKJ6XUDVQ=&lt;/KeyValue&gt;
         &lt;/DHPublicKey&gt;
-        &lt;Nonce&gt;123&lt;/Nonce&gt;
-        &lt;Signature&gt;Signature Value&lt;/Signature&gt;
+        &lt;Nonce&gt;4c1d5833-fff2-46a0-8df3-382625fd191e&lt;/Nonce&gt;
+        &lt;Signature/&gt;
     &lt;/KeyMaterial&gt;
     &lt;FIs&gt;
         &lt;FI&gt;
-            &lt;EncryptedData/&gt;
-            &lt;Account FIType=&quot;DEPOSIT&quot; FIPId=&quot;fip@sbi.co.in&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;SBI123456&quot; maskedAccNumber=&quot;SBI111111111111&quot;/&gt;
+            &lt;EncryptedData&gt;bMCwJAM8VDGj87ILIa4Ry+LYky9+1w0/NGzuDIk5Q8vyouoNdMO8DD9UoCf7dWko8NZ0/TFsj9H7
+qQTnj9FAye3LqOwetC1B+SIVs0hDE00GTxPKphuuqDBdE+ZtJ2FixlA+BRVRVVxs6Z/h7wqWqh4+
+Yua3w33xC8kXnldNwjh5cSYg2OvkQilmpF1Jwdm2/gwRmLIYncrCYi08AOnoaRMHK45lUPc7wTy0
+lYmNy7q1ReiEYLNz93nYIqI6ogfx0x2VIfEJaFw3JyVVGdEBGJmavVM2+qZqKG2j2vkFZ1pMynve
+8CN+xzEtjdDBAk6aQkKDhQBaovBuqERmZfYGOHrWICjM8wsQaxLxNN52whjRfJ1tqDUCguEklERn
+W1FfMTigG84tVmeuR3dnrtOao0vkrstDWtaZ5RIJwG/Gnjk51iv5ywq6gtV8/xAotKiYdinMCXcb
+IMWGncnlKqAEJEFJpXV5QqnfU3io6PTAG29tfw1abysWSTe4THNRZOP/YMtwsYLK4RNDDVYLBBh0
+6aBEbQhnYGo/IwCh+6wKTMpe9SOpsj5o0/ur5tiKwkVcJAjxdv+f8a9ty70j4GOXFKfVxyXR40Qj
+pUK1bmCIuQf0oFOjmhksBWXxvO+N0N4KF26O67eQII3OaysduLtorCqlxUtEtQFgq7NJx/zqraXy
+rv3Xc6pVqMpI0h7Y3xdE5OO0aCJGS0VN0/g5yIg9NBryrAyz114yNAz/ul/iL1/D7dVRZO1OXEcn
+97JOHcKeMt7ijgTwdbgf/j8c9ukPrJwh+iiCQZViS6n29egqE0IU/XX24bF0w9TKrb+J5rva4J8/
+QlAnpeG+goDLBd25VZ/QJKEOAL3Vdky6O5DXmtc6yWdYNqbJzeEkIHhMBrISaxHlRjZctipjgF82
+nW723kU7CCsBRo+suzzhMK+0RMdJH8VxtvS+YvpUdd0UHGFy/c79KC7L5sqhAmpGIMx1FaX0NusC
+bI5DjUIqwJhsvicm8aApSIdTpRwrwc2Xyf/4r+CmdOUBZvJpMb4/QWMV244wL4tTMA2Z5cfOjVr9
+EaMP13RgTioVc9baY4tzYQAmGajNZIAmGadHtjEf9pws6POqSjm05vBGKgB+Fx8qkNP4tXvzjlDo
+O8hvu+bsK44Z+9nnLtqHz1A0QC2iN4v4/+1yHAINYgwIJo5YQgl8hEPv1dbp68CumGBKd70jjXRR
+fklIAtenOL5tiV5P4LBKl6th2zIULvTh6Nab6iX7M6k=&lt;/EncryptedData&gt;
+            &lt;Account FIPId=&quot;SBIN&quot; accType=&quot;SAVINGS&quot; maskedAccNumber=&quot;SBI983456005&quot;/&gt;
         &lt;/FI&gt;
     &lt;/FIs&gt;
 &lt;/FIFetchResponse&gt;
