@@ -481,8 +481,8 @@
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;ConsentsResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606+0000&quot; id=&quot;string&quot; type=&quot;string&quot;&gt;
-    &lt;ConsentsHandle&gt;e2376170-0e47-4e67-9ceb-66073bac393d&lt;/ConsentsHandle&gt;
+<pre><code>&lt;ConsentsResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606+0000&quot; txnid=&quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot; id=&quot;jayavants&quot; type=&quot;USER&quot;&gt;
+    &lt;ConsentsHandle&gt;4e5b5961-2514-42e0-b3f6-b9cf8de6e6de&lt;/ConsentsHandle&gt;
 &lt;/ConsentsResponse&gt;
 </code></pre>
 
@@ -495,11 +495,12 @@
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;ConsentStatus ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606+0000&quot;&gt;
-    &lt;ConsentsHandle&gt;e2376170-0e47-4e67-9ceb-66073bac393d&lt;/ConsentsHandle&gt;
-    &lt;Status/&gt;
+<pre><code>&lt;ConsentStatus ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606+0000&quot; txnid=&quot;e9cc2222-d4bb-4eb1-9e1b-2222fbff4dry&quot;&gt;
+    &lt;ConsentsHandle&gt;5f211951-46a0-4c53-bba6-e60f851b7687&lt;/ConsentsHandle&gt;
+    &lt;Status&gt;READY&lt;/Status&gt;
     &lt;Consents&gt;
-        &lt;Consents/&gt;&lt;/Consents&gt;
+        &lt;Consent id=&quot;345678c8-29c8-11e8-8865-jhdr7lkg8745p&quot; status=&quot;READY&quot;/&gt;
+    &lt;/Consents&gt;
 &lt;/ConsentStatus&gt;
 </code></pre>
 
@@ -540,35 +541,30 @@
 <p>HTTP METHOD: <code>consent_purpose_free_text</code></p>
 <p>URL: <code>http://aa.finvu.in/API/V1/FI/request</code></p>
 <p>Request Body</p>
-<pre><code>&lt;FIRequest timestamp=&quot;2018-07-10T15:04:39.066Z&quot; ver=&quot;v1.0&quot; txnid=&quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;&gt;
-    &lt;DataConsumer id=&quot;string&quot; type=&quot;FIU&quot; callbackURL=&quot;string&quot;&gt;&lt;/DataConsumer&gt;
-    &lt;DateTimeRange from=&quot;2017-10-08T11:00:34.169Z&quot; to=&quot;2018-10-08T11:00:34.169Z&quot;&gt;&lt;/DateTimeRange&gt;
-    &lt;FIRequestParams&gt;
-        &lt;Consent id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot; status=&quot;READY&quot;&gt;&lt;/Consent&gt;
-        &lt;KeyMaterials&gt;
-            &lt;KeyMaterial startTime=&quot;2018-10-08T11:00:34.169Z&quot; cryptoAlg=&quot;ECDHE&quot; curve=&quot;Curve25519&quot; params=&quot;string&quot;&gt;
-                &lt;Session sessionId=&quot;caa2f259-2dc2-4075-87aa-6d81018b6183&quot; status=&quot;string&quot;&gt;&lt;/Session&gt;
-                &lt;DHPublicKey expiry=&quot;1531236622970&quot;&gt;
-                    &lt;Parameters&gt;params&lt;/Parameters&gt;
-                    &lt;KeyValue&gt;keyvalue&lt;/KeyValue&gt;
-                &lt;/DHPublicKey&gt;
-                &lt;Nonce&gt;0&lt;/Nonce&gt;
-                &lt;Signature&gt;signature12&lt;/Signature&gt;
-            &lt;/KeyMaterial&gt;
-        &lt;/KeyMaterials&gt;
-    &lt;/FIRequestParams&gt;
+<pre><code>&lt;FIRequest ver=&quot;1.0&quot; timestamp=&quot;2018-06-09T09:58:50.505Z&quot; txnid=&quot;53454de6-060c-435b-acfe-3f4eeeb7f37b&quot;&gt;
+    &lt;DataConsumer id=&quot;cookiejar-aa@finvu.in&quot; type=&quot;AA&quot; callbackURL=&quot;http://localhost:9090/API/V1&quot;&gt;&lt;/DataConsumer&gt;
+    &lt;DateTimeRange from=&quot;2018-11-27T06:26:29.761Z&quot; to=&quot;2020-11-27T06:26:29.761Z&quot;&gt;&lt;/DateTimeRange&gt;
+    &lt;Consent id=&quot;8a02b15b-96ca-4db4-8ff6-c825587e8a75&quot;&gt;&lt;/Consent&gt;
+    &lt;KeyMaterials&gt;
+        &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505Z&quot; cryptoAlg=&quot;ECDHE&quot; curve=&quot;Curve25519&quot; params=&quot;string&quot;&gt;
+            &lt;Session sessionId=&quot;&quot; status=&quot;string&quot;&gt;&lt;/Session&gt;
+            &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505Z&quot;&gt;
+                &lt;Parameters&gt;Param 1&lt;/Parameters&gt;
+                &lt;KeyValue&gt;ec4eGoOo/EezrC+6gaKkUJaFbAkHrHC1k9FO+m23uQw=&lt;/KeyValue&gt;
+            &lt;/DHPublicKey&gt;
+            &lt;Nonce&gt;21d326f1-c6a2-43c3-a536-291b6a8b2687&lt;/Nonce&gt;
+            &lt;Signature&gt; Signature Value&lt;/Signature&gt;
+        &lt;/KeyMaterial&gt;
+    &lt;/KeyMaterials&gt;
 &lt;/FIRequest&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;FIResponse ver=&quot;v1.0&quot; timestamp=&quot;2018-10-13T09:29:08.243+0000&quot; txnid=&quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;&gt;
-    &lt;ScheduledFIRequests&gt;
-        &lt;ScheduledFIRequest&gt;
-            &lt;Consent id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot;/&gt;
-            &lt;Sessions&gt;
-                &lt;Sessions sessionId=&quot;2fc5d57b-34fa-485d-a1d4-240f8bf36dc3&quot;/&gt;&lt;/Sessions&gt;
-        &lt;/ScheduledFIRequest&gt;
-    &lt;/ScheduledFIRequests&gt;
+<pre><code>&lt;FIResponse ver=&quot;1.0&quot; timestamp=&quot;2019-02-19T08:45:03.313+0000&quot; txnid=&quot;53454de6-060c-435b-acfe-3f4eeeb7f37b&quot;&gt;
+    &lt;Consent id=&quot;8a02b15b-96ca-4db4-8ff6-c825587e8a75&quot;/&gt;
+    &lt;Sessions&gt;
+        &lt;Session sessionId=&quot;7f4cc4a9-47af-4ae2-bef9-09864b01e24d&quot; status=&quot;string&quot;/&gt;
+    &lt;/Sessions&gt;
 &lt;/FIResponse&gt;
 </code></pre>
 
@@ -579,7 +575,7 @@
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
-    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
+    &lt;Consent id=&quot;8a02b15b-96ca-4db4-8ff6-c825587e8a75&quot;&gt;&lt;/Consent&gt;
 &lt;/FetchFIRequest&gt;
 </code></pre>
 
