@@ -575,75 +575,45 @@ txnid=&quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;&gt;
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/FI/fetch/{SessionID}</code></p>
 <p>Request Body</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
-    &lt;Consent id=&quot;1f6a52e8-dab8-4bf9-9191-ee1729f36e09&quot;&gt;&lt;/Consent&gt;
+&lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b11&quot;&gt;
+    &lt;Consent id=&quot;d4bdd361-de0c-444d-a9b0-923b6f45eee6&quot;&gt;&lt;/Consent&gt;
 &lt;/FetchFIRequest&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;FIFetchResponse timestamp=&quot;2018-11-27T06:41:54.904+0000&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot; ver=&quot;1.0&quot;&gt;
-    &lt;Account FIPId=&quot;info@cookiejar.co.in&quot; id=&quot;HDFC11111111&quot; type=&quot;SAVINGS&quot;&gt;
-        &lt;FIs&gt;
-            &lt;FI&gt;
-                &lt;DateTimeRange/&gt;
-                &lt;EncryptedFI&gt;STZiVjQ0TUwwM2J6cFhKaE9sSG5GdElGb090dVhLYXVMdmJqZXlFVWhxbGNJYzFMellJc3Vud3hj
-bXZwS3cvZ2c1V1RCVHZaTExVS0IveVVnWDNrNzhkbHhORG1wdGFVczVEQ0t4ZlltRGNLNklMdzVN
-TnVFY3hia3E5M0UvOWFNMmFCbHNtb2ltZ1FGU3JvZWZmNldtc1J2VVNzZUx6a3loRjc1Ty9UMm9q
-R2wyVWRteVZBdjdoOGhyWVI0RG82MTZ3RDdqb2tUaU04SEt2L2xkNXpRYVlYOGIxL1hhOGVxYXZU
-ckFjeGVVeDNTai9JaGE0bm1peGdYV3hvUVNMK096QmdpQWlVenpZMnhqeGZVT1lrOGc9PQ==&lt;/EncryptedFI&gt;
-                &lt;KeyMaterial cryptoAlg=&quot;ECDHE&quot; curve=&quot;Curve25519&quot; params=&quot;string&quot; startTime=&quot;2018-06-01T09:58:50.505+0000&quot;&gt;
-                    &lt;Session sessionId=&quot;0951e004-7ed4-4d63-b373-e97e86c000ff&quot; status=&quot;string&quot;/&gt;
-                    &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505+0000&quot;&gt;
-                        &lt;Parameters&gt;Param 1&lt;/Parameters&gt;
-                        &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
-                    &lt;/DHPublicKey&gt;
-                    &lt;Nonce&gt;12345&lt;/Nonce&gt;
-                    &lt;Signature/&gt;
-                &lt;/KeyMaterial&gt;
-            &lt;/FI&gt;
-        &lt;/FIs&gt;
-    &lt;/Account&gt;
-    &lt;Signature/&gt;
-    &lt;Signature xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
-        &lt;SignedInfo&gt;
-            &lt;CanonicalizationMethod Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/&gt;
-            &lt;SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/&gt;
-            &lt;Reference URI=&quot;&quot;&gt;
-                &lt;Transforms&gt;
-                    &lt;Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/&gt;
-                &lt;/Transforms&gt;
-                &lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;
-                &lt;DigestValue&gt;w7FTFC9MkjWkPDKROYDhajhjZ64=&lt;/DigestValue&gt;
-            &lt;/Reference&gt;
-        &lt;/SignedInfo&gt;
-        &lt;SignatureValue&gt;EMixDV9m8Z2vh3L7TvFwIwYJ9d9KBBxUxSclNhGmn0M7cg3AdTFy5aVfH8y5pCwrhdOjz8U66rO6
-gvTiPYVTucBoSuBvsFU1OxgM4MJpjPc/pPOo7RbJuswExXaiUc09bCP2hFDPRaVwpy6WvqAZnz5v
-M4R/F9ykuhFUYly+2O7W6fLkxtP1q9PzVMH+KT9rK/BVSqXDTokrkyWfpwltqkuw7O/LxDLPXJ9E
-nOiVitTRSugDsJu/QDAENSH5dvxe8pHMnjggWaF83kPjgYzrJwtiE+bg4XDbrfYci2X2K0L303xv
-Cxjwk9Gg/HoK6Gre2eSR8p+0XaY4TtwxXLNozg==&lt;/SignatureValue&gt;
-        &lt;KeyInfo&gt;
-            &lt;X509Data&gt;
-                &lt;X509SubjectName&gt;CN=PP,OU=CTPL,O=CTPL,L=Pune,ST=Maharashtra,C=IN&lt;/X509SubjectName&gt;
-                &lt;X509Certificate&gt;MIIDWTCCAkGgAwIBAgIEdZ+fzDANBgkqhkiG9w0BAQsFADBdMQswCQYDVQQGEwJJTjEUMBIGA1UE
-CBMLTWFoYXJhc2h0cmExDTALBgNVBAcTBFB1bmUxDTALBgNVBAoTBENUUEwxDTALBgNVBAsTBENU
-UEwxCzAJBgNVBAMTAlBQMB4XDTE4MDUzMDE3MTE0MloXDTE5MDUyNTE3MTE0MlowXTELMAkGA1UE
-BhMCSU4xFDASBgNVBAgTC01haGFyYXNodHJhMQ0wCwYDVQQHEwRQdW5lMQ0wCwYDVQQKEwRDVFBM
-MQ0wCwYDVQQLEwRDVFBMMQswCQYDVQQDEwJQUDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
-ggEBALfG14O4AJKktnFbM5/vfJ7gcNjWRn0tiOSc05Ha8T7ZyiqP+og0vg/KqaJyh8gowCnYcmQ9
-gncRfLbu2B/KESMcLn6mdQawO2UeNwf4oLSH5F12BOaYLRdnDivAwjJmZ897kTgZ3MgDngKOqn4p
-vbNjHM1gXLHcxUhfJ+dCDgsM872qYUvwsCDselfdB7pGz69YImbjiYs5RuHk2bg16jfb6Ps5H18n
-UTu0qNkvnShBeNz98Z7dNP5phI2oCEuZdyZqB5wXdir4YrFGbk3wpIVLlLEYpIUMFLYtryK2c5xB
-HMP39W5r6mnsY/F4vuuwtmWgnPXQa1+4ZblEVhLDkhkCAwEAAaMhMB8wHQYDVR0OBBYEFPZNZ7B8
-XiTIhHEhNtDFj0b1LGj6MA0GCSqGSIb3DQEBCwUAA4IBAQBVDrNd9jwj3ylure8iGNvd6fzmc+or
-hU/9itFomim7X/TMAT6lYzpvJKyBLKN1l/mZQulkV+yRVdY5ETDnvKVHHfBE7OVSES8JYJXe/41L
-v0OQYTLEFcJwVSR+b6yOUgWBh2xdpkat358UwItQ5NIuVAU1EIbgfejHmMvJlUf/gWj1wD6+Hx9L
-UJn6SSo59xjPxbTEsh8PLMEipM2eI7cXG/uGMpyBg41YfvW2JQrXa4ILokQ1fbtc3iZZtfYZMVC0
-BaMXz5VPVRb8PrdxAt2szi93yS7HJ9UHYRbBmbRjbulFtrSXKd3GqvRfjht4174iKcBVkpNOpIQs
-syBiW1qx&lt;/X509Certificate&gt;
-            &lt;/X509Data&gt;
-        &lt;/KeyInfo&gt;
-    &lt;/Signature&gt;
+<pre><code>&lt;FIFetchResponse ver=&quot;1.0&quot; timestamp=&quot;2019-03-20T05:47:24.576+0000&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b11&quot;&gt;
+    &lt;KeyMaterial startTime=&quot;2019-03-20T05:22:06.525+0000&quot; cryptoAlg=&quot;ECDHE&quot; curve=&quot;Curve25519&quot; params=&quot;None&quot;&gt;
+        &lt;Session sessionId=&quot;c550dd89-f954-4ee4-af13-8c29b5a1c653&quot; status=&quot;SESSION-RESUMED&quot;/&gt;
+        &lt;DHPublicKey expiry=&quot;2019-03-21T00:00:00.000+0000&quot;&gt;
+            &lt;Parameters&gt;BBCrtxRqdKpGHh3dYKH3dVRW&lt;/Parameters&gt;
+            &lt;KeyValue&gt;BHshtmAYWiXBvNN5hZ/3HKv0F3v8uXpngKEXxn0bQC8=&lt;/KeyValue&gt;
+        &lt;/DHPublicKey&gt;
+        &lt;Nonce&gt;cf759a2f-f79f-4f58-b165-7353da4f732d&lt;/Nonce&gt;
+        &lt;Signature/&gt;
+    &lt;/KeyMaterial&gt;
+    &lt;FIs&gt;
+        &lt;FI&gt;
+            &lt;EncryptedData&gt;qTvdxBqgV/BA/A1Bev3si81PXGDa4KRWUmx3dgL3aa0wfRRPWZh6AblsycfNKkApdNX6m332K+oo
+DupwW6uZJ6445jl+NOr+jEbwO1yCHvZwMDdEmhSiIllVi7t5ueB/8LRuPhZRejwWHPHTRcvza5sh
+kFUUPQrlDlArAJ1EfWN4FCHneJcpFYX9jPwnGAEZEzAjPrnmuLu6zDeELbIcu4bIIjhv+yFHtNWL
+df+Sn5sUaUdhZijwRIE3AAnqxLlXJc22eN3skJw4KoANBNLbyrXAE00T0etsVnsdJw3ntw72defh
+MdypnL/4YJPh/HSdGZoOWdg4X4ERLV8Eyi6I+lET/n8VCwogV53qt8VGlWCZaGs+eEH383b0/b2L
+ZVmDkj/KdElcwFu2Mu9be3qP9Ir5DdTzthh4jB6bwtp1D6u0j+n0+YTKgDSXJnx1xNNFQDJEh/Or
+2wYwBUCMRPh7GNWlrO75B+a6ADTi39iedIWZoaCW//yL1GMUmngKGFNTcCZ9bcKwVQt0JRbfTtxH
+mwp00obZjKVRu+gHU7neWXtBsDjPEj8GyfqUZalf3ul6RU1vj1LPAMb0me1vBo9F+jJ6aoroKiEO
+jRBr1LeoseVsx2vhw4CFJvWxjwhqG3H3tVyA0OVYlrZJQyr+BpT11R0WI6uLhCGCcJKCC4d2jjZP
+aRet5PRIj9nFPH6Y1BSsPoonOD9+hWTRJziWhN06gPLz5kHRJ1BU1TgbJd1QMtTRBvbtuAeneOKa
+BEI+UrDmtoGNHB7zJU5+tMZjCGYrY4gzSEed+q1XUaEWuQ+zkt9O6T1vCnJzoFIpvrphUrve5UDZ
+3+58FzEt64rWfwLyxCDcfnd4wU0lMHmqRqAePX4gGo67zqQ9nKrN2TH0zKc6yF+c33mIoDaTxj2d
+b+YDwD9kjAjQFBsNMUUuftY7ab9/fYzjHstnowXlBCr6mRFzbATuWWujzMyEN506Sq7TL2OelFUl
+0At097rQ3sx8cBSgIdZTJtUl300FOueT2nIWv4CrPjY+z20Q3L23SwnnElzYlfNevrC7p2ULO0uq
+9+LLL3KUHwT26Fts27LX/mZ1PMYRfakMQ4CUDcX7RwHBsfESfLvvCrktnODBdzZ8Vmb/OWAC7zLV
+RMMyzkM/1CGdG9MWeIEDIKO3dF/Cvd/3yiS8B58cMS1j0RXtOkkPOELmE96QCDixa//KuFMI6cIo
+IzFoji8FKVRiEULctMnrCx++V6U2cM4Upn/Y+fUTjRPRc2MVK2RnF9b452NGTmim4bmmOVSy4zEJ
+Uat5F+1Uyg==&lt;/EncryptedData&gt;
+            &lt;Account FIType=&quot;DEPOSIT&quot; FIPId=&quot;SBIN&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;SBIREF1414&quot; maskedAccNumber=&quot;XXXXX5564&quot;/&gt;
+        &lt;/FI&gt;
+    &lt;/FIs&gt;
 &lt;/FIFetchResponse&gt;
 </code></pre>
 
