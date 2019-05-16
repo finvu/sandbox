@@ -244,6 +244,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#account-unlinking" title="Account Unlinking" class="md-nav__link">
+    Account Unlinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#account-confirm-token" title="Account Confirm Token" class="md-nav__link">
     Account Confirm Token
   </a>
@@ -370,6 +377,13 @@
           <li class="md-nav__item">
   <a href="#account-linking" title="Account Linking" class="md-nav__link">
     Account Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-unlinking" title="Account Unlinking" class="md-nav__link">
+    Account Unlinking
   </a>
   
 </li>
@@ -553,6 +567,35 @@
 }
 </code></pre>
 
+<h3 id="account-unlinking">Account Unlinking</h3>
+<p>For simulation purpose, The method is used to delete a previously established account linkage to the user’s profile. </p>
+<p>HTTP METHOD: <code>DELETE</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/link</code></p>
+<p>Request Body</p>
+<pre><code>{
+  &quot;ver&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;2018-05-09T17:51:18.412Z&quot;,
+  &quot;txnid&quot;: &quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;,
+  &quot;Account&quot;: {
+    &quot;customerAddress&quot;: &quot;cust123&quot;,
+    &quot;linkRefNumber&quot;: &quot;UBI48596&quot;
+  }
+}
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>{
+    &quot;ver&quot;: &quot;1.0&quot;,
+    &quot;timestamp&quot;: &quot;2018-05-09T17:51:18.412+0000&quot;,
+    &quot;txnid&quot;: &quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;,
+    &quot;AccLinkDetails&quot;: {
+        &quot;customerAddress&quot;: &quot;cust123&quot;,
+        &quot;linkRefNumber&quot;: &quot;UBI48596&quot;,
+        &quot;status&quot;: &quot;DELINKED&quot;
+    }
+}
+</code></pre>
+
 <h3 id="account-confirm-token">Account Confirm Token</h3>
 <p>HTTP METHOD: <code>GET</code></p>
 <p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/link/{RefNumber}/{Token}</code></p>
@@ -688,7 +731,7 @@ Uat5F+1Uyg==&lt;/EncryptedData&gt;
 
 <h3 id="consent">Consent</h3>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Consent/Notification</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Consent</code></p>
 <p>Request Body</p>
 <pre><code>{
   &quot;ver&quot;: &quot;1.0&quot;,
