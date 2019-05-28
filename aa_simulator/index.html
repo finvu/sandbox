@@ -261,8 +261,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#consentsconsentshandle" title="Consents/{consentsHandle}" class="md-nav__link">
-    Consents/{consentsHandle}
+  <a href="#consenthandleconsenthandle" title="/Consent/handle/{consentHandle}" class="md-nav__link">
+    /Consent/handle/{consentHandle}
   </a>
   
 </li>
@@ -290,6 +290,20 @@
         
           <li class="md-nav__item">
   <a href="#notification" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification_1" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification_2" title="Notification" class="md-nav__link">
     Notification
   </a>
   
@@ -361,8 +375,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#consentsconsentshandle" title="Consents/{consentsHandle}" class="md-nav__link">
-    Consents/{consentsHandle}
+  <a href="#consenthandleconsenthandle" title="/Consent/handle/{consentHandle}" class="md-nav__link">
+    /Consent/handle/{consentHandle}
   </a>
   
 </li>
@@ -390,6 +404,20 @@
         
           <li class="md-nav__item">
   <a href="#notification" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification_1" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification_2" title="Notification" class="md-nav__link">
     Notification
   </a>
   
@@ -451,184 +479,338 @@
 <h3 id="consents">Consents</h3>
 <p>This API is intended for AA Client to request generation of digitally signed consent artefacts.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Consents</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Consent</code></p>
 <p>Request Body</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;ConsentsRequest xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606Z&quot; txnid=&quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;&gt;
-    &lt;FIP id=&quot;fip-1&quot;&gt;&lt;/FIP&gt;
-    &lt;FIU id=&quot;fiu-1&quot;&gt;&lt;/FIU&gt;
-    &lt;AA id=&quot;aa-1&quot;&gt;&lt;/AA&gt;
-    &lt;Customer idTypes=&quot;string&quot; id=&quot;string&quot;&gt;&lt;/Customer&gt;
-    &lt;FITypes&gt;
-        &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
-    &lt;/FITypes&gt;
-    &lt;Data-Items&gt;
-        &lt;Data id=&quot;string&quot; type=&quot;TRANSACTIONAL&quot;&gt;
-            &lt;Access mode=&quot;STORE&quot;&gt;&lt;/Access&gt;
-            &lt;DateTimeRange from=&quot;2017-07-13T11:33:34.509Z&quot; to=&quot;2018-07-13T11:33:34.509Z&quot;&gt;&lt;/DateTimeRange&gt;
-            &lt;DataLife unit=&quot;MONTH&quot; value=&quot;string&quot;&gt;&lt;/DataLife&gt;
-            &lt;Frequency unit=&quot;DAILY&quot;&gt;&lt;/Frequency&gt;
-            &lt;Datafilter&gt;&lt;/Datafilter&gt;
-        &lt;/Data&gt;
-    &lt;/Data-Items&gt;
-    &lt;ConsentUse logUri=&quot;string&quot;&gt;&lt;/ConsentUse&gt;
-    &lt;DataAccess logUri=&quot;string&quot;&gt;&lt;/DataAccess&gt;
-    &lt;Purpose code=&quot;string&quot; refUri=&quot;string&quot; text=&quot;string&quot;&gt;
-        &lt;Category type=&quot;string&quot;&gt;&lt;/Category&gt;
-    &lt;/Purpose&gt;
-    &lt;Signature&gt;c3RyaW5n&lt;/Signature&gt;
-&lt;/ConsentsRequest&gt;
+<pre><code>{
+  &quot;ver&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;2019-05-02T06:49:35.645Z&quot;,
+  &quot;txnid&quot;: &quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;,
+  &quot;ConsentDetail&quot;: {
+    &quot;consentStart&quot;: &quot;2019-12-06T11:39:57.153Z&quot;,
+    &quot;consentExpiry&quot;: &quot;2019-12-06T11:39:57.153Z&quot;,
+    &quot;consentMode&quot;: &quot;VIEW&quot;,
+    &quot;fetchType&quot;: &quot;ONETIME&quot;,
+    &quot;consentTypes&quot;: [
+      &quot;BALANCE&quot;
+    ],
+    &quot;fiTypes&quot;: [
+      &quot;DEPOSIT&quot;
+    ],
+    &quot;DataConsumer&quot;: {
+      &quot;id&quot;: &quot;fiu-1&quot;
+    },
+    &quot;Customer&quot;: {
+      &quot;id&quot;: &quot;jay55@finvu.in&quot;
+    },
+    &quot;Purpose&quot;: {
+      &quot;code&quot;: &quot;101&quot;,
+      &quot;refUri&quot;: &quot;https://api.rebit.org.in/aa/purpose/101.xml&quot;,
+      &quot;text&quot;: &quot;Wealth management service&quot;,
+      &quot;Category&quot;: {
+        &quot;type&quot;: &quot;string&quot;
+      }
+    },
+    &quot;FIDataRange&quot;: {
+      &quot;from&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
+      &quot;to&quot;: &quot;2019-12-06T11:39:57.153Z&quot;
+    },
+    &quot;DataLife&quot;: {
+      &quot;unit&quot;: &quot;MONTH&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;Frequency&quot;: {
+      &quot;unit&quot;: &quot;MONTH&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;DataFilter&quot;: [
+      {
+        &quot;type&quot;: &quot;TRANSACTIONAMOUNT&quot;,
+        &quot;operator&quot;: &quot;&gt;=&quot;,
+        &quot;value&quot;: 20000
+      }
+    ]
+  }
+}
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;ConsentsResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606+0000&quot; txnid=&quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot; id=&quot;jayavants&quot; type=&quot;USER&quot;&gt;
-    &lt;ConsentsHandle&gt;4e5b5961-2514-42e0-b3f6-b9cf8de6e6de&lt;/ConsentsHandle&gt;
-&lt;/ConsentsResponse&gt;
+<pre><code>{
+    &quot;ver&quot;: &quot;1.0&quot;,
+    &quot;timestamp&quot;: &quot;2019-05-28T12:58:29.654+0000&quot;,
+    &quot;txnid&quot;: &quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;,
+    &quot;Customer&quot;: {
+        &quot;id&quot;: &quot;jay55@finvu.in&quot;
+    },
+    &quot;ConsentHandle&quot;: &quot;2d216b9b-a8f3-48c0-b565-e8f35e7c2273&quot;
+}
 </code></pre>
 
-<h3 id="consentsconsentshandle">Consents/{consentsHandle}</h3>
+<h3 id="consenthandleconsenthandle">/Consent/handle/{consentHandle}</h3>
 <p>This API is intended for checking the status of a previously submitted Consent Artefacts creation request</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Consents/{consentsHandle}</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Consent/handle/{consentHandle}</code></p>
 <p>Request Body</p>
 <pre><code>No Request Body expected
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;ConsentStatus ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T06:49:32.606+0000&quot; txnid=&quot;e9cc2222-d4bb-4eb1-9e1b-2222fbff4dry&quot;&gt;
-    &lt;ConsentsHandle&gt;5f211951-46a0-4c53-bba6-e60f851b7687&lt;/ConsentsHandle&gt;
-    &lt;Status&gt;READY&lt;/Status&gt;
-    &lt;Consents&gt;
-        &lt;Consent id=&quot;345678c8-29c8-11e8-8865-jhdr7lkg8745p&quot; status=&quot;READY&quot;/&gt;
-    &lt;/Consents&gt;
-&lt;/ConsentStatus&gt;
+<pre><code>{
+    &quot;ver&quot;: &quot;1.0&quot;,
+    &quot;timestamp&quot;: &quot;2019-05-28T12:58:29.654+0000&quot;,
+    &quot;txnid&quot;: &quot;4a4adbbe-29ae-11e8-a8d7-0289437bf331&quot;,
+    &quot;ConsentHandle&quot;: &quot;2d216b9b-a8f3-48c0-b565-e8f35e7c2273&quot;,
+    &quot;ConsentStatus&quot;: {
+        &quot;id&quot;: &quot;ce721611-0ed1-4043-b54a-9493b4ad3007&quot;,
+        &quot;status&quot;: &quot;READY&quot;
+    }
+}
 </code></pre>
 
 <h3 id="consentsid">Consents/{id}</h3>
 <p>This API is intended for fetching the information associated with the specific consent.</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Consents/Consent/{id}</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Consent/{id}</code></p>
 <p>Request Body</p>
 <pre><code>No Request Body expected
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;ConsentArtefact ver=&quot;1.0&quot; id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot; createTime=&quot;2018-10-08T09:29:23.034+0000&quot; startTime=&quot;2018-10-08T09:29:23.034+0000&quot; expireTime=&quot;2020-07-07T05:48:14.000+0000&quot;&gt;
-    &lt;FIP id=&quot;fip@sbi.co.in&quot;/&gt;
-    &lt;AA id=&quot;123456@finvu.in&quot;/&gt;
-    &lt;User idTypes=&quot;MOBILE&quot; id=&quot;9822289017&quot;/&gt;
-    &lt;Account FIType=&quot;DEPOSIT&quot; FIPId=&quot;fip@sbi.co.in&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;SBI123456&quot; maskedAccNumber=&quot;SBI111111111111&quot;/&gt;
-    &lt;Data-Items&gt;
-        &lt;Data id=&quot;data123&quot; type=&quot;PROFILE&quot;&gt;
-            &lt;Access mode=&quot;VIEW&quot;/&gt;
-            &lt;DateTimeRange from=&quot;2017-07-13T06:03:34.000+0000&quot; to=&quot;2018-07-13T06:03:34.000+0000&quot;/&gt;
-            &lt;DataLife value=&quot;data_life_value&quot;/&gt;
-            &lt;Frequency unit=&quot;MONTHLY&quot;/&gt;
-            &lt;Datafilter/&gt;
-        &lt;/Data&gt;
-    &lt;/Data-Items&gt;
-    &lt;ConsentUse logUri=&quot;consent_use_loguri&quot;/&gt;
-    &lt;DataAccess logUri=&quot;dataaccess_loguri&quot;/&gt;
-    &lt;Purpose code=&quot;consent_purpose_code&quot; refUri=&quot;consent_purpose_refuri&quot; text=&quot;consent_purpose_free_text&quot;&gt;
-        &lt;Category type=&quot;type&quot;/&gt;
-    &lt;/Purpose&gt;
-    &lt;Signature&gt;AA signature&lt;/Signature&gt;
-&lt;/ConsentArtefact&gt;
+<pre><code>{
+    &quot;ver&quot;: &quot;1.0&quot;,
+    &quot;txnid&quot;: &quot;5d9fce7c-ca84-4107-a670-c3b0837c5ef1&quot;,
+    &quot;consentId&quot;: &quot;ce721611-0ed1-4043-b54a-9493b4ad3007&quot;,
+    &quot;status&quot;: &quot;ACTIVE&quot;,
+    &quot;createTimestamp&quot;: &quot;2019-05-28T11:38:20.380+0000&quot;,
+    &quot;ConsentDetail&quot;: {
+        &quot;consentStart&quot;: &quot;2019-05-28T11:38:20.380+0000&quot;,
+        &quot;consentExpiry&quot;: &quot;2020-05-28T11:38:20.381+0000&quot;,
+        &quot;consentMode&quot;: &quot;VIEW&quot;,
+        &quot;fetchType&quot;: &quot;ONETIME&quot;,
+        &quot;consentTypes&quot;: [
+            &quot;BALANCE&quot;,
+            &quot;TRANSACTIONS&quot;,
+            &quot;PROFILE&quot;
+        ],
+        &quot;fiTypes&quot;: [
+            &quot;DEPOSIT&quot;,
+            &quot;TERM-DEPOSIT&quot;
+        ],
+        &quot;DataConsumer&quot;: {
+            &quot;id&quot;: &quot;cookiejar-aa@finvu.in&quot;,
+            &quot;type&quot;: &quot;AA&quot;
+        },
+        &quot;DataProvider&quot;: {
+            &quot;id&quot;: &quot;BARB0KIMXXX&quot;,
+            &quot;type&quot;: &quot;FIP&quot;
+        },
+        &quot;Customer&quot;: {
+            &quot;id&quot;: &quot;jayavants&quot;
+        },
+        &quot;Accounts&quot;: [
+            {
+                &quot;fiType&quot;: &quot;DEPOSIT&quot;,
+                &quot;fipId&quot;: &quot;BARB0KIMXXX&quot;,
+                &quot;accType&quot;: &quot;SAVINGS&quot;,
+                &quot;linkRefNumber&quot;: &quot;UBI485964579&quot;,
+                &quot;maskedAccNumber&quot;: &quot;UBI85217881279&quot;
+            },
+            {
+                &quot;fiType&quot;: &quot;DEPOSIT&quot;,
+                &quot;fipId&quot;: &quot;BARB0KIMXXX&quot;,
+                &quot;accType&quot;: &quot;SAVINGS&quot;,
+                &quot;linkRefNumber&quot;: &quot;UBI4859645&quot;,
+                &quot;maskedAccNumber&quot;: &quot;UBI852178812&quot;
+            }
+        ],
+        &quot;Purpose&quot;: {
+            &quot;code&quot;: &quot;101&quot;,
+            &quot;refUri&quot;: &quot;https://api.rebit.org.in/aa/purpose/101.xml&quot;,
+            &quot;text&quot;: &quot;Wealth management service&quot;,
+            &quot;Category&quot;: {
+                &quot;type&quot;: &quot;purposeCategoryType&quot;
+            }
+        },
+        &quot;FIDataRange&quot;: {
+            &quot;from&quot;: &quot;2019-05-28T11:38:20.383+0000&quot;,
+            &quot;to&quot;: &quot;2020-05-28T11:38:20.381+0000&quot;
+        },
+        &quot;DataLife&quot;: {
+            &quot;unit&quot;: &quot;MONTH&quot;,
+            &quot;value&quot;: 4
+        },
+        &quot;Frequency&quot;: {
+            &quot;unit&quot;: &quot;HOUR&quot;,
+            &quot;value&quot;: 4
+        },
+        &quot;DataFilter&quot;: [
+            {
+                &quot;type&quot;: &quot;TRANSACTIONAMOUNT&quot;,
+                &quot;operator&quot;: &quot;&gt;&quot;,
+                &quot;value&quot;: &quot;20000&quot;
+            }
+        ]
+    },
+    &quot;consentDetailDigitalSignature&quot;: &quot;Signature of AA as defined in W3C standards; Base64 encoded&quot;,
+    &quot;ConsentUse&quot;: {
+        &quot;logUri&quot;: &quot;consent_use_loguri&quot;,
+        &quot;count&quot;: 2,
+        &quot;lastUseDateTime&quot;: &quot;2019-05-28T11:38:20.379+0000&quot;
+    }
+}
 </code></pre>
 
 <h3 id="firequest">/FI/request</h3>
 <p>The FIU or the User submits the Consent IDs of the consents required for fetching financial information from the FIP(s).</p>
-<p>HTTP METHOD: <code>consent_purpose_free_text</code></p>
+<p>HTTP METHOD: <code>POST</code></p>
 <p>URL: <code>http://aa.finvu.in/API/V1/FI/request</code></p>
 <p>Request Body</p>
-<pre><code>&lt;FIRequest ver=&quot;1.0&quot; timestamp=&quot;2018-06-09T09:58:50.505Z&quot; txnid=&quot;53454de6-060c-435b-acfe-3f4eeeb7f37b&quot;&gt;
-    &lt;DataConsumer id=&quot;cookiejar-aa@finvu.in&quot; type=&quot;AA&quot; callbackURL=&quot;http://localhost:9090/API/V1&quot;&gt;&lt;/DataConsumer&gt;
-    &lt;DateTimeRange from=&quot;2018-11-27T06:26:29.761Z&quot; to=&quot;2020-11-27T06:26:29.761Z&quot;&gt;&lt;/DateTimeRange&gt;
-    &lt;Consent id=&quot;8a02b15b-96ca-4db4-8ff6-c825587e8a75&quot;&gt;&lt;/Consent&gt;
-    &lt;KeyMaterials&gt;
-        &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505Z&quot; cryptoAlg=&quot;ECDHE&quot; curve=&quot;Curve25519&quot; params=&quot;string&quot;&gt;
-            &lt;Session sessionId=&quot;&quot; status=&quot;string&quot;&gt;&lt;/Session&gt;
-            &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505Z&quot;&gt;
-                &lt;Parameters&gt;Param 1&lt;/Parameters&gt;
-                &lt;KeyValue&gt;ec4eGoOo/EezrC+6gaKkUJaFbAkHrHC1k9FO+m23uQw=&lt;/KeyValue&gt;
-            &lt;/DHPublicKey&gt;
-            &lt;Nonce&gt;21d326f1-c6a2-43c3-a536-291b6a8b2687&lt;/Nonce&gt;
-            &lt;Signature&gt; Signature Value&lt;/Signature&gt;
-        &lt;/KeyMaterial&gt;
-    &lt;/KeyMaterials&gt;
-&lt;/FIRequest&gt;
+<pre><code>{
+    &quot;ver&quot;: &quot;1.0&quot;,
+    &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
+    &quot;txnid&quot;: &quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;,
+    &quot;FIDataRange&quot;: {
+        &quot;from&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
+        &quot;to&quot;: &quot;2020-12-06T11:39:57.153Z&quot;
+    },
+    &quot;Consent&quot;: {
+        &quot;id&quot;: &quot;ce721611-0ed1-4043-b54a-9493b4ad3007&quot;,
+        &quot;digitalSignature&quot;: &quot;Digital signature of the consentDetail section in the consent Artefact&quot;
+    },
+    &quot;KeyMaterial&quot;: {
+    &quot;cryptoAlg&quot;: &quot;ECDHE&quot;,
+    &quot;curve&quot;: &quot;Curve25519&quot;,
+    &quot;params&quot;: &quot;string&quot;,
+    &quot;DHPublicKey&quot;: {
+      &quot;expiry&quot;: &quot;2019-06-01T09:58:50.505Z&quot;,
+      &quot;Parameters&quot;: &quot;Param 1&quot;,
+      &quot;KeyValue&quot;: &quot;TC/w081h2ps3lfQBymsSPFB+t7vV89RAndZjOlvPJDc=&quot;
+    },
+    &quot;Nonce&quot;: &quot;b6f6bcbc-d02a-4c68-8868-da5a3de60b33&quot;,
+    &quot;Signature&quot;: &quot;AA signature&quot;
+  }
+}
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;FIResponse ver=&quot;1.0&quot; timestamp=&quot;2019-02-19T08:45:03.313+0000&quot; txnid=&quot;53454de6-060c-435b-acfe-3f4eeeb7f37b&quot;&gt;
-    &lt;Consent id=&quot;8a02b15b-96ca-4db4-8ff6-c825587e8a75&quot;/&gt;
-    &lt;Sessions&gt;
-        &lt;Session sessionId=&quot;7f4cc4a9-47af-4ae2-bef9-09864b01e24d&quot; status=&quot;string&quot;/&gt;
-    &lt;/Sessions&gt;
-&lt;/FIResponse&gt;
+<pre><code>{
+    &quot;ver&quot;: &quot;1.0&quot;,
+    &quot;timestamp&quot;: &quot;2019-05-28T12:35:16.484+0000&quot;,
+    &quot;txnid&quot;: &quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;,
+    &quot;consentId&quot;: &quot;ce721611-0ed1-4043-b54a-9493b4ad3007&quot;,
+    &quot;sessionId&quot;: &quot;fd1dc34c-da66-4c5d-8101-260c68286836&quot;
+}
 </code></pre>
 
 <h3 id="fifetchsessionid">/FI/fetch/{sessionId}</h3>
 <p>Once FIU receives the notification <Data-Ready> from AA, using digitally signed consent request received from AA, this API can be used to fetch the financial information from the AA.</p>
-<p>HTTP METHOD: <code>POST</code></p>
+<p>HTTP METHOD: <code>GET</code></p>
 <p>URL: <code>http://aa.finvu.in/API/V1/FI/fetch/{sessionId}</code></p>
-<p>Request Body</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
-    &lt;Consent id=&quot;8a02b15b-96ca-4db4-8ff6-c825587e8a75&quot;&gt;&lt;/Consent&gt;
-&lt;/FetchFIRequest&gt;
-</code></pre>
-
 <p>Response Expected: </p>
-<pre><code>&lt;FIFetchResponse ver=&quot;1.0&quot; timestamp=&quot;2019-02-19T10:17:40.757+0000&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
-    &lt;KeyMaterial startTime=&quot;2019-02-19T10:17:00.254+0000&quot; cryptoAlg=&quot;ECDHE&quot; curve=&quot;Curve25519&quot; params=&quot;None&quot;&gt;
-        &lt;Session sessionId=&quot;f1e02863-4830-47a4-94e7-f8ef665b9887&quot; status=&quot;SESSION-RESUMED&quot;/&gt;
-        &lt;DHPublicKey expiry=&quot;2019-02-20T00:00:00.000+0000&quot;&gt;
-            &lt;Parameters&gt;BBArzwyRRrS7/h1MVDs6QV6H&lt;/Parameters&gt;
-            &lt;KeyValue&gt;x30xgyLxVpKe3VGBsC37mRluKcaWz5mXNMpKJ6XUDVQ=&lt;/KeyValue&gt;
-        &lt;/DHPublicKey&gt;
-        &lt;Nonce&gt;4c1d5833-fff2-46a0-8df3-382625fd191e&lt;/Nonce&gt;
-        &lt;Signature/&gt;
-    &lt;/KeyMaterial&gt;
-    &lt;FIs&gt;
-        &lt;FI&gt;
-            &lt;EncryptedData&gt;bMCwJAM8VDGj87ILIa4Ry+LYky9+1w0/NGzuDIk5Q8vyouoNdMO8DD9UoCf7dWko8NZ0/TFsj9H7
-qQTnj9FAye3LqOwetC1B+SIVs0hDE00GTxPKphuuqDBdE+ZtJ2FixlA+BRVRVVxs6Z/h7wqWqh4+
-Yua3w33xC8kXnldNwjh5cSYg2OvkQilmpF1Jwdm2/gwRmLIYncrCYi08AOnoaRMHK45lUPc7wTy0
-lYmNy7q1ReiEYLNz93nYIqI6ogfx0x2VIfEJaFw3JyVVGdEBGJmavVM2+qZqKG2j2vkFZ1pMynve
-8CN+xzEtjdDBAk6aQkKDhQBaovBuqERmZfYGOHrWICjM8wsQaxLxNN52whjRfJ1tqDUCguEklERn
-W1FfMTigG84tVmeuR3dnrtOao0vkrstDWtaZ5RIJwG/Gnjk51iv5ywq6gtV8/xAotKiYdinMCXcb
-IMWGncnlKqAEJEFJpXV5QqnfU3io6PTAG29tfw1abysWSTe4THNRZOP/YMtwsYLK4RNDDVYLBBh0
-6aBEbQhnYGo/IwCh+6wKTMpe9SOpsj5o0/ur5tiKwkVcJAjxdv+f8a9ty70j4GOXFKfVxyXR40Qj
-pUK1bmCIuQf0oFOjmhksBWXxvO+N0N4KF26O67eQII3OaysduLtorCqlxUtEtQFgq7NJx/zqraXy
-rv3Xc6pVqMpI0h7Y3xdE5OO0aCJGS0VN0/g5yIg9NBryrAyz114yNAz/ul/iL1/D7dVRZO1OXEcn
-97JOHcKeMt7ijgTwdbgf/j8c9ukPrJwh+iiCQZViS6n29egqE0IU/XX24bF0w9TKrb+J5rva4J8/
-QlAnpeG+goDLBd25VZ/QJKEOAL3Vdky6O5DXmtc6yWdYNqbJzeEkIHhMBrISaxHlRjZctipjgF82
-nW723kU7CCsBRo+suzzhMK+0RMdJH8VxtvS+YvpUdd0UHGFy/c79KC7L5sqhAmpGIMx1FaX0NusC
-bI5DjUIqwJhsvicm8aApSIdTpRwrwc2Xyf/4r+CmdOUBZvJpMb4/QWMV244wL4tTMA2Z5cfOjVr9
-EaMP13RgTioVc9baY4tzYQAmGajNZIAmGadHtjEf9pws6POqSjm05vBGKgB+Fx8qkNP4tXvzjlDo
-O8hvu+bsK44Z+9nnLtqHz1A0QC2iN4v4/+1yHAINYgwIJo5YQgl8hEPv1dbp68CumGBKd70jjXRR
-fklIAtenOL5tiV5P4LBKl6th2zIULvTh6Nab6iX7M6k=&lt;/EncryptedData&gt;
-            &lt;Account FIPId=&quot;SBIN&quot; accType=&quot;SAVINGS&quot; maskedAccNumber=&quot;SBI983456005&quot;/&gt;
-        &lt;/FI&gt;
-    &lt;/FIs&gt;
-&lt;/FIFetchResponse&gt;
+<pre><code>{
+    &quot;ver&quot;: &quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;,
+    &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153+0000&quot;,
+    &quot;txnid&quot;: &quot;e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb&quot;,
+    &quot;FI&quot;: [
+        {
+            &quot;fipID&quot;: &quot;80a78190-d2c8-4299-a3f4-13413b77c9f2&quot;,
+            &quot;data&quot;: [
+                {
+                    &quot;linkRefNumber&quot;: &quot;UBI485964579&quot;,
+                    &quot;maskedAccNumber&quot;: &quot;UBI85217881279&quot;,
+                    &quot;encryptedFI&quot;: &quot;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&quot;
+                },
+                {
+                    &quot;linkRefNumber&quot;: &quot;UBI4859645&quot;,
+                    &quot;maskedAccNumber&quot;: &quot;UBI852178812&quot;,
+                    &quot;encryptedFI&quot;: &quot;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&quot;
+                }
+            ],
+            &quot;KeyMaterial&quot;: {
+                &quot;cryptoAlg&quot;: &quot;ECDHE&quot;,
+                &quot;curve&quot;: &quot;Curve25519&quot;,
+                &quot;params&quot;: &quot;None&quot;,
+                &quot;DHPublicKey&quot;: {
+                    &quot;expiry&quot;: &quot;2019-05-29T00:00:00.000+0000&quot;,
+                    &quot;Parameters&quot;: &quot;BBD6p/fEXFHZa8hTPq3q+MT6&quot;,
+                    &quot;KeyValue&quot;: &quot;rw+gvnzMZucx7LNEA1NJdsHzvpp47hgAa7ENRqLhVjo=&quot;
+                },
+                &quot;Nonce&quot;: &quot;77e4b597-ea3a-476e-bcd6-278c037b73ed&quot;,
+                &quot;Signature&quot;: &quot;Signature of AA&quot;
+            }
+        }
+    ]
+}
 </code></pre>
 
 <h3 id="notification">Notification</h3>
 <p>API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Notification</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Consent/Notification</code></p>
 <p>Request Body</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Notification xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-06T04:37:19.509Z&quot; txnid=&quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;&gt;
-    &lt;From type=&quot;string&quot; value=&quot;string&quot; name=&quot;SBI&quot; id=&quot;fip123&quot;&gt;&lt;/From&gt;
-    &lt;To type=&quot;string&quot; value=&quot;string&quot; name=&quot;string&quot; id=&quot;string&quot;&gt;&lt;/To&gt;
-    &lt;Event type=&quot;FI-READY&quot;&gt;&lt;/Event&gt;
-    &lt;Consent id=&quot;687c3620-6bb4-43c4-9b9e-39f36c7617fb&quot; status=&quot;string&quot;&gt;&lt;/Consent&gt;
-    &lt;Session sessionId=&quot;9afdacdd-215b-4c17-af18-cdccebfb7d1a&quot; status=&quot;string&quot;&gt;&lt;/Session&gt;
-    &lt;Payload&gt;string&lt;/Payload&gt;
-&lt;/Notification&gt;
+<pre><code>{
+  &quot;ver&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
+  &quot;txnid&quot;: &quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;,
+  &quot;Notifier&quot;: {
+    &quot;type&quot;: &quot;FIP&quot;,
+    &quot;id&quot;: &quot;BARB0KIMXXX&quot;
+  },
+  &quot;ConsentStatusNotification&quot;: {
+    &quot;consentId&quot;: &quot;ce721611-0ed1-4043-b54a-9493b4ad3007&quot;,
+    &quot;ConsentStatus&quot;: &quot;REJECTED&quot;
+  }
+}
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>200 OK
+</code></pre>
+
+<h3 id="notification_1">Notification</h3>
+<p>API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/FI/Notification</code></p>
+<p>Request Body</p>
+<pre><code>{
+  &quot;ver&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
+  &quot;txnid&quot;: &quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;,
+  &quot;Notifier&quot;: {
+    &quot;type&quot;: &quot;FIP&quot;,
+    &quot;id&quot;: &quot;BARB0KIMXXX&quot;
+  },
+  &quot;FIStatusNotification&quot;: {
+    &quot;sessionId&quot;: &quot;668018cd-fd10-4f40-b080-0fd1f744cd18&quot;,
+    &quot;FIStatus&quot;: &quot;READY&quot;,
+    &quot;description&quot;: &quot;CONSENT-ACTIVE&quot;
+  }
+}
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>200 OK
+</code></pre>
+
+<h3 id="notification_2">Notification</h3>
+<p>API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://aa.finvu.in/API/V1/Account/link/Notification</code></p>
+<p>Request Body</p>
+<pre><code>{
+  &quot;ver&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
+  &quot;txnid&quot;: &quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;,
+  &quot;Notifier&quot;: {
+    &quot;type&quot;: &quot;FIP&quot;,
+    &quot;id&quot;: &quot;SBIN&quot;
+  },
+  &quot;AccountLinkStatusNotification&quot;: {
+    &quot;maskedAccNumber&quot;: &quot;XXXXXXXX6001&quot;,
+    &quot;customerAddress&quot;: &quot;test9&quot;,
+    &quot;linkRefNumber&quot;: &quot;2a6fd402-1894-4533-b9d3-be55d562130a&quot;,
+    &quot;linkStatus&quot;: &quot;DELINKED&quot;
+  }
+}
 </code></pre>
 
 <p>Response Expected: </p>
@@ -644,10 +826,16 @@ fklIAtenOL5tiV5P4LBKl6th2zIULvTh6Nab6iX7M6k=&lt;/EncryptedData&gt;
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>&lt;HeartbeatResponse ver=&quot;1.0&quot; timestamp=&quot;2018-06-26T04:28:01.000+0000&quot;&gt;
-    &lt;Error errMsg=&quot;OK&quot; errCode=&quot;200&quot;/&gt;
-    &lt;Status&gt;UP&lt;/Status&gt;
-&lt;/HeartbeatResponse&gt;
+<pre><code>{
+    &quot;ver&quot;: &quot;1.0&quot;,
+    &quot;timestamp&quot;: &quot;2018-06-25T17:28:01.000+0000&quot;,
+    &quot;Status&quot;: &quot;UP&quot;,
+    &quot;Error&quot;: {
+        &quot;code&quot;: 0,
+        &quot;msg&quot;: &quot;OK&quot;,
+        &quot;detail&quot;: &quot;Service is activated on network&quot;
+    }
+}
 </code></pre>
                 
                   
