@@ -36,7 +36,7 @@
     
     
       
-        <title>FIP Data API - Finvu API Docs</title>
+        <title>Central Trust Store - Finvu API Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#fip-data-api" tabindex="1" class="md-skip">
+      <a href="#central-trust-store" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
                 Finvu API Docs
               </span>
               <span class="md-header-nav__topic">
-                FIP Data API
+                Central Trust Store
               </span>
             
           
@@ -198,56 +198,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        FIP Data API
-      </label>
-    
-    <a href="./" title="FIP Data API" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../fip_data_api/" title="FIP Data API" class="md-nav__link">
       FIP Data API
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adding-user-account" title="Adding User Account" class="md-nav__link">
-    Adding User Account
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-user-account-transaction" title="Adding User Account Transaction" class="md-nav__link">
-    Adding User Account Transaction
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -267,11 +222,56 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../cts_simulator/" title="Central Trust Store" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Central Trust Store
+      </label>
+    
+    <a href="./" title="Central Trust Store" class="md-nav__link md-nav__link--active">
       Central Trust Store
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-new-entity-aa-fip-fiu" title="Add New Entity (AA, FIP, FIU)" class="md-nav__link">
+    Add New Entity (AA, FIP, FIU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extracting-entity-aa-fip-fiu" title="Extracting Entity (AA, FIP, FIU)" class="md-nav__link">
+    Extracting Entity (AA, FIP, FIU)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -296,15 +296,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-user-account" title="Adding User Account" class="md-nav__link">
-    Adding User Account
+  <a href="#add-new-entity-aa-fip-fiu" title="Add New Entity (AA, FIP, FIU)" class="md-nav__link">
+    Add New Entity (AA, FIP, FIU)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-user-account-transaction" title="Adding User Account Transaction" class="md-nav__link">
-    Adding User Account Transaction
+  <a href="#extracting-entity-aa-fip-fiu" title="Extracting Entity (AA, FIP, FIU)" class="md-nav__link">
+    Extracting Entity (AA, FIP, FIU)
   </a>
   
 </li>
@@ -326,110 +326,95 @@
               
                 
                 
-                <h1 id="fip-data-api">FIP Data API</h1>
-<p>This API can be used to add sample data for accounts and associated transactions and can be called from an appropriate testing tool such as <a href="https://www.getpostman.com">Postman</a></p>
-<h2 id="adding-user-account">Adding User Account</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URL</td>
-<td align="center"><code>http://api.finvu.in/Accounts/add</code></td>
-</tr>
-<tr>
-<td>HTTP METHOD</td>
-<td align="center"><code>POST</code></td>
-</tr>
-</tbody>
-</table>
+                <h1 id="central-trust-store">Central Trust Store</h1>
+<p>This is a Central Trust Store for the Account Aggregator Ecosystem and is a prototype based on current ReBIT API defnition for the Central Trust Store.  </p>
+<h3 id="add-new-entity-aa-fip-fiu">Add New Entity (AA, FIP, FIU)</h3>
+<p>Below is the API for adding details on FIP, AA or FIU. </p>
+<p>Note: In case of AA and FIU currently fitypes needs to be provided when adding details, although it would be ignored when used.</p>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>//aactsuat.finvu.in/saveEntity/&lt;Entity Type&gt;</code></p>
+<p>e.g.: https://aactsuat.finvu.in/saveEntity/AA</p>
+<p>e.g.: https://aactsuat.finvu.in/saveEntity/FIP</p>
+<p>e.g.: https://aactsuat.finvu.in/saveEntity/FIU</p>
 <p>Request Body</p>
-<pre><code>&lt;UserAccountInfo&gt;
-    &lt;UserAccount accountRefNo=&quot;RefHDFC0001&quot; accountNo=&quot;HDFC11111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
-      &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
-    &lt;/UserAccount&gt;
-    &lt;UserAccount accountRefNo=&quot;RefHDFC0002&quot; accountNo=&quot;HDFC22222222&quot; accountTypeEnum=&quot;CURRENT&quot; FIType=&quot;DEPOSIT&quot;&gt;
-      &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
-    &lt;/UserAccount&gt;
-    &lt;UserAccount accountRefNo=&quot;RefSBI0001&quot; accountNo=&quot;SBI11111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
-      &lt;Identifiers pan=&quot;AFYPA24444&quot; mobile=&quot;7030608902&quot; email=&quot;info@cookiejar.co.in&quot; aadhar=&quot;679486011111&quot;&gt;&lt;/Identifiers&gt; 
-    &lt;/UserAccount&gt;
-&lt;/UserAccountInfo&gt;
+<pre><code>{
+  &quot;ver&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;2019-06-16T03:01:53.410Z&quot;,
+  &quot;txnid&quot;: &quot;29ae-11e8-a8d7-0289&quot;,
+  &quot;requester&quot;: {
+    &quot;name&quot;: &quot;Finvu&quot;,
+    &quot;id&quot;: &quot;AA010001&quot;
+  },
+  &quot;entityinfo&quot;: {
+    &quot;name&quot;: &quot;Cookiejar Technologies Private Limited&quot;,
+    &quot;id&quot;: &quot;AA010001&quot;,
+    &quot;code&quot;: &quot;CTPL&quot;,
+    &quot;baseurl&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,
+    &quot;fitypes&quot;: [
+      &quot;DEPOSIT&quot;,&quot;EQUITY&quot;
+    ],
+    &quot;certificate&quot;: {&quot;keys&quot;:
+       [
+         {&quot;kty&quot;:&quot;EC&quot;,
+          &quot;crv&quot;:&quot;P-256&quot;,
+          &quot;x&quot;:&quot;MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4&quot;,
+          &quot;y&quot;:&quot;4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM&quot;,
+          &quot;use&quot;:&quot;enc&quot;,
+          &quot;kid&quot;:&quot;1&quot;},
+
+         {&quot;kty&quot;:&quot;RSA&quot;,
+          &quot;n&quot;: &quot;0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw&quot;,
+          &quot;e&quot;:&quot;AQAB&quot;,
+          &quot;alg&quot;:&quot;RS256&quot;,
+          &quot;kid&quot;:&quot;2011-04-29&quot;}
+       ]
+     },
+    &quot;tokeninfo&quot;: {
+      &quot;url&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,
+      &quot;maxcalls&quot;: 1,
+      &quot;desc&quot;: &quot;string&quot;
+    }
+  }
+}
 </code></pre>
 
 <p>Response Expected: </p>
-<pre><code>User account(s) added.
-
-  Account Reference Number : RefHDFC0001
-  Account Number : HDFC11111111
-  Consent Id : 2c84eba9-4637-45f5-b42e-00e67c128258
- (It use in Account Discovery.)
-
-
-  Account Reference Number : RefHDFC0002
-  Account Number : HDFC22222222
-  Consent Id : 09670e7c-7dbb-4d45-8e15-dfcc829caab6
- (It use in Account Discovery.)
-
-
-  Account Reference Number : RefSBI0001
-  Account Number : SBI11111111
-  Consent Id : b583190a-d51e-4ce2-9981-f51d0e010af9
- (It use in Account Discovery.)
-
- Please save this information for FI request API calls.
+<pre><code>Record save successfully with Entity Id AA
 </code></pre>
 
-<h2 id="adding-user-account-transaction">Adding User Account Transaction</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URL</td>
-<td align="center"><code>http://api.finvu.in/Accounts/Transaction/add</code></td>
-</tr>
-<tr>
-<td>HTTP METHOD</td>
-<td align="center"><code>POST</code></td>
-</tr>
-</tbody>
-</table>
-<p>Request Body</p>
-<pre><code>&lt;UserAccountTrans&gt;
-        &lt;UserAccount&gt; 
-            &lt;accountRefNo&gt;RefHDFC0001&lt;/accountRefNo&gt; 
-            &lt;accountNo&gt;HDFC11111111&lt;/accountNo&gt; 
-            &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
-            &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
-            &lt;accountData&gt;
-    &lt;![CDATA[
-      &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-      &lt;Account xmlns=&quot;http://api.rebit.org.in/FISchema/deposit&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://api.rebit.org.in/FISchema/deposit ../FISchema/deposit.xsd&quot; id=&quot;accountNumber&quot; type=&quot;deposit&quot;&gt;
-    &lt;Summary type=&quot;current&quot; openingDate=&quot;2002-09-24&quot; ifscCode=&quot;AIRP0000001&quot; micrCode=&quot;&quot; branch=&quot;&quot; facility=&quot;OD&quot; currentBalance=&quot;&quot;    currentODLimit=&quot;&quot;&gt;
-          &lt;Holders type=&quot;single&quot;&gt;
-    &lt;Holder order=&quot;1|2&quot; name=&quot;&quot; aadhaar=&quot;123456789012&quot; mobile=&quot;&quot; landline=&quot;&quot; address=&quot;&quot; email=&quot;qw.1234@co.in&quot; pan=&quot;AAAPL1234C&quot;/&gt;&lt;/Holders&gt;
-    &lt;/Summary&gt;
-    &lt;Transactions startDate=&quot;2002-09-24&quot; endDate=&quot;2002-09-24&quot;&gt;
-          &lt;Transaction id=&quot;&quot; date=&quot;2002-09-24&quot; narration=&quot;&quot; reference=&quot;&quot; amount=&quot;800&quot; balance=&quot;90&quot;/&gt;
-  &lt;/Transactions&gt;
-      &lt;/Account&gt;
-    ]]&gt;
-            &lt;/accountData&gt;
-        &lt;/UserAccount&gt;
-&lt;/UserAccountTrans&gt;
-</code></pre>
-
+<h3 id="extracting-entity-aa-fip-fiu">Extracting Entity (AA, FIP, FIU)</h3>
+<p>HTTP METHOD: <code>GET</code></p>
+<p>URL: <code>//aactsuat.finvu.in/entityInfo/&lt;Entity Type&gt;/&lt;Entity ID&gt;</code></p>
+<p>e.g.
+https://aactsuat.finvu.in/entityInfo/AA/AA010001</p>
 <p>Response Expected: </p>
-<pre><code>User account transaction added.
+<pre><code>{
+    &quot;ver&quot;: &quot;1.0&quot;,
+    &quot;timestamp&quot;: &quot;2019-06-17T10:20:56.537+0000&quot;,
+    &quot;txnid&quot;: &quot;ff8b7364-d507-4898-a2c1-66f23e5e9753&quot;,
+    &quot;requester&quot;: null,
+    &quot;entityinfo&quot;: {
+        &quot;name&quot;: &quot;Cookiejar Technologies Private Limited&quot;,
+        &quot;id&quot;: &quot;AA010001&quot;,
+        &quot;code&quot;: &quot;CTPL&quot;,
+        &quot;baseurl&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,
+        &quot;fitypes&quot;: [
+            &quot;DEPOSIT&quot;,
+            &quot;EQUITY&quot;
+        ],
+        &quot;certificate&quot;: {
+            &quot;keys&quot;: [
+                &quot;{kty=EC, crv=P-256, x=MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4, y=4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM, use=enc, kid=1}&quot;,
+                &quot;{kty=RSA, n=0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw, e=AQAB, alg=RS256, kid=2011-04-29}&quot;
+            ]
+        },
+        &quot;tokeninfo&quot;: {
+            &quot;url&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,
+            &quot;maxcalls&quot;: 1,
+            &quot;desc&quot;: &quot;string&quot;
+        }
+    }
+}
 </code></pre>
                 
                   
@@ -451,7 +436,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../fip_simulator/" title="FIP API (Simulator)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../aa_simulator/" title="AA API Sandbox" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -460,25 +445,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                FIP API (Simulator)
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../aa_simulator/" title="AA API Sandbox" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
                 AA API Sandbox
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
