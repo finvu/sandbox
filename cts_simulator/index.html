@@ -258,6 +258,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#updating-entity-aa-fip-fiu" title="Updating Entity (AA, FIP, FIU)" class="md-nav__link">
+    Updating Entity (AA, FIP, FIU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#extracting-entity-aa-fip-fiu" title="Extracting Entity (AA, FIP, FIU)" class="md-nav__link">
     Extracting Entity (AA, FIP, FIU)
   </a>
@@ -305,6 +312,13 @@
         <li class="md-nav__item">
   <a href="#add-new-entity-aa-fip-fiu" title="Add New Entity (AA, FIP, FIU)" class="md-nav__link">
     Add New Entity (AA, FIP, FIU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-entity-aa-fip-fiu" title="Updating Entity (AA, FIP, FIU)" class="md-nav__link">
+    Updating Entity (AA, FIP, FIU)
   </a>
   
 </li>
@@ -396,6 +410,56 @@
 <pre><code>Record save successfully with Entity Id AA
 </code></pre>
 
+<h3 id="updating-entity-aa-fip-fiu">Updating Entity (AA, FIP, FIU)</h3>
+<p>Below is the API for updating details on FIP, AA or FIU. </p>
+<p>HTTP METHOD: <code>PUT</code></p>
+<p>URL: <code>//aactsuat.finvu.in/saveEntity</code></p>
+<p>Request Body</p>
+<pre><code>{
+  &quot;ver&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;2019-06-16T03:01:53.410Z&quot;,
+  &quot;txnid&quot;: &quot;29ae-11e8-a8d7-0289&quot;,
+  &quot;requester&quot;: {
+    &quot;name&quot;: &quot;Finvu&quot;,
+    &quot;id&quot;: &quot;AA010001&quot;
+  },
+  &quot;entityinfo&quot;: {
+    &quot;name&quot;: &quot;Cookiejar Technologies Private Limited&quot;,
+    &quot;id&quot;: &quot;AA010001&quot;,
+    &quot;code&quot;: &quot;CTPL&quot;,
+    &quot;baseurl&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,
+    &quot;fitypes&quot;: [
+      &quot;DEPOSIT&quot;,&quot;EQUITY&quot;
+    ],
+    &quot;certificate&quot;: {&quot;keys&quot;:
+       [
+         {&quot;kty&quot;:&quot;EC&quot;,
+          &quot;crv&quot;:&quot;P-256&quot;,
+          &quot;x&quot;:&quot;MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4&quot;,
+          &quot;y&quot;:&quot;4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM&quot;,
+          &quot;use&quot;:&quot;enc&quot;,
+          &quot;kid&quot;:&quot;1&quot;},
+
+         {&quot;kty&quot;:&quot;RSA&quot;,
+          &quot;n&quot;: &quot;0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw&quot;,
+          &quot;e&quot;:&quot;AQAB&quot;,
+          &quot;alg&quot;:&quot;RS256&quot;,
+          &quot;kid&quot;:&quot;2011-04-29&quot;}
+       ]
+     },
+    &quot;tokeninfo&quot;: {
+      &quot;url&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,
+      &quot;maxcalls&quot;: 1,
+      &quot;desc&quot;: &quot;string&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>Record save successfully Modified with Entity Id :: AA010001
+</code></pre>
+
 <h3 id="extracting-entity-aa-fip-fiu">Extracting Entity (AA, FIP, FIU)</h3>
 <p>HTTP METHOD: <code>GET</code></p>
 <p>URL: <code>//aactsuat.finvu.in/entityInfo/&lt;Entity Type&gt;/&lt;Entity ID&gt;</code></p>
@@ -440,57 +504,45 @@ https://aactsuat.finvu.in/entityInfo/AA/AA010001</p>
 <p>Response Expected: </p>
 <pre><code>[
     {
-        &quot;ver&quot;: &quot;1.0&quot;,
-        &quot;timestamp&quot;: &quot;2019-06-18T03:35:00.408+0000&quot;,
-        &quot;txnid&quot;: &quot;632a218a-99ed-4728-a5e3-5ad01376a94f&quot;,
-        &quot;requester&quot;: null,
-        &quot;entityinfo&quot;: {
-            &quot;name&quot;: &quot;Cookiejar Technologies Private Limited&quot;,
-            &quot;id&quot;: &quot;AA010001&quot;,
-            &quot;code&quot;: &quot;CTPL&quot;,
-            &quot;baseurl&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,
-            &quot;fitypes&quot;: [
-                &quot;DEPOSIT&quot;,
-                &quot;EQUITY&quot;
-            ],
-            &quot;certificate&quot;: {
-                &quot;keys&quot;: [
-                    &quot;{kty=EC, crv=P-256, x=MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4, y=4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM, use=enc, kid=1}&quot;,
-                    &quot;{kty=RSA, n=0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw, e=AQAB, alg=RS256, kid=2011-04-29}&quot;
-                ]
-            },
-            &quot;tokeninfo&quot;: {
-                &quot;url&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,
-                &quot;maxcalls&quot;: 1,
-                &quot;desc&quot;: &quot;string&quot;
-            }
+        &quot;name&quot;: &quot;Cookiejar Technologies Private Limited&quot;,
+        &quot;id&quot;: &quot;AA010001&quot;,
+        &quot;code&quot;: &quot;FINVUTPL&quot;,
+        &quot;baseurl&quot;: &quot;https://finvu.in/API/V1&quot;,
+        &quot;fitypes&quot;: [
+            &quot;DEPOSIT&quot;,
+            &quot;EQUITY&quot;
+        ],
+        &quot;certificate&quot;: {
+            &quot;keys&quot;: [
+                &quot;{kty=EC, crv=P-256, x=MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4, y=4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM, use=enc, kid=1}&quot;,
+                &quot;{kty=RSA, n=0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgwz, e=AQAB, alg=RS256, kid=2011-04-29}&quot;
+            ]
+        },
+        &quot;tokeninfo&quot;: {
+            &quot;url&quot;: &quot;https://finvu.in/API/V1&quot;,
+            &quot;maxcalls&quot;: 1,
+            &quot;desc&quot;: &quot;string&quot;
         }
     },
     {
-        &quot;ver&quot;: &quot;1.0&quot;,
-        &quot;timestamp&quot;: &quot;2019-06-18T03:35:00.417+0000&quot;,
-        &quot;txnid&quot;: &quot;27483312-9d73-4f88-bee0-f1bef4e36938&quot;,
-        &quot;requester&quot;: null,
-        &quot;entityinfo&quot;: {
-            &quot;name&quot;: &quot;Finvu Technologies Private Limited&quot;,
-            &quot;id&quot;: &quot;AA010002&quot;,
-            &quot;code&quot;: &quot;FINVUTPL&quot;,
-            &quot;baseurl&quot;: &quot;https://finvu.in/API/V1&quot;,
-            &quot;fitypes&quot;: [
-                &quot;DEPOSIT&quot;,
-                &quot;EQUITY&quot;
-            ],
-            &quot;certificate&quot;: {
-                &quot;keys&quot;: [
-                    &quot;{kty=EC, crv=P-256, x=MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4, y=4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM, use=enc, kid=1}&quot;,
-                    &quot;{kty=RSA, n=0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgwz, e=AQAB, alg=RS256, kid=2011-04-29}&quot;
-                ]
-            },
-            &quot;tokeninfo&quot;: {
-                &quot;url&quot;: &quot;https://finvu.in/API/V1&quot;,
-                &quot;maxcalls&quot;: 1,
-                &quot;desc&quot;: &quot;string&quot;
-            }
+        &quot;name&quot;: &quot;Finvu Technologies Private Limited&quot;,
+        &quot;id&quot;: &quot;AA010002&quot;,
+        &quot;code&quot;: &quot;FINVUTPL&quot;,
+        &quot;baseurl&quot;: &quot;https://finvu.in/API/V1&quot;,
+        &quot;fitypes&quot;: [
+            &quot;DEPOSIT&quot;,
+            &quot;EQUITY&quot;
+        ],
+        &quot;certificate&quot;: {
+            &quot;keys&quot;: [
+                &quot;{kty=EC, crv=P-256, x=MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4, y=4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM, use=enc, kid=1}&quot;,
+                &quot;{kty=RSA, n=0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgwz, e=AQAB, alg=RS256, kid=2011-04-29}&quot;
+            ]
+        },
+        &quot;tokeninfo&quot;: {
+            &quot;url&quot;: &quot;https://finvu.in/API/V1&quot;,
+            &quot;maxcalls&quot;: 1,
+            &quot;desc&quot;: &quot;string&quot;
         }
     }
 ]
