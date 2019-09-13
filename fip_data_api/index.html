@@ -411,10 +411,27 @@
             &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
             &lt;accountTypeEnum&gt;SAVINGS&lt;/accountTypeEnum&gt;
             &lt;accountData&gt;
-    &lt;![CDATA[&lt;Account xmlns=&quot;http://api.rebit.org.in/FISchema/deposit&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://api.rebit.org.in/FISchema/deposit ../FISchema/deposit.xsd&quot; id=&quot;1111111&quot; type=&quot;deposit&quot;&gt;&lt;Summary type=&quot;current&quot; openingDate=&quot;2002-09-24&quot; ifscCode=&quot;AIRP0000001&quot; micrCode=&quot;&quot; branch=&quot;&quot; facility=&quot;OD&quot; currentBalance=&quot;10000&quot; currentODLimit=&quot;&quot;&gt;&lt;Holders type=&quot;single&quot;&gt;&lt;Holder order=&quot;1|2&quot; name=&quot;test&quot; aadhaar=&quot;123456789012&quot; mobile=&quot;8888888&quot; landline=&quot;&quot; address=&quot;Pune&quot; email=&quot;qw.1234@co.in&quot; pan=&quot;AAAPL1234C&quot;/&gt;&lt;/Holders&gt;&lt;/Summary&gt;&lt;Transactions startDate=&quot;2002-09-24&quot; endDate=&quot;2002-09-24&quot;&gt;&lt;Transaction id=&quot;bf58d0e8-cad0-4659-87cf-3c97642fd6d6&quot; date=&quot;2002-09-24&quot; narration=&quot;MMT/Ref815116555662/68012604153&quot; reference=&quot;12222222&quot; amount=&quot;800&quot; balance=&quot;10000&quot;/&gt;&lt;/Transactions&gt;&lt;/Account&gt;]]&gt;
-            &lt;/accountData&gt;
-        &lt;/UserAccount&gt;
-&lt;/UserAccountTrans&gt;
+    &lt;![CDATA[&lt;Account xmlns=&quot;http://api.rebit.org.in/FISchema/deposit&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://api.rebit.org.in/FISchema/deposit../FISchema/deposit.xsd&quot; linkedAccRef=&quot;2197b71479a17f8b003da134fab117e7&quot; maskedAccNumber=&quot;000401165847&quot; type=&quot;deposit&quot;&gt;
+    &lt;Profile&gt;
+        &lt;Holders type=&quot;JOINT&quot;&gt;
+            &lt;Holder name=&quot;Test&quot; address=&quot;Pune&quot; email=&quot;test@finvu.in&quot; landline=&quot;02183-230890&quot; mobile=&quot;8600045504&quot; city=&quot;Pune&quot; state=&quot;MH&quot; country=&quot;India&quot; zip=&quot;411002&quot;/&gt;
+        &lt;/Holders&gt;
+        &lt;Summary type=&quot;SAVINGS&quot; branch=&quot;Pune&quot; facility=&quot;CC&quot; ifscCode=&quot;ICIC0000005&quot; micrCode=&quot;411229002&quot; openingDate=&quot;2018-04-01&quot; currentODLimit=&quot;10000&quot; drawingLimit=&quot;20000&quot;/&gt;
+    &lt;/Profile&gt;
+    &lt;Balance currentBalance=&quot;1358.51&quot; currency=&quot;INR&quot; exchgeRate=&quot;&quot; balanceDateTime=&quot;2018-04-01T18:30:00.000+0000&quot;&gt;
+        &lt;Pending amount=&quot;0.0&quot;/&gt;
+    &lt;/Balance&gt;
+    &lt;Transactions startDate=&quot;2018-04-01&quot; endDate=&quot;2019-03-31&quot;&gt;
+        &lt;Transaction txnId=&quot;M3775&quot; transactionTimestamp=&quot;2015-03-30T18:30:00.000+0000&quot; narration=&quot;By Cash&quot; valueDate=&quot;2015-03-30T18:30:00.000+0000&quot; type=&quot;CREDIT&quot; amount=&quot;1000.0&quot; currentBalance=&quot;1001.00&quot; mode=&quot;OTHERS&quot; reference=&quot;2197b71479a17f8b003da134fab117e7&quot; /&gt;
+        &lt;Transaction txnId=&quot;SB3380774&quot; transactionTimestamp=&quot;2015-07-02T18:30:00.000+0000&quot; narration=&quot;000401165847:Int.Pd:30-06-2014 to 02-07-2015&quot; valueDate=&quot;2015-07-02T18:30:00.000+0000&quot; type=&quot;CREDIT&quot; amount=&quot;10.0&quot; currentBalance=&quot;1011.00&quot; mode=&quot;OTHERS&quot; reference=&quot;2197b71479a17f8b003da134fab117e7&quot; /&gt;
+        &lt;Transaction txnId=&quot;S24889192&quot; transactionTimestamp=&quot;2015-07-02T18:30:00.000+0000&quot; narration=&quot;PKT/100000009881/DG~000401166353~000401165847&quot; valueDate=&quot;2015-07-02T18:30:00.000+0000&quot; type=&quot;CREDIT&quot; amount=&quot;100.0&quot; currentBalance=&quot;1111.00&quot; mode=&quot;OTHERS&quot; reference=&quot;2197b71479a17f8b003da134fab117e7&quot; /&gt;
+        &lt;Transaction txnId=&quot;S24889193&quot; transactionTimestamp=&quot;2015-07-02T18:30:00.000+0000&quot; narration=&quot;PKT/100000009881/DG~000401166353~000401165847&quot; valueDate=&quot;2015-07-02T18:30:00.000+0000&quot; type=&quot;CREDIT&quot; amount=&quot;9796.0&quot; currentBalance=&quot;1211.00&quot; mode=&quot;OTHERS&quot; reference=&quot;2197b71479a17f8b003da134fab117e7&quot; /&gt;
+        &lt;Transaction txnId=&quot;S24889193&quot; transactionTimestamp=&quot;2015-07-02T18:30:00.000+0000&quot; narration=&quot;PKT/100000010986/DG~000401166353~000401165847&quot; valueDate=&quot;2015-07-02T18:30:00.000+0000&quot; type=&quot;CREDIT&quot; amount=&quot;1.01&quot; currentBalance=&quot;1212.01&quot; mode=&quot;OTHERS&quot; reference=&quot;2197b71479a17f8b003da134fab117e7&quot; /&gt;
+        &lt;Transaction txnId=&quot;S24929945&quot; transactionTimestamp=&quot;2015-07-02T18:30:00.000+0000&quot; narration=&quot;&quot; valueDate=&quot;2015-07-02T18:30:00.000+0000&quot; type=&quot;CREDIT&quot; amount=&quot;4.5&quot; currentBalance=&quot;1356.51&quot; mode=&quot;OTHERS&quot; reference=&quot;2197b71479a17f8b003da134fab117e7&quot; /&gt;
+        &lt;Transaction txnId=&quot;S26293463&quot; transactionTimestamp=&quot;2015-07-02T18:30:00.000+0000&quot; narration=&quot;UPI/705120481717/manu12@icici&quot; valueDate=&quot;2015-07-02T18:30:00.000+0000&quot; type=&quot;CREDIT&quot; amount=&quot;1.0&quot; currentBalance=&quot;1357.51&quot; mode=&quot;OTHERS&quot; reference=&quot;2197b71479a17f8b003da134fab117e7&quot; /&gt;
+        &lt;Transaction txnId=&quot;S26293472&quot; transactionTimestamp=&quot;2015-07-02T18:30:00.000+0000&quot; narration=&quot;UPI/705411482008/timesofmoney@eazypay&quot; valueDate=&quot;2015-07-02T18:30:00.000+0000&quot; type=&quot;CREDIT&quot; amount=&quot;1.0&quot; currentBalance=&quot;1358.51&quot; mode=&quot;OTHERS&quot; reference=&quot;2197b71479a17f8b003da134fab117e7&quot; /&gt;
+    &lt;/Transactions&gt;
+&lt;/Account&gt;
 </code></pre>
 
 <p>Response Expected: </p>
