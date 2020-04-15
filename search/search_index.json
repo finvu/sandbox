@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Overview\n\n\nFinvu has implemented a FIP simulator based on the \nReBIT API specs\n in order to test the APIs as part of the AA ecosystem. We have also provided an API for inputting source FI data considering different \nFIType\n and these would evolve as we move forward. Kindly refer to the details of the FIP Data API to know more. \n\n\nSince this is a closed user group the FIP simulator has support for \nhttp\n only and future support for \nhttps\n will be considered.\n\n\nWe are trying to keep upto the pace by implementing latest Rebit API specs for the FIP simulator, however if there any issues, do drop us a note at \ninfo@cookiejar.co.in\n\n\nVersion\n\n\nCurrently the FIP simulator adheres to the ReBit specs version 1.0.5\n\n\nFIP Data API\n\n\nPrior to using the FIP Sandbox API, dummy FI data can be entered into FIP source data system using the \nFIP Data API\n\n\nAA Data API\n\n\nPrior to using the AA Sandbox API, dummy FI data can be entered into AA source data system using the \nAA Data API\n\n\nAPI Key Request\n\n\nIn order to use the FIP and AA API an api key is required to be passed. \n\n\nPlease send an email to \ninfo@cookiejar.co.in\n for the api key. \n\n\nRefer to the \nFIP API Sandbox\n page for more information.\n\n\nRefer to the \nAA API Sandbox\n page for more information.\n\n\nRoot API Endpoint\n\n\nThe root API end point is \nhttp://api.finvu.in/ConnectHub/V1/",
+            "text": "Overview\n\n\nFinvu has implemented a FIP simulator based on the \nReBIT API specs\n in order to test the APIs as part of the AA ecosystem. We have also provided an API for inputting source FI data considering different \nFIType\n and these would evolve as we move forward. Kindly refer to the details of the FIP Data API to know more. \n\n\nSince this is a closed user group the FIP simulator has support for \nhttp\n only and future support for \nhttps\n will be considered.\n\n\nWe are trying to keep upto the pace by implementing latest Rebit API specs for the FIP simulator, however if there any issues, do drop us a note at \ninfo@cookiejar.co.in\n\n\nVersion\n\n\nCurrently the FIP simulator adheres to the ReBit specs version 1.0.5\n\n\nFIP Data Entry API\n\n\nPrior to using the FIP Sandbox API, dummy FI data can be entered into FIP source data system using the \nFIP Data API\n\n\nAA Data API\n\n\nPrior to using the AA Sandbox API, dummy FI data can be entered into AA source data system using the \nAA Data API\n\n\nAPI Key Request\n\n\nIn order to use the FIP and AA API an api key is required to be passed. \n\n\nPlease send an email to \ninfo@cookiejar.co.in\n for the api key. \n\n\nRefer to the \nFIP API Sandbox\n page for more information.\n\n\nRefer to the \nAA API Sandbox\n page for more information.\n\n\nRoot API Endpoint\n\n\nThe root API end point is \nhttp://api.finvu.in/ConnectHub/V1/",
             "title": "Overview"
         },
         {
@@ -16,9 +16,9 @@
             "title": "Version"
         },
         {
-            "location": "/#fip-data-api",
+            "location": "/#fip-data-entry-api",
             "text": "Prior to using the FIP Sandbox API, dummy FI data can be entered into FIP source data system using the  FIP Data API",
-            "title": "FIP Data API"
+            "title": "FIP Data Entry API"
         },
         {
             "location": "/#aa-data-api",
