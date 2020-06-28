@@ -36,7 +36,7 @@
     
     
       
-        <title>AA API Sandbox - Finvu API Docs</title>
+        <title>Integration with Finvu AA - Finvu API Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#aa-api-sandbox" tabindex="1" class="md-skip">
+      <a href="#integrating-with-finvu-aa" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
                 Finvu API Docs
               </span>
               <span class="md-header-nav__topic">
-                AA API Sandbox
+                Integration with Finvu AA
               </span>
             
           
@@ -186,6 +186,30 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../get_started/" title="Get Started" class="md-nav__link">
+      Get Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_fiu_integration/" title="Integrating with Finvu FIU" class="md-nav__link">
+      Integrating with Finvu FIU
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -197,11 +221,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        AA API Sandbox
+        Integration with Finvu AA
       </label>
     
-    <a href="./" title="AA API Sandbox" class="md-nav__link md-nav__link--active">
-      AA API Sandbox
+    <a href="./" title="Integration with Finvu AA" class="md-nav__link md-nav__link--active">
+      Integration with Finvu AA
     </a>
     
       
@@ -215,8 +239,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-request" title="API Request" class="md-nav__link">
-    API Request
+  <a href="#pre-requisites-before-testing" title="Pre-Requisites before testing" class="md-nav__link">
+    Pre-Requisites before testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finvu-aa-endpoint" title="Finvu AA Endpoint" class="md-nav__link">
+    Finvu AA Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-headers-to-be-set-for-every-api-request" title="Request headers (To be set for every API request)" class="md-nav__link">
+    Request headers (To be set for every API request)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finvu-aa-api" title="Finvu AA API" class="md-nav__link">
+    Finvu AA API
   </a>
   
     <nav class="md-nav">
@@ -394,6 +439,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sample-data-for-testing" title="Sample data for testing" class="md-nav__link">
+    Sample data for testing
+  </a>
+  
+</li>
+      
       
       
       
@@ -411,32 +463,44 @@
 
 
   <li class="md-nav__item">
+    <a href="../how_to/" title="How-To" class="md-nav__link">
+      How-To
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../guidelines/" title="Guidelines" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_data_api/" title="Sample Test Data" class="md-nav__link">
+      Sample Test Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../fip_simulator/" title="FIP API Sandbox" class="md-nav__link">
       FIP API Sandbox
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../fiu_simulator/" title="FIU API Sandbox" class="md-nav__link">
-      FIU API Sandbox
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../fip_data_api/" title="Test Data in FIP" class="md-nav__link">
-      Test Data in FIP
     </a>
   </li>
 
@@ -462,8 +526,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-request" title="API Request" class="md-nav__link">
-    API Request
+  <a href="#pre-requisites-before-testing" title="Pre-Requisites before testing" class="md-nav__link">
+    Pre-Requisites before testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finvu-aa-endpoint" title="Finvu AA Endpoint" class="md-nav__link">
+    Finvu AA Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-headers-to-be-set-for-every-api-request" title="Request headers (To be set for every API request)" class="md-nav__link">
+    Request headers (To be set for every API request)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finvu-aa-api" title="Finvu AA API" class="md-nav__link">
+    Finvu AA API
   </a>
   
     <nav class="md-nav">
@@ -641,6 +726,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sample-data-for-testing" title="Sample data for testing" class="md-nav__link">
+    Sample data for testing
+  </a>
+  
+</li>
+      
       
       
       
@@ -658,14 +750,79 @@
               
                 
                 
-                <h1 id="aa-api-sandbox">AA API Sandbox</h1>
-<p>This is a Sandbox implementation of the AA API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
-<h2 id="api-request">API Request</h2>
-<p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT AA API Specs.</p>
+                <h1 id="integrating-with-finvu-aa">Integrating with Finvu AA</h1>
+<p>If you are building your own FIU module you would need to first build the FIU functionality and the APIs.</p>
+<p>Once you have built out the API and respective FIU functionality , you can start testing with Finvu Account Aggregator APIs. </p>
+<p>Before that there are certain pre-requisites that need to be done for security and authentication when calling the APIs. </p>
+<h2 id="pre-requisites-before-testing">Pre-Requisites before testing</h2>
+<p>Follow below steps.</p>
+<ol>
+<li>
+<p>Share your root endpoint with us on <code>support@cookiejar.co.in</code></p>
+<p>e.g. <code>https://api.fiu.com</code></p>
+</li>
+<li>
+<p>Share the public key portion only on <code>support@cookiejar.co.in</code> of your generated key for signature verification and that the APIs are from a trusted source. </p>
+<p>Refer to the <strong><a href="../how_to">How-To</a></strong> section for more details on JSON Web key generation and signing.</p>
+</li>
+<li>
+<p>In order to use the AA api, a token has to be acquired that needs to be passed in the API header. Reach out to us on <code>support@cookiejar.co.in</code> to request for the  API token. </p>
+<p>This needs to be set in the <code>client_api_key</code> header when calling our AA apis.</p>
+<div class="admonition attention">
+<p class="admonition-title">Token expiry</p>
+<p>The token will have a <strong>expiry of 6 months</strong> in the sandbox environment following which API calls would fail.</p>
+</div>
+</li>
+<li>
+<p>Generate a token and share with us on <code>support@cookiejar.co.in</code> . We will use this token in header <code>aa_api_key</code> when we call your FIU notification apis. </p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Sharing of Metadata Information</p>
+<p>In the future this process will be automated and centralized so communication would be seamless for token generation, public key retrieval, updates, token expiration notifications, etc.</p>
+</div>
+<h2 id="finvu-aa-endpoint">Finvu AA Endpoint</h2>
+<p>The Finvu AA api endpoint is <code>https://aauat.finvu.in/API/V1</code></p>
+<h2 id="request-headers-to-be-set-for-every-api-request">Request headers (To be set for every API request)</h2>
+<p>Below <code>HTTP</code> headers need to be set as part of each request when calling our AA apis</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Accept</code></td>
+<td><code>application/json</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>client_api_key</code></td>
+<td>Sample <code>eyJraWQiOiJqYXlAZmludnUuaW4iLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJjb29raWVqYXIiLCJleHAiOjE1OTEyNjMwMDMsImp0aSI6IjRxeXFpWV9aZGJpTW1qQ2lqT0ZMckEiLCJpYXQiOjE1NTk3MjcwMDMsIm5iZiI6MTU1OTcyNzAwMywic3ViIjoiamF5QGZpbnZ1LmluIiwiZ3JvdXBzIjpbImFnZ3JlZ2F0b3IiXX0.Ctd9EUpn0CrfEG8b9ouBcG8ilVuPWzXkxZFOhuTCRdpiVzi6M05ABJ9THJ1QE4n__r74r8KHSxDgdeV1L-8mek68i9m5BYgqaka5VKoCLiN0B22Xvy2QFski1ZLQhm7Va2NioVvilGGWBDlpW_csuChA2yobml1jqomr8SGya6MFbDURRmJjdL6oRTysoCYxeFzU2_JCud2ljMvaWsjSlnrYXQWaWaoJBAhz3AWNXdzU0u6mhq1mvksRl3xXJDiAVkY0KvZXRNjsJDYQfVJjavh9n0fZelJIWMHznp9mLpxRfrr_qo6hiTkX2QtbbmKfhc0_BXsKNOdxEXJmieOPSA</code></td>
+<td>The AA token that was shared by us and shared with you. Reference to Step 3.</td>
+</tr>
+<tr>
+<td><code>x-jws-signature</code></td>
+<td>Sample <code>eyJhbGciOiJSUzI1NiIsImtpZCI6IjUzMzEwNzkyLTgwMDYtNGU3NC1iYmJlLWNiZGRlYjg5ZjMwYiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..h1FWwXanmcWgxUtHwlNWtD5_sE3HLjqd2rjE_c1WiPBvOHKJ4hs5oYlRdT663r7z7FV3WqP7tErNCzOlWUpu7j9JXKu7t4ObkCwx4pEZVySFcrI_0dpPAB43JlHeADeBwRX145tx6UC4yk4mIOTBrjdh2Yf0RZ7wOoyKys44mNqf0WJIZ2gO7bcm-WfTDW_5Y-tAO3LfyU2cQSyi1Jnc5q8qODXb_TsAYJOvANq0QGlstjEFwytnFsgPtyELjnjHMWgeTuDerw45xdNhdtNkR8UUHgajG2CFQwjEgpeOvZXbj0EeqbIgszXHsTHEfzRM6ZMMMEGcO_aXRUV3A6zZJQ</code></td>
+<td>The detached signature of the body generated by your FIU module.  Reference to Step 2.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="finvu-aa-api">Finvu AA API</h2>
+<p>Below are the AA api in order to integrate with the Finvu Account Aggregator ecosystem. These APIs confirm to the ReBIT API specifications.</p>
 <h3 id="consents">Consents</h3>
-<p>This API is intended for AA Client to request generation of digitally signed consent artefacts.</p>
+<p>This API is intended for FIU/AA Client to request generation of digitally signed consent artefacts.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Consent</code></p>
+<p>RELATIVE URL: <code>/Consent</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/Consent</code></p>
 <h2 id="request-headers">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -695,7 +852,7 @@
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>{
+<div class="codehilite"><pre><span></span>{
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2019-05-02T06:49:35.645Z&quot;,
         &quot;txnid&quot;: &quot;4a4adbbe-29ae-11e8-a8d7-0289437bf731&quot;,
@@ -745,10 +902,11 @@
           ]
         }
       }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2020-04-09T07:24:33.592+0000&quot;,
         &quot;txnid&quot;: &quot;4a4adbbe-29ae-11e8-a8d7-0289437bf731&quot;,
@@ -757,13 +915,15 @@
         },
         &quot;ConsentHandle&quot;: &quot;2c75ad41-49e0-438c-bd7c-8af9db072065&quot;
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="consenthandleconsenthandle">/Consent/handle/{consentHandle}</h3>
 <p>This API is intended for checking the status of a previously submitted Consent Artefacts creation request</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Consent/handle/{consentHandle}</code></p>
-<p>e.g. : http://aa.finvu.in/API/V1/Consent/handle/2c75ad41-49e0-438c-bd7c-8af9db072065</p>
+<p>RELATIVE URL: <code>/handle/{consentHandle}</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/Consent/handle/{consentHandle}</code></p>
+<p>e.g. : https://aauat.finvu.in/API/V1/Consent/handle/2c75ad41-49e0-438c-bd7c-8af9db072065</p>
 <h2 id="request-headers_1">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -793,11 +953,12 @@
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>No Request Body expected
-</code></pre>
+<div class="codehilite"><pre><span></span>No Request Body expected
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2020-04-09T07:24:33.592+0000&quot;,
         &quot;txnid&quot;: &quot;4a4adbbe-29ae-11e8-a8d7-0289437bf731&quot;,
@@ -807,13 +968,15 @@
       &quot;status&quot;: &quot;PENDING&quot;
         }
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="consentsid">Consents/{id}</h3>
 <p>This API is intended for fetching the information associated with the specific consent.</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Consent/{id}</code>
-e.g. : http://aa.finvu.in/API/V1/Consent/79072af5-c41f-4cae-ac59-e233b82ea750</p>
+<p>RELATIVE URL: <code>/Consent/{id}</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/Consent/{id}</code>
+e.g. : https://aauat.finvu.in/API/V1/Consent/79072af5-c41f-4cae-ac59-e233b82ea750</p>
 <h2 id="request-headers_2">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -843,11 +1006,12 @@ e.g. : http://aa.finvu.in/API/V1/Consent/79072af5-c41f-4cae-ac59-e233b82ea750</p
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>No Request Body expected
-</code></pre>
+<div class="codehilite"><pre><span></span>No Request Body expected
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;txnid&quot;: &quot;1f242d7e-63aa-47b4-be7f-a1b442fff02f&quot;,
         &quot;consentId&quot;: &quot;79072af5-c41f-4cae-ac59-e233b82ea750&quot;,
@@ -860,12 +1024,14 @@ e.g. : http://aa.finvu.in/API/V1/Consent/79072af5-c41f-4cae-ac59-e233b82ea750</p
       &quot;lastUseDateTime&quot;: &quot;2020-04-09T07:47:13.032+0000&quot;
         }
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="firequest">/FI/request</h3>
 <p>The FIU or the User submits the Consent IDs of the consents required for fetching financial information from the FIP(s).</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/FI/request</code></p>
+<p>RELATIVE URL: <code>/FI/request</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/FI/request</code></p>
 <h2 id="request-headers_3">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -895,7 +1061,7 @@ e.g. : http://aa.finvu.in/API/V1/Consent/79072af5-c41f-4cae-ac59-e233b82ea750</p
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>      {
+<div class="codehilite"><pre><span></span>      {
           &quot;ver&quot;: &quot;1.1.2&quot;,
           &quot;timestamp&quot;: 1586430349059,
           &quot;txnid&quot;: &quot;0b538f95-38de-4ed6-be51-d55c2d8fe6f1&quot;,
@@ -919,23 +1085,26 @@ e.g. : http://aa.finvu.in/API/V1/Consent/79072af5-c41f-4cae-ac59-e233b82ea750</p
         &quot;Nonce&quot;: &quot;MqmdF9qAfaCt9i9qewn3AmdWOPIkC7cjUDeLDdNPDEM=&quot;
           }
       }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.1.2&quot;,
         &quot;timestamp&quot;: &quot;2020-04-14T06:04:34.727+0000&quot;,
         &quot;txnid&quot;: &quot;0b538f95-38de-4ed6-be51-d55c2d8fe6f1&quot;,
         &quot;consentId&quot;: &quot;237f245e-20fd-4bb3-8d95-47855f1f2cb1&quot;,
         &quot;sessionId&quot;: &quot;e4e3fb59-d682-48c7-80e2-770967ba2477&quot;
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="fifetchsessionid">/FI/fetch/{sessionId}</h3>
 <p>Once FIU receives the notification <Data-Ready> from AA, using digitally signed consent request received from AA, this API can be used to fetch the financial information from the AA.</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/FI/fetch/{sessionId}</code>
-e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</p>
+<p>RELATIVE URL: <code>/FI/fetch/{sessionId}</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/FI/fetch/{sessionId}</code>
+e.g. : https://aauat.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</p>
 <h2 id="request-headers_4">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -965,7 +1134,7 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
 </tbody>
 </table>
 <p>Response Expected: </p>
-<pre><code>{
+<div class="codehilite"><pre><span></span>{
         &quot;ver&quot;: &quot;1.1.2&quot;,
         &quot;timestamp&quot;: &quot;2020-04-09T11:05:49.059+0000&quot;,
         &quot;txnid&quot;: &quot;0b538f95-38de-4ed6-be51-d55c2d8fe6f1&quot;,
@@ -993,12 +1162,14 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
       }
         ]
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="consent-notification">Consent Notification</h3>
 <p>API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Consent/Notification</code></p>
+<p>RELATIVE URL: <code>/Consent/Notification</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/Consent/Notification</code></p>
 <h2 id="request-headers_5">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -1028,7 +1199,7 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>      {
+<div class="codehilite"><pre><span></span>      {
           &quot;ver&quot;: &quot;1.1.2&quot;,
           &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
           &quot;txnid&quot;: &quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;,
@@ -1043,16 +1214,19 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
         &quot;linkStatus&quot;: &quot;LINKED&quot;
           }
       }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>200 OK
-</code></pre>
+<div class="codehilite"><pre><span></span>200 OK
+</pre></div>
+
 
 <h3 id="fi-notification">FI Notification</h3>
 <p>API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/FI/Notification</code></p>
+<p>RELATIVE URL: <code>/FI/Notification</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/FI/Notification</code></p>
 <h2 id="request-headers_6">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -1082,7 +1256,7 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>      {
+<div class="codehilite"><pre><span></span>      {
           &quot;ver&quot;: &quot;1.1.2&quot;,
           &quot;timestamp&quot;: &quot;2020-04-14T05:59:12.196+0000&quot;,
           &quot;txnid&quot;: &quot;800b4213-4da4-44ac-a195-3ef81817da45&quot;,
@@ -1107,16 +1281,19 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
         ]
           }
       }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>200 OK
-</code></pre>
+<div class="codehilite"><pre><span></span>200 OK
+</pre></div>
+
 
 <h3 id="account-link-notification">Account Link Notification</h3>
 <p>API handles the notifications corresponding to the events generated during consent flow and data flow.</p>
 <p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Account/link/Notification</code></p>
+<p>RELATIVE URL: <code>/Account/link/Notification</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/Account/link/Notification</code></p>
 <h2 id="request-headers_7">Request headers</h2>
 <p>Below <code>http</code> headers need to be set as part of each request</p>
 <table>
@@ -1146,7 +1323,7 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>      {
+<div class="codehilite"><pre><span></span>      {
           &quot;ver&quot;: &quot;1.1.2&quot;,
           &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
           &quot;txnid&quot;: &quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;,
@@ -1161,22 +1338,26 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
         &quot;linkStatus&quot;: &quot;LINKED&quot;
           }
       }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>200 OK
-</code></pre>
+<div class="codehilite"><pre><span></span>200 OK
+</pre></div>
+
 
 <h3 id="heartbeat">Heartbeat</h3>
 <p>This API is used by FIUs to check availability of AAs.</p>
 <p>HTTP METHOD: <code>GET</code></p>
-<p>URL: <code>http://aa.finvu.in/API/V1/Heartbeat</code></p>
+<p>RELATIVE URL: <code>/Heartbeat</code></p>
+<p>URL: <code>https://aauat.finvu.in/API/V1/Heartbeat</code></p>
 <p>Request Body</p>
-<pre><code>No Request Body expected
-</code></pre>
+<div class="codehilite"><pre><span></span>No Request Body expected
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>{
+<div class="codehilite"><pre><span></span>{
     &quot;ver&quot;: &quot;1.0&quot;,
     &quot;timestamp&quot;: &quot;2018-06-25T17:28:01.000+0000&quot;,
     &quot;Status&quot;: &quot;UP&quot;,
@@ -1186,7 +1367,14 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
         &quot;detail&quot;: &quot;Service is activated on network&quot;
     }
 }
-</code></pre>
+</pre></div>
+
+
+<h2 id="sample-data-for-testing">Sample data for testing</h2>
+<p>Whether you are building your own FIU or using our FIU, having access to sample data is a necessary. </p>
+<p>We have made it simple for you to enter data as per your requirements and have provided APIs for the same. </p>
+<p>Refer to the <a href="../fip_data_api">Sample Test Data</a> section for entering sample data. The data schemas are compliant with the <a href="https://api.rebit.org.in/schema">ReBIT FIType schemas</a>.</p>
+<p>As data is sourced from FIP (Financial Information Provider) we have built a FIP sandbox as well. However as a FIU developer you need not worry about FIP as FIU never interact with FIP directly and communication is always through an AA. For reference more details of FIP at <a href="../fip_simulator">FIP Sandbox</a></p>
                 
                   
                 
@@ -1207,7 +1395,7 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../finvu_fiu_integration/" title="Integrating with Finvu FIU" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1216,19 +1404,19 @@ e.g. : http://aa.finvu.in/API/V1/FI/fetch/e4e3fb59-d682-48c7-80e2-770967ba2477</
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Overview
+                Integrating with Finvu FIU
               </span>
             </div>
           </a>
         
         
-          <a href="../fip_simulator/" title="FIP API Sandbox" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../how_to/" title="How-To" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                FIP API Sandbox
+                How-To
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

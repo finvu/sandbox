@@ -188,8 +188,68 @@
 
 
   <li class="md-nav__item">
-    <a href="../aa_simulator/" title="AA API Sandbox" class="md-nav__link">
-      AA API Sandbox
+    <a href="../get_started/" title="Get Started" class="md-nav__link">
+      Get Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_fiu_integration/" title="Integrating with Finvu FIU" class="md-nav__link">
+      Integrating with Finvu FIU
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-nav__link">
+      Integration with Finvu AA
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../how_to/" title="How-To" class="md-nav__link">
+      How-To
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../guidelines/" title="Guidelines" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_data_api/" title="Sample Test Data" class="md-nav__link">
+      Sample Test Data
     </a>
   </li>
 
@@ -421,30 +481,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../fiu_simulator/" title="FIU API Sandbox" class="md-nav__link">
-      FIU API Sandbox
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../fip_data_api/" title="Test Data in FIP" class="md-nav__link">
-      Test Data in FIP
-    </a>
   </li>
 
     
@@ -708,7 +744,7 @@
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
       &quot;ver&quot;: &quot;1.0&quot;,
       &quot;timestamp&quot;: &quot;2019-04-29T04:04:44.955Z&quot;,
       &quot;txnid&quot;: &quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;,
@@ -726,10 +762,11 @@
         &quot;DEPOSIT&quot;
       ]
     }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2020-04-07T06:27:11.243+0000&quot;,
         &quot;txnid&quot;: &quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;,
@@ -760,7 +797,8 @@
       }
         ]
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="account-linking">Account Linking</h3>
 <p>For simulation purpose, the customer account authentication is TOKEN based and an OTP is sent to the mobile no of the account holder. </p>
@@ -795,7 +833,7 @@
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
       &quot;ver&quot;: &quot;1.0&quot;,
       &quot;timestamp&quot;: &quot;2018-05-09T17:51:18.412Z&quot;,
       &quot;txnid&quot;: &quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;,
@@ -812,17 +850,19 @@
         ]
       }
     }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2020-04-07T06:29:53.676+0000&quot;,
         &quot;txnid&quot;: &quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;,
         &quot;AuthenticatorType&quot;: &quot;TOKEN&quot;,
         &quot;RefNumber&quot;: &quot;f455409f-6d06-4c8a-ac5a-34c6d78d467a&quot;
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="account-unlinking">Account Unlinking</h3>
 <p>For simulation purpose, The method is used to delete a previously established account linkage to the user’s profile. </p>
@@ -857,7 +897,7 @@
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>      {
+<div class="codehilite"><pre><span></span>      {
           &quot;ver&quot;: &quot;1.0&quot;,
           &quot;timestamp&quot;: &quot;2020-04-08T04:32:48.875+0000&quot;,
           &quot;txnid&quot;: &quot;39081877-b011-4c79-9255-f1d41bbb7f55&quot;,
@@ -866,10 +906,11 @@
         &quot;linkRefNumber&quot;: &quot;03948856668800&quot;
           }
       }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2020-04-08T04:32:48.875+0000&quot;,
         &quot;txnid&quot;: &quot;39081877-b011-4c79-9255-f1d41bbb7f55&quot;,
@@ -879,7 +920,8 @@
       &quot;status&quot;: &quot;DELINKED&quot;
         }
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="account-confirm-token">Account Confirm Token</h3>
 <p>HTTP METHOD: <code>GET</code></p>
@@ -915,12 +957,13 @@
 </table>
 <p>Request Body</p>
 <p>Put the SMS received on mobile in <token>{OTP sms}</token></p>
-<pre><code>e.g.
+<div class="codehilite"><pre><span></span>e.g.
 http://api.finvu.in/ConnectHub/V1/Accounts/link/9d4dd3b3-7510-401a-b148-a79f03ac01d9/689612
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2020-04-07T06:54:40.480+0000&quot;,
         &quot;txnid&quot;: &quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;,
@@ -933,7 +976,8 @@ http://api.finvu.in/ConnectHub/V1/Accounts/link/9d4dd3b3-7510-401a-b148-a79f03ac
       }
         ]
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="fi-request">FI request</h3>
 <p>HTTP METHOD: <code>POST</code></p>
@@ -967,7 +1011,7 @@ http://api.finvu.in/ConnectHub/V1/Accounts/link/9d4dd3b3-7510-401a-b148-a79f03ac
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2020-04-07T07:14:37.217+0000&quot;,
         &quot;txnid&quot;: &quot;50aabff2-0278-4840-b338-845e9f4d9955&quot;,
@@ -991,17 +1035,19 @@ http://api.finvu.in/ConnectHub/V1/Accounts/link/9d4dd3b3-7510-401a-b148-a79f03ac
       &quot;Nonce&quot;: &quot;UzU4ashLJj3FAYKVeb3wmMoHqn+eo98uS1tUq10RNrs=&quot;
         }
     }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>  {
+<div class="codehilite"><pre><span></span>  {
       &quot;ver&quot;: &quot;1.0&quot;,
       &quot;timestamp&quot;: &quot;2020-04-07T07:17:16.579+0000&quot;,
       &quot;txnid&quot;: &quot;50aabff2-0278-4840-b338-845e9f4d9955&quot;,
       &quot;consentId&quot;: &quot;2503a18c-c7f2-4112-9830-44cc63e91252&quot;,
       &quot;sessionId&quot;: &quot;931d1d33-e332-4ee2-b780-020d43ba69fd&quot;
   }
-</code></pre>
+</pre></div>
+
 
 <h3 id="fi-fetch">FI Fetch</h3>
 <p>HTTP METHOD: <code>GET</code></p>
@@ -1036,7 +1082,7 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
 </tbody>
 </table>
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2020-04-07T07:24:09.185+0000&quot;,
         &quot;txnid&quot;: &quot;50aabff2-0278-4840-b338-845e9f4d9955&quot;,
@@ -1064,7 +1110,8 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
       }
         ]
     }
-</code></pre>
+</pre></div>
+
 
 <h3 id="consent-notifications">Consent Notifications</h3>
 <p>HTTP METHOD: <code>POST</code></p>
@@ -1098,7 +1145,7 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>      {
+<div class="codehilite"><pre><span></span>      {
           &quot;ver&quot;: &quot;1.0&quot;,
           &quot;timestamp&quot;: &quot;2020-04-07T09:23:33.744+0000&quot;,
           &quot;txnid&quot;: &quot;f4a7674d-9f0c-4840-a3eb-45e7b9af0fc1&quot;,
@@ -1111,11 +1158,13 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
         &quot;consentStatus&quot;: &quot;REVOKED&quot;
           }
       }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>200 OK
-</code></pre>
+<div class="codehilite"><pre><span></span>200 OK
+</pre></div>
+
 
 <h3 id="consent">Consent</h3>
 <p>HTTP METHOD: <code>POST</code></p>
@@ -1149,7 +1198,7 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;txnid&quot;: &quot;0428ae6e-43b5-421e-9042-a532ced2f66d&quot;,
         &quot;consentId&quot;: &quot;1c79f3ba-ec2e-4d8b-8a43-8c4190fcad92&quot;,
@@ -1162,11 +1211,13 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
       &quot;lastUseDateTime&quot;: &quot;2020-04-07T07:09:38.877+0000&quot;
         }
     }
-</code></pre>
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>200 OK
-</code></pre>
+<div class="codehilite"><pre><span></span>200 OK
+</pre></div>
+
 
 <h3 id="heartbeat">Heartbeat</h3>
 <p>HTTP METHOD: <code>GET</code></p>
@@ -1196,16 +1247,17 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
 </tbody>
 </table>
 <p>Request Body</p>
-<pre><code>No Request Body expected
-</code></pre>
+<div class="codehilite"><pre><span></span>No Request Body expected
+</pre></div>
+
 
 <p>Response Expected: </p>
-<pre><code>    {
+<div class="codehilite"><pre><span></span>    {
         &quot;ver&quot;: &quot;1.0&quot;,
         &quot;timestamp&quot;: &quot;2019-01-23T04:08:25.132+0000&quot;,
         &quot;Status&quot;: &quot;UP&quot;
     }
-</code></pre>
+</pre></div>
                 
                   
                 
@@ -1226,7 +1278,7 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../aa_simulator/" title="AA API Sandbox" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../fip_data_api/" title="Sample Test Data" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1235,25 +1287,11 @@ e.g. : http://api.finvu.in/ConnectHub/V1/FI/fetch/931d1d33-e332-4ee2-b780-020d43
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                AA API Sandbox
+                Sample Test Data
               </span>
             </div>
           </a>
         
-        
-          <a href="../fiu_simulator/" title="FIU API Sandbox" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                FIU API Sandbox
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

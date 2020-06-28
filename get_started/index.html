@@ -1,0 +1,648 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>Get Started - Finvu API Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#get-started" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Finvu API Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../images/finvu_logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Finvu API Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Get Started
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../images/finvu_logo.png" width="48" height="48">
+      
+    </span>
+    Finvu API Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Get Started
+      </label>
+    
+    <a href="./" title="Get Started" class="md-nav__link md-nav__link--active">
+      Get Started
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-fiu-flows" title="Understanding the FIU flows" class="md-nav__link">
+    Understanding the FIU flows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consent-flow-request-for-consent" title="Consent Flow - Request for consent" class="md-nav__link">
+    Consent Flow - Request for consent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consent-flow-notify-fiu-of-the-consent" title="Consent Flow - Notify FIU of the consent" class="md-nav__link">
+    Consent Flow - Notify FIU of the consent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow-making-a-data-request" title="Data Flow - Making a data request" class="md-nav__link">
+    Data Flow - Making a data request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow-receiving-data" title="Data Flow - Receiving data" class="md-nav__link">
+    Data Flow - Receiving data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-aa-flows-and-customer-interaction" title="Understanding the AA flows and Customer interaction" class="md-nav__link">
+    Understanding the AA flows and Customer interaction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-customer-registration-with-aa" title="Step 1. Customer Registration with AA" class="md-nav__link">
+    Step 1. Customer Registration with AA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-customer-linking-their-financial-accounts" title="Step 2. Customer Linking their financial accounts" class="md-nav__link">
+    Step 2. Customer Linking their financial accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-ready-to-acceptreject-consents" title="Step 3. Ready to accept/reject consents" class="md-nav__link">
+    Step 3. Ready to accept/reject consents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-with-our-fiu-module" title="Integrating with our FIU module" class="md-nav__link">
+    Integrating with our FIU module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-using-your-own-fiu" title="Integrating using your own FIU" class="md-nav__link">
+    Integrating using your own FIU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-data-for-testing" title="Sample data for testing" class="md-nav__link">
+    Sample data for testing
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_fiu_integration/" title="Integrating with Finvu FIU" class="md-nav__link">
+      Integrating with Finvu FIU
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-nav__link">
+      Integration with Finvu AA
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../how_to/" title="How-To" class="md-nav__link">
+      How-To
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../guidelines/" title="Guidelines" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_data_api/" title="Sample Test Data" class="md-nav__link">
+      Sample Test Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_simulator/" title="FIP API Sandbox" class="md-nav__link">
+      FIP API Sandbox
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-fiu-flows" title="Understanding the FIU flows" class="md-nav__link">
+    Understanding the FIU flows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consent-flow-request-for-consent" title="Consent Flow - Request for consent" class="md-nav__link">
+    Consent Flow - Request for consent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consent-flow-notify-fiu-of-the-consent" title="Consent Flow - Notify FIU of the consent" class="md-nav__link">
+    Consent Flow - Notify FIU of the consent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow-making-a-data-request" title="Data Flow - Making a data request" class="md-nav__link">
+    Data Flow - Making a data request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow-receiving-data" title="Data Flow - Receiving data" class="md-nav__link">
+    Data Flow - Receiving data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-aa-flows-and-customer-interaction" title="Understanding the AA flows and Customer interaction" class="md-nav__link">
+    Understanding the AA flows and Customer interaction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-customer-registration-with-aa" title="Step 1. Customer Registration with AA" class="md-nav__link">
+    Step 1. Customer Registration with AA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-customer-linking-their-financial-accounts" title="Step 2. Customer Linking their financial accounts" class="md-nav__link">
+    Step 2. Customer Linking their financial accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-ready-to-acceptreject-consents" title="Step 3. Ready to accept/reject consents" class="md-nav__link">
+    Step 3. Ready to accept/reject consents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-with-our-fiu-module" title="Integrating with our FIU module" class="md-nav__link">
+    Integrating with our FIU module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-using-your-own-fiu" title="Integrating using your own FIU" class="md-nav__link">
+    Integrating using your own FIU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-data-for-testing" title="Sample data for testing" class="md-nav__link">
+    Sample data for testing
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="get-started">Get Started</h1>
+<p>You can integrate with our AA in multiple ways as it depends on what you are building.  </p>
+<p>Interaction and integration with Finvu Account Aggregator (AA) would be as a FIP or FIU. Refer to the appropriate section for details on integration and calling of apis.</p>
+<h2 id="understanding-the-fiu-flows">Understanding the FIU flows</h2>
+<p>Below are the high level flows for a FIU. </p>
+<h3 id="consent-flow-request-for-consent">Consent Flow - Request for consent</h3>
+<p>The FIU requests for consent from the customer, by calling the AA server <code>/Consent</code> API. The AA server on receiving the request notifies the customer through an app notification, SMS, etc of the consent request. The customer views details of the consent on the Finvu app (mobile or Web) and approves/rejects the consent as appropriate.</p>
+<h3 id="consent-flow-notify-fiu-of-the-consent">Consent Flow - Notify FIU of the consent</h3>
+<p>Once the customer approves or rejects the consent on the Finvu app (Mobile or Web), AA server notifies the FIU by calling the FIU <code>/Consent/Notification</code> API. The FIU on receiving the notification can chose to update their system and subsequently gets details of the consent from the AA server by calling the <code>/Consent/{id}</code>.</p>
+<h3 id="data-flow-making-a-data-request">Data Flow - Making a data request</h3>
+<p>If the customer has approved the consent and FIU has received the details of the consent from Finvu AA , data can be requested for that consent by calling the AA <code>/FI/request</code> api. AA server returns a unique session identifier for that request and subsequently forwards the request to the FIPs as per the consent details.</p>
+<h3 id="data-flow-receiving-data">Data Flow - Receiving data</h3>
+<p>FIU after making a data request will need to wait for the Data Ready notification from AA as AA server gets the data from the FIP. Once data is available, AA notifies the FIU of the data ready. On receiving the ready notification, FIU server can fetch the data from the AA server.</p>
+<h2 id="understanding-the-aa-flows-and-customer-interaction">Understanding the AA flows and Customer interaction</h2>
+<p>Before the customer can start sharing their financial information securely with FIUs, the customer would have to be registered with a licensed AA. Finvu AA provides a mobile or web application for the customer interaction. This is a fairly simple process for the customer, with only a few steps. </p>
+<h3 id="step-1-customer-registration-with-aa">Step 1. Customer Registration with AA</h3>
+<p>The Customer registers with the Finvu Account Aggregator either on the Finvu mobile app or through web. The customer after registration gets a unique handle / AA id e.g. <code>yourname@finvu</code> or could be your mobile no <code>9999910000@finvu</code> . The choice is yours !. This virtual user handle can be given to a FIU for consent requests (much like a UPI handle for payment collection). </p>
+<h3 id="step-2-customer-linking-their-financial-accounts">Step 2. Customer Linking their financial accounts</h3>
+<p>The Customer need to link their accounts with their unique Finvu AA id, and authentication is a simple process via an OTP that is sent to the customer registered mobile no by their Financial Institution.</p>
+<h3 id="step-3-ready-to-acceptreject-consents">Step 3. Ready to accept/reject consents</h3>
+<p>Customer can now accept or reject consent requests coming from a FIU and share their financial account information for their choice of selected accounts. This can be done through Finvu mobile or web app. </p>
+<h2 id="integrating-with-our-fiu-module">Integrating with our FIU module</h2>
+<p>We have built the nuts and bolts and the complexity of the FIU functionality to interact with an AA. This would help you to focus on building your app once you receive the decrypted data. </p>
+<p>Our FIU sandbox environment is hosted and available at all times for you to access. </p>
+<p>The FIU sandbox is AA agnostic and can interface with any account aggregator, this is done on basis of the handle of the AA user e.g. customer1@finvu will redirect to the 'Finvu AA', customer2@otheraa will redirect requests to the 'Other AA'</p>
+<p>If you are building apps on FIU side start with integrating with our FIU sandbox. </p>
+<p><a href="../finvu_fiu_integration">Integrating with Finvu FIU Sandbox</a></p>
+<h2 id="integrating-using-your-own-fiu">Integrating using your own FIU</h2>
+<p>If you are building your own FIU module you would need to first build the FIU functionality and the APIs.  </p>
+<p><a href="../finvu_aa_integration">Integrating with Finvu AA Sandbox</a></p>
+<h2 id="sample-data-for-testing">Sample data for testing</h2>
+<p>Whether you are building your own FIU or using our FIU, having access to sample data is a necessary. </p>
+<p>We have made it simple for you to enter data as per your requirements and have provided APIs for the same. </p>
+<p>Refer to the <a href="../fip_data_api">Sample Test Data</a> section for entering sample data. The data schemas are compliant with the <a href="https://api.rebit.org.in/schema">ReBIT FIType schemas</a>.</p>
+<p>As data is sourced from FIP (Financial Information Provider) we have built a FIP sandbox as well. However as a FIU developer you need not worry about FIP as FIU never interact with FIP directly and communication is always through an AA. For reference more details of FIP at <a href="../fip_simulator">FIP Sandbox</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Overview
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../finvu_fiu_integration/" title="Integrating with Finvu FIU" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Integrating with Finvu FIU
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Cookiejar Technologies Pvt Ltd.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
+      
+      <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

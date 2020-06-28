@@ -36,7 +36,7 @@
     
     
       
-        <title>FIU API Sandbox - Finvu API Docs</title>
+        <title>How-To - Finvu API Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#fiu-api-simulator" tabindex="1" class="md-skip">
+      <a href="#how-tos" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
                 Finvu API Docs
               </span>
               <span class="md-header-nav__topic">
-                FIU API Sandbox
+                How-To
               </span>
             
           
@@ -188,8 +188,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../aa_simulator/" title="AA API Sandbox" class="md-nav__link">
-      AA API Sandbox
+    <a href="../get_started/" title="Get Started" class="md-nav__link">
+      Get Started
     </a>
   </li>
 
@@ -200,8 +200,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../fip_simulator/" title="FIP API Sandbox" class="md-nav__link">
-      FIP API Sandbox
+    <a href="../finvu_fiu_integration/" title="Integrating with Finvu FIU" class="md-nav__link">
+      Integrating with Finvu FIU
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-nav__link">
+      Integration with Finvu AA
     </a>
   </li>
 
@@ -221,11 +233,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        FIU API Sandbox
+        How-To
       </label>
     
-    <a href="./" title="FIU API Sandbox" class="md-nav__link md-nav__link--active">
-      FIU API Sandbox
+    <a href="./" title="How-To" class="md-nav__link md-nav__link--active">
+      How-To
     </a>
     
       
@@ -239,29 +251,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-request" title="API Request" class="md-nav__link">
-    API Request
+  <a href="#generate-key-and-sign-the-apis" title="Generate key and Sign the APIs" class="md-nav__link">
+    Generate key and Sign the APIs
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#consent-notification" title="Consent Notification" class="md-nav__link">
-    Consent Notification
+  <a href="#generate-keys" title="Generate keys" class="md-nav__link">
+    Generate keys
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fi-notification" title="FI Notification" class="md-nav__link">
-    FI Notification
+  <a href="#sign-the-api-requestresponse" title="Sign the API request/response" class="md-nav__link">
+    Sign the API request/response
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-a-uuid" title="Generate a UUID" class="md-nav__link">
+    Generate a UUID
+  </a>
   
 </li>
       
@@ -282,8 +301,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../fip_data_api/" title="Test Data in FIP" class="md-nav__link">
-      Test Data in FIP
+    <a href="../guidelines/" title="Guidelines" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_data_api/" title="Sample Test Data" class="md-nav__link">
+      Sample Test Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_simulator/" title="FIP API Sandbox" class="md-nav__link">
+      FIP API Sandbox
     </a>
   </li>
 
@@ -309,29 +352,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-request" title="API Request" class="md-nav__link">
-    API Request
+  <a href="#generate-key-and-sign-the-apis" title="Generate key and Sign the APIs" class="md-nav__link">
+    Generate key and Sign the APIs
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#consent-notification" title="Consent Notification" class="md-nav__link">
-    Consent Notification
+  <a href="#generate-keys" title="Generate keys" class="md-nav__link">
+    Generate keys
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fi-notification" title="FI Notification" class="md-nav__link">
-    FI Notification
+  <a href="#sign-the-api-requestresponse" title="Sign the API request/response" class="md-nav__link">
+    Sign the API request/response
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-a-uuid" title="Generate a UUID" class="md-nav__link">
+    Generate a UUID
+  </a>
   
 </li>
       
@@ -352,67 +402,55 @@
               
                 
                 
-                <h1 id="fiu-api-simulator">FIU API (Simulator)</h1>
-<p>This is a simulator implementation of the FIU API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
-<h2 id="api-request">API Request</h2>
-<p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT FIP API Specs.</p>
-<h3 id="consent-notification">Consent Notification</h3>
-<p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://api.finvu.in/ConnectHub/FIU/API/V1/Consent/Notification</code></p>
-<p>Request Body</p>
-<pre><code>{
-  &quot;ver&quot;: &quot;1.0&quot;,
-  &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
-  &quot;txnid&quot;: &quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;,
-  &quot;Notifier&quot;: {
-    &quot;type&quot;: &quot;AA&quot;,
-    &quot;id&quot;: &quot;cookiejar-aa@devfinvu.in&quot;
-  },
-  &quot;ConsentStatusNotification&quot;: {
-    &quot;consentId&quot;: &quot;dd186b2a-e838-441c-a72a-3d2b3c023120&quot;,
-    &quot;ConsentStatus&quot;: &quot;READY&quot;
-  }
-}
-</code></pre>
+                <h1 id="how-tos">How-Tos</h1>
+<p>We have compiled some how-tos, hope these would be helpful when building your product.</p>
+<h2 id="generate-key-and-sign-the-apis">Generate key and Sign the APIs</h2>
+<h3 id="generate-keys">Generate keys</h3>
+<p>The ReBIT API specification requires API calls to be signed. For this purpose, JSON Web Signature (JWS) is used. </p>
+<p>All API request/responses will have to include a header called <code>x-jws-signature</code> with the 'detached content' JWS signature value. </p>
+<p>The receiver of the request/response verifies the JWS against the <code>https</code> request/response data. </p>
+<p>However, since the JWS signatures do not include the certificates to verify the signature, there is a need to distribute the public keys with the ecosystem partners so that they can verify signatures. The ecosystem partners can thus verify the signature using the public key.</p>
+<div class="admonition note">
+<p class="admonition-title">Sharing of Public Key</p>
+<p>If you are building your FIU or FIP modules, public key needs to be shared with the ecosystem partners, FIU/FIP to share with AA and vice versa. In the future this will be centralized so communication with ecosystem partners would be seamless for key retrieval, updates, etc.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Saving the Public and Private Key Pair</p>
+<p>In order to sign the APIs the Public and Private Key pair is used for signing of the APIs. The Public Key portion will be shared with the AA for verifying the signature. See below section on how to Sign the API request/response</p>
+</div>
+<p>Follow below steps to generate a public key to be shared with AA </p>
+<ol>
+<li>
+<p>Go to the <a href="https://mkjwk.org/">mkjws site</a></p>
+</li>
+<li>
+<p>Use the <strong>RSA tab</strong> which is default option</p>
+</li>
+<li>
+<p>Enter the following fields</p>
+<p>a.  Key Size: <strong>2048</strong> (the default)</p>
+<p>b.  Key Use: Select <strong>Signature</strong> in the dropdown</p>
+<p>c.  Algorithm: Select dropdown option corresponding to <strong>RS256...</strong> using <strong>SHA-256</strong></p>
+<p>d.  Key ID: Goto to <a href="https://www.uuidgenerator.net/">Online UUID Generator</a> and select the version 4 UUID which is generated by default when the page loads. </p>
+<div class="codehilite"><pre><span></span>Paste that UUID into the Key ID field
+</pre></div>
 
-<p>Response Expected: </p>
-<pre><code>200 OK
-</code></pre>
 
-<h3 id="fi-notification">FI Notification</h3>
-<p>HTTP METHOD: <code>POST</code></p>
-<p>URL: <code>http://api.finvu.in/ConnectHub/FIU/API/V1/FI/Notification</code></p>
-<p>Request Body</p>
-<pre><code>{
-  &quot;ver&quot;: &quot;1.0&quot;,
-  &quot;timestamp&quot;: &quot;2018-12-06T11:39:57.153Z&quot;,
-  &quot;txnid&quot;: &quot;0b811819-9044-4856-b0ee-8c88035f8858&quot;,
-  &quot;Notifier&quot;: {
-    &quot;type&quot;: &quot;AA&quot;,
-    &quot;id&quot;: &quot;cookiejar-aa@finvu.in&quot;
-  },
-  &quot;FIStatusNotification&quot;: {
-    &quot;sessionId&quot;: &quot;XXXX0-XXXX-XXXX&quot;,
-    &quot;sessionStatus&quot;: &quot;ACTIVE&quot;,
-    &quot;FIStatusResponse&quot;: [
-      {
-        &quot;fipID&quot;: &quot;FIP-1&quot;,
-        &quot;Accounts&quot;: [
-          {
-            &quot;linkRefNumber&quot;: &quot;XXXX-XXXX-XXXX&quot;,
-            &quot;FIStatus&quot;: &quot;READY&quot;,
-            &quot;description&quot;: &quot;ACTIVE&quot;
-          }
-        ]
-      }
-    ]
-  }
-}
-</code></pre>
-
-<p>Response Expected: </p>
-<pre><code>200 OK
-</code></pre>
+</li>
+<li>
+<p>Finally, click on <strong>Generate</strong>.</p>
+</li>
+<li>
+<p>Copy the contents of the <strong>Public Key</strong> text area that is to be shared with ecosystem partner to verify the signature.</p>
+</li>
+</ol>
+<h3 id="sign-the-api-requestresponse">Sign the API request/response</h3>
+<p>All API request/responses will have to include a header called <code>x-jws-signature</code> with the 'detached content' JWS signature value. The receiver of the request/response verifies the JWS against the https request/response data. </p>
+<p>More details on the signature security can be found at our github with sample programs on how to generate and verify detached signature
+<strong>https://github.com/finvu/finvu-rebit-aa-jws</strong></p>
+<h2 id="generate-a-uuid">Generate a UUID</h2>
+<p>A UUID is being used for several fields in the API requests, if you wish to generate one during testing see the 
+<a href="https://www.uuidgenerator.net/">Online UUI Generator</a></p>
                 
                   
                 
@@ -433,7 +471,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../fip_simulator/" title="FIP API Sandbox" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -442,19 +480,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                FIP API Sandbox
+                Integration with Finvu AA
               </span>
             </div>
           </a>
         
         
-          <a href="../fip_data_api/" title="Test Data in FIP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../guidelines/" title="Guidelines" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Test Data in FIP
+                Guidelines
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
