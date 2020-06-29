@@ -413,8 +413,8 @@
 <p><code>AA</code> - Account Aggregators that facilitate secure information exchange between FIU/Customer and FIP.</p>
 <p><code>FIP</code> - Financial Information Providers that hold the customer account information and share encrypted information on presentation of a consent and data request from the FIU or Customer.</p>
 <p><code>FIU</code> - Financial Information Users that request consent from a customer via an AA and subsequently request for data on the basis of an approved consent from an AA.</p>
-<p><code>fip_api_key</code> - This is the key used by FIP in conjunction with the <code>x-jws-signature</code> when FIP calls the AA API for linking, data ready, etc notifications. </p>
-<p><code>client_api_key</code> - This is the key used by FIU in conjunction with the <code>x-jws-signature</code> that FIU will set in the API when calling AA.</p>
+<p><code>fip_api_key</code> - This is the token used by FIP in conjunction with the <code>x-jws-signature</code> when FIP calls the AA API for linking, data ready, notifications, etc. </p>
+<p><code>client_api_key</code> - This is the token used by FIU in conjunction with the <code>x-jws-signature</code> that FIU will set in the API when calling AA.</p>
 <p><code>x-jws-signature</code> - HTTP header that contains the 'detached' signature of the body. API request/response need to be signed and the signature to be set in this header. Please see the details in our <a href="./how_to">How to</a> section to generate the signature</p>
 <h2 id="api-information">API Information</h2>
 <p>All API request and responses are in standard <a href="https://www.json.org">JSON</a> format. The APIs use <code>GET</code> and <code>POST</code> requests and HTTP response codes to indicate status and errors. All requests must include a Content-Type of <code>application/json</code> and the body must be valid JSON. API use <code>https</code> protocol for security. </p>
