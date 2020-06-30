@@ -1235,9 +1235,9 @@ https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/
 <p>FIStatus api is called to check whether data is ready or not. If data is ready fiRequestStatus is set to READY or else fiRequestStatus is set to PENDING.</p>
 <p>When the fiRequestStatus is READY, it means that the AA has sent the data to Finsense FIU and FIU has stored the data and ready for channel to fetch. The channel can then call the FIFetch API to retrieve the data into channel.</p>
 <p>API to call
-https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/<custAAId></p>
+https://finsense.finvu.in/ConnectHub/FIU/API/V1/<consentId>/<sessionId>/<consentHandle>/<custId></p>
 <p>Method : <code>GET</code></p>
-<p>PARAMETERS: <code>consentHandleId</code> The consentHandleId when raising a consent Request
+<p>PARAMETERS: <code>consentId</code> The consentHandleId when raising a consent Request
 <code>custAAId</code> The Customer AA id</p>
 <p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
@@ -1276,10 +1276,10 @@ https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/
 
 
 <p>The <code>fiRequestStatus</code> are as below </p>
-<div class="codehilite"><pre><span></span>|  Return Status            |   Description |
-| -------------             |-------------|
-| PENDING                   | Requested data IS NOT ready to fetch.
-| READY                 | Requested data IS ready to fetch.
+<div class="codehilite"><pre><span></span>|  Return Status |  Description |
+| -------------  |------------- |
+| `PENDING` | Requested data IS NOT ready to fetch.|
+| `READY`   | Requested data IS ready to fetch.|
 </pre></div>
 
 
