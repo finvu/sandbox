@@ -198,6 +198,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-nav__link">
+      Integration with Finvu AA
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -291,11 +303,31 @@
     Create a Consent Template
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-consent-template" title="Step 1. Create a consent template" class="md-nav__link">
+    Step 1. Create a consent template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-approve-the-consent-template" title="Step 2. Approve the consent template" class="md-nav__link">
+    Step 2. Approve the consent template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#raise-consent-request-using-template" title="Raise Consent Request using template" class="md-nav__link">
-    Raise Consent Request using template
+  <a href="#request-consent-for-user-to-approve" title="Request Consent for user to approve" class="md-nav__link">
+    Request Consent for user to approve
   </a>
   
 </li>
@@ -308,15 +340,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#make-data-request" title="Make Data request" class="md-nav__link">
-    Make Data request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-status-of-data" title="Check status of Data" class="md-nav__link">
-    Check status of Data
+  <a href="#data-request" title="Data request" class="md-nav__link">
+    Data request
   </a>
   
 </li>
@@ -343,18 +368,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-nav__link">
-      Integration with Finvu AA
-    </a>
   </li>
 
     
@@ -491,11 +504,31 @@
     Create a Consent Template
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-consent-template" title="Step 1. Create a consent template" class="md-nav__link">
+    Step 1. Create a consent template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-approve-the-consent-template" title="Step 2. Approve the consent template" class="md-nav__link">
+    Step 2. Approve the consent template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#raise-consent-request-using-template" title="Raise Consent Request using template" class="md-nav__link">
-    Raise Consent Request using template
+  <a href="#request-consent-for-user-to-approve" title="Request Consent for user to approve" class="md-nav__link">
+    Request Consent for user to approve
   </a>
   
 </li>
@@ -508,15 +541,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#make-data-request" title="Make Data request" class="md-nav__link">
-    Make Data request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-status-of-data" title="Check status of Data" class="md-nav__link">
-    Check status of Data
+  <a href="#data-request" title="Data request" class="md-nav__link">
+    Data request
   </a>
   
 </li>
@@ -563,6 +589,7 @@
 <h4 id="step-1-registration-of-user">Step 1. Registration of user</h4>
 <p>The URL to call : 
 <code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/registerUser</code></p>
+<p>Method : <code>POST</code></p>
 <h5 id="request-headers-to-be-set-for-every-api-request">Request headers (To be set for every API request)</h5>
 <p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
@@ -641,8 +668,9 @@
 
 
 <h4 id="step-2-login-user-to-get-the-api-token">Step 2. Login user to get the API token</h4>
-<p>The URL to call : 
+<p>The URL to call 
 <code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/User/Login</code></p>
+<p>Method : <code>POST</code></p>
 <h5 id="request-headers-to-be-set-for-every-api-request_1">Request headers (To be set for every API request)</h5>
 <p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
@@ -721,12 +749,661 @@
 <p>The token is valid for a period of 3 months. </p>
 </div>
 <h3 id="create-a-consent-template">Create a Consent Template</h3>
-<h3 id="raise-consent-request-using-template">Raise Consent Request using template</h3>
+<p>Whenever a consent request is raised, the consent parameters and information needs to be provided. In order to reduce repetitive work, errors and also give flexibility for different customers or channels, a consent template can be created once and be for raising a consent request. This provides ease and flexibility when interaction with the customer and AA. We have provided an API to create a consent template. </p>
+<p>We have built-in structural and valid value validations however to further reduce errors, once the consent template is created, the template would require an approval and allow a four-eye check to avoid errors, etc. The approval of the template can be done via an API call.  </p>
+<h4 id="step-1-create-a-consent-template">Step 1. Create a consent template</h4>
+<p>API to call : 
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentTemplate</code></p>
+<p>Method : <code>POST</code></p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Template creation Request</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;f871126b-dd3f-4bb4-be8c-b1911b57a893&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-13T12:58:33.501+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;templateName&quot;</span><span class="p">:</span> <span class="s2">&quot;PERIDOIC_DAILY_CONSENT&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;templateDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;PERIDOIC_DAILY_CONSENT&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;consentMode&quot;</span><span class="p">:</span> <span class="s2">&quot;STORE&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;consentTypes&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;PROFILE&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;TRANSACTIONS&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;SUMMARY&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;fiTypes&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;DEPOSIT&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;Purpose&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;101&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;refUri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.rebit.org.in/aa/purpose/101.xml&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Wealth management service&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Personal Finance&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;fetchType&quot;</span><span class="p">:</span> <span class="s2">&quot;PERIODIC&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;Frequency&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">5</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;DataLife&quot;</span><span class="p">:{</span>
+                    <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;YEAR&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">5</span>
+                <span class="p">},</span>
+                 <span class="nt">&quot;ConsentExpiry&quot;</span><span class="p">:{</span>
+                    <span class="nt">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;YEAR&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">5</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;consentStartDays&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="nt">&quot;dataRangeStartMonths&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="nt">&quot;dataRangeEndMonths&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="nt">&quot;approvalStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;pending verification&quot;</span>
+            <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>templateName</code></td>
+<td>The name of the template which can be alpha numeric</td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>templateDescription</code></td>
+<td>Alpha numeric</td>
+<td>Brief description of the template</td>
+</tr>
+<tr>
+<td><code>consentMode</code></td>
+<td>Allowed values: <code>STORE</code> , <code>VIEW</code>, <code>QUERY</code></td>
+<td>Specifies whether the consent mode is view only, store or query.</td>
+</tr>
+<tr>
+<td><code>consentTypes</code></td>
+<td>Allowed values: <code>PROFILE</code>, <code>TRANSACTIONS</code>, <code>SUMMARY</code></td>
+<td>Specifies the account information that can be fetched with this consent i.e. account profile or summary or transactions</td>
+</tr>
+<tr>
+<td><code>fiTypes</code></td>
+<td>Refer to the ReBIT FITypes for possible values <a href="https://api.rebit.org.in/schema">ReBIT Schema</a></td>
+<td>This specifies the type of Financial Information that can be fetched with this consent. e.g. Deposit accounts (Savings, Current), recurring deposit, etc.</td>
+</tr>
+<tr>
+<td><code>Purpose</code></td>
+<td>Possible values of the Purpose/”code” and Purpose/”text” is given in <a href="https://api.rebit.org.in/purpose">ReBIT Purpose Codes</a></td>
+<td>The consent purpose or purpose for which data is being fetched.</td>
+</tr>
+<tr>
+<td><code>fetchType</code></td>
+<td>Allowed values: <code>ONETIME</code> or <code>PERIODIC</code></td>
+<td>This specifies if the consent can be used once or multiple times i.e. multiple data request can be done or only once</td>
+</tr>
+<tr>
+<td>if <code>ONETIME</code> , then data can be fetched once only.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>if <code>PERIODIC</code>, this consent can be used for multiple data fetches and will be based on the frequency information.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Frequency</code></td>
+<td><code>unit</code> valid values are HOUR, DAY, MONTH, YEAR <code>value</code> needs to be numeric</td>
+<td>This specifies the frequency of consent usage i.e. the frequency of data requests that can be done.  This is specified with 2 components i.e <code>UNIT</code> and <code>VALUE</code> . e.g. if <code>UNIT</code> is <code>HOUR</code> and value is 4 that means data requests can be done 4 times in a HOUR.</td>
+</tr>
+<tr>
+<td><code>DataLife</code></td>
+<td><code>unit</code> valid values are <code>DAY</code>, <code>MONTH</code>, <code>YEAR</code>, <code>INF</code>  .  <code>value</code> needs to be numeric</td>
+<td>This signifies for how long can data be stored. Value of <code>INF</code> means forever.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Calculated values for Fields</p>
+<p>Since this is a template and some of the values need to be calculated when raising a consent request, hence absolute values cannot be provided. For which we have provided fields that help you to define the necessary information for calculation at runtime. </p>
+<p>Fields such as the <code>consent expiry</code>, <code>consent start date</code>, <code>data range</code> are calculated based on when the consent request is raised.  </p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConsentExpiry</code></td>
+<td><code>unit</code> valid values are DAY, MONTH, YEAR <code>value</code> needs to be numeric</td>
+<td>Specifies when the consent will expire and is controlled by the two fields <code>unit</code> and <code>value</code> e.g. If <code>UNIT</code> is YEAR and <code>VALUE</code> is 5, the consent will expire after 5 years. The consentExpiry field in the consent request will have a date and time of 5 years ahead from the instant that the consent is requested.</td>
+</tr>
+<tr>
+<td><code>consentStartDays</code></td>
+<td>This has to be a numeric value . (Value of '0' will be taken as current date for the consent request)</td>
+<td>This specifies after how many days the consent will start. This gets calculated  when the consent request is raised.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataRangeStartMonths</code></td>
+<td><code>dataRangeEndMonths</code></td>
+<td>The datarange field is used to specify the data range of the financial information that will be requested. As part of the consent request the data range should be within the consent start and expiry dates. Both these fields are used in conjunction with each other and specify the data range.  Example: <code>dataRangeStartMonths</code> if 0 and <code>dataRangeEndMonths</code> if 5 is interpreted as the dataRangeStart from currentMonth and until next 5 months.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="step-2-approve-the-consent-template">Step 2. Approve the consent template</h4>
+<p>This API is used to approve a previously created consent template. </p>
+<p>The API to call:
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/ApproveConsentTemplate</code></p>
+<p>Method : <code>POST</code></p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Bearer Token of the User</p>
+<p>This should be the bearer token of the approver user. </p>
+</div>
+<p>Sample Template approval Request</p>
+<div class="codehilite"><pre><span></span>{
+    &quot;header&quot;: {
+        &quot;rid&quot;: &quot;f871126b-dd3f-4bb4-be8c-b1911b57a893&quot;,
+        &quot;ts&quot;: &quot;2020-01-13T12:58:33.501+0000&quot;,
+        &quot;channelId&quot;: null
+    },
+    &quot;body&quot;: {
+        &quot;templateName&quot;: &quot;PERIDOIC_DAILY_CONSENT&quot;
+    }
+}
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>templateName</code></td>
+<td>The name of the template created in Step 1.</td>
+<td>This is the name of the template that needs approval.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-consent-for-user-to-approve">Request Consent for user to approve</h3>
+<p>This API is used to raise a consent request that customer can approve on the Finvu Mobile or Web application.</p>
+<p>API to call
+https://finsense.finvu.in/ConnectHub/FIU/API/V1/SubmitConsentRequest</p>
+<p>Method : <code>POST</code></p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custId</code></td>
+<td>A valid customer AA id</td>
+<td>This is the virtual AA id of the customer e.g. customer1@finvu</td>
+</tr>
+<tr>
+<td><code>consentDescription</code></td>
+<td>Descriptive Text</td>
+<td>Brief description of the consent. e.g. Consent for a loan application</td>
+</tr>
+<tr>
+<td><code>templateName</code></td>
+<td>Valid and approved template</td>
+<td>This is the name of an approved template.</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Response</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;42c06b9f-cc5b-4a53-9119-9ca9d8e9acdb&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-21T12:23:14.550+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span> <span class="s2">&quot;finsense&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;custId&quot;</span><span class="p">:</span> <span class="s2">&quot;customer1@finvu&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentHandle&quot;</span><span class="p">:</span> <span class="s2">&quot;0417b382-f5df-4e5a-a372-b489f040bd5f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentPurpose&quot;</span><span class="p">:</span> <span class="s2">&quot;Wealth management service&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Wealth Management Service&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;requestDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-21T12:23:14.562+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;REQUESTED&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;requestSessionId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;requestConsentId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;dateTimeRangeFrom&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-01T06:47:45.557+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;dateTimeRangeTo&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-31T06:47:45.560+0000&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h3 id="check-status-of-consent-request">Check status of Consent Request</h3>
-<h3 id="make-data-request">Make Data request</h3>
-<h3 id="check-status-of-data">Check status of Data</h3>
+<p>This API is used to check the status of a previously raised consent request that is awaiting customer approval. </p>
+<p>API to call
+https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/<custAAId></p>
+<p>Method : <code>GET</code></p>
+<p>PARAMETERS: <code>consentHandleId</code> The consentHandleId when raising a consent Request
+<code>custAAId</code> The Customer AA id</p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Response</p>
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;5c9d403d-d9c1-4177-b27e-3aca5a660938&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-15T11:03:44.427+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span>  <span class="s2">&quot;netbanking&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;consentStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentId&quot;</span><span class="p">:</span> <span class="mf">117e8942</span><span class="mi">-1605-4</span><span class="err">b</span><span class="mi">75</span><span class="err">-b</span><span class="mi">2</span><span class="err">db</span><span class="mi">-4</span><span class="err">b</span><span class="mi">8</span><span class="err">c</span><span class="mi">953</span><span class="err">abeae</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>The <code>consentStatus</code> are as below </p>
+<div class="codehilite"><pre><span></span>|  Return Status            |   Description |
+| -------------             |-------------|
+| PENDING                   | Status is pending and consentId is not generated at AA side.
+| ACCEPTED                  | Status is approved and consentId is generated at AA side and available in the response
+| REJECTED                  | Status is rejected. User has rejected the consent request. Consent id is not generated at AA side.
+</pre></div>
+
+
+<h3 id="data-request">Data request</h3>
+<p>If consent is ACCEPTED then a data request can be made. When the FI DataRquest is called, the request goes to FIRquest of AA then AA sends notification when Data is ready to FIU. In the response it sends sessionId using which data fetch api can be called.</p>
+<p>URL to call 
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/FIRequest</code></p>
+<p>Method: <code>POST</code></p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request body</p>
+<div class="codehilite"><pre><span></span><span class="err">Request:</span>
+<span class="p">{</span>
+
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;42c06b9f-cc5b-4a53-9119-9ca9d8e9acdb&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span>  <span class="s2">&quot;2019-07-15T11:03:44.427+0000&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;channelId&quot;</span><span class="p">:</span>  <span class="s2">&quot;netbanking&quot;</span>
+
+    <span class="p">},</span>
+
+    <span class="nt">&quot;body&quot;</span><span class="p">:{</span>
+
+        <span class="nt">&quot;custId&quot;</span><span class="p">:</span> <span class="s2">&quot;customer1@finvu&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentId&quot;</span><span class="p">:</span> <span class="s2">&quot;117e8942-1605-4b75-b2db-4b8c953abeae&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentHandleId&quot;</span><span class="p">:</span><span class="s2">&quot;6fa1b74b-62b8-48dd-be2d-696b978aaf8f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;dateTimeRangeFrom&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30T08:10:45.006+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;dateTimeRangeTo&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-09-30T08:10:45.006+0000&quot;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custId</code></td>
+<td>A valid customer AA id</td>
+<td>This is the virtual AA id of the customer e.g. customer1@finvu</td>
+</tr>
+<tr>
+<td><code>consentId</code></td>
+<td>An ACCEPTED consent by the customer</td>
+<td>This is the consent Id received when a consent request is ACCEPTED.</td>
+</tr>
+<tr>
+<td><code>dateTimeRangeFrom</code></td>
+<td>A valid dateTimeFrom</td>
+<td>The from data range for which data is requested. This should be within the data range of the consent.</td>
+</tr>
+<tr>
+<td><code>dateTimeRangeTo</code></td>
+<td>A valid dateTimeFrom</td>
+<td>The to data range for which data is requested. This should be within the data range of the consent.</td>
+</tr>
+</tbody>
+</table>
+<p>e.g. This can be for 1 month, or 6 months , etc.    </p>
+<p>Sample response. This returns a Session id for the request. </p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;41f44ca2-4b9a-4310-b6a0-eaaa1349bdd6&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-15T11:08:21.722+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span>  <span class="s2">&quot;finsense&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;ver&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-15T11:08:21.404+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;txnid&quot;</span><span class="p">:</span> <span class="s2">&quot;eeddca07-bccb-4808-8b4a-573322223566&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentId&quot;</span><span class="p">:</span> <span class="s2">&quot;117e8942-1605-4b75-b2db-4b8c953abeae&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;sessionId&quot;</span><span class="p">:</span> <span class="s2">&quot;eeb30580-3740-42c4-887b-3f08b929be58&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;consentHandleId&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">The Session id for status</p>
+<p>The session id is used for checking the status of the data request.</p>
+</div>
 <h3 id="check-status-of-data-request">Check status of Data Request</h3>
+<p>This API retrieves the status of the previously sent FIDataRequest.</p>
+<p>FIStatus api is called to check whether data is ready or not. If data is ready fiRequestStatus is set to READY or else fiRequestStatus is set to PENDING.</p>
+<p>When the fiRequestStatus is READY, it means that the AA has sent the data to Finsense FIU and FIU has stored the data and ready for channel to fetch. The channel can then call the FIFetch API to retrieve the data into channel.</p>
+<p>API to call
+https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/<custAAId></p>
+<p>Method : <code>GET</code></p>
+<p>PARAMETERS: <code>consentHandleId</code> The consentHandleId when raising a consent Request
+<code>custAAId</code> The Customer AA id</p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Response</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;7e61e4d8-f9db-488b-848e-331db1c90f16&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-15T11:10:32.987+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span>  <span class="s2">&quot;netbanking&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;fiRequestStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>The <code>fiRequestStatus</code> are as below </p>
+<div class="codehilite"><pre><span></span>|  Return Status            |   Description |
+| -------------             |-------------|
+| PENDING                   | Requested data IS NOT ready to fetch.
+| READY                 | Requested data IS ready to fetch.
+</pre></div>
+
+
 <h3 id="fetch-data">Fetch data</h3>
+<p>This API is used to fetch the data from Finsense FIU when the call to FIStatus API returns READY in the fiRequestStatus field.</p>
+<p>API to call
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/IFetch/&lt;custId&gt;/&lt;consentId&gt;/&lt;sessionId&gt;</code></p>
+<p>e.g. https://finsense.finvu.in/ConnectHub/FIU/API/V1/FIFetch/customer1@finvu.in/117e8942-1605-4b75-b2db-4b8c953abeae/eeb30580-3740-42c4-887b-3f08b929be58</p>
+<p>METHOD: <code>GET</code></p>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
+</tr>
+</tbody>
+</table>
+<p>The request parameters
+  |  Field          |   Value       |   Description |
+  | ------------- |-------------|-------------|
+  | <code>custId</code> | A valid customer AA id | This is the virtual AA id of the customer e.g. customer1@finvu
+  | <code>consentId</code> | An ACCEPTED consent by the customer. | This is the consent Id received when a consent request is ACCEPTED.
+  | <code>sessionId</code> | The sessionId returned for a submitted data request | The session id used to track the data request for a previously submitted data request.</p>
+<p>Sample Response of the fetch returns the decrypted data</p>
+<div class="codehilite"><pre><span></span><span class="err">Response:</span>
+<span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;b9da6b54-fa90-42eb-8994-ef3d106de01e&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-12-23T09:00:47.423+0000&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;channelId&quot;</span><span class="p">:</span>  <span class="s2">&quot;finsense&quot;</span>
+<span class="p">},</span>
+<span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+     <span class="nt">&quot;fiObjects&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+           <span class="nt">&quot;Transactions&quot;</span><span class="p">:</span> <span class="p">{</span>
+               <span class="nt">&quot;Transaction&quot;</span><span class="p">:</span> <span class="p">[</span>
+                   <span class="p">{</span>
+                      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DEBIT&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;ATM&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">6036</span><span class="p">,</span>
+                      <span class="nt">&quot;currentBalance&quot;</span><span class="p">:</span> <span class="s2">&quot;322644.09&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;transactionTimestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-08T00:00:00.000+0000&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;valueDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-08T00:00:00.000+0000&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;txnId&quot;</span><span class="p">:</span> <span class="s2">&quot;2edce6c8-28f3-462d-8a69-12b84337c165&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;narration&quot;</span><span class="p">:</span> <span class="s2">&quot;ATW-532676XXXXXX3613-S1AWDD47-DELHI&#39;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;reference&quot;</span><span class="p">:</span> <span class="s2">&quot;REF6857423&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;CREDIT&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;ATM&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">10500</span><span class="p">,</span>
+                       <span class="nt">&quot;currentBalance&quot;</span><span class="p">:</span> <span class="s2">&quot;312144.09&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;transactionTimestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-12T00:00:00.000+0000&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;valueDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-12T00:00:00.000+0000&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;txnId&quot;</span><span class="p">:</span> <span class="s2">&quot;e7d0cbe4-f1c3-4972-be28-432474ac9f71&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;narration&quot;</span><span class="p">:</span> <span class="s2">&quot;CREDIT INTEREST CAPITALISED&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;reference&quot;</span><span class="p">:</span> <span class="s2">&quot;REF6857423&quot;</span>
+                     <span class="p">}</span>
+                <span class="p">],</span>
+               <span class="nt">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2004-04-12T00:00:00.000+0000&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2004-04-12T00:00:00.000+0000&quot;</span>
+        <span class="p">},</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DEPOSIT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;maskedAccNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;BOB6857423&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;linkedAccRef&quot;</span><span class="p">:</span> <span class="s2">&quot;REF6857423&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;Summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SAVINGS&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;branch&quot;</span><span class="p">:</span> <span class="s2">&quot;Pune&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;facility&quot;</span><span class="p">:</span> <span class="s2">&quot;CC&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;ifscCode&quot;</span><span class="p">:</span> <span class="s2">&quot;SBIN0000454&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;micrCode&quot;</span><span class="p">:</span> <span class="s2">&quot;411002001&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;openingDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-04-01&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;currentODLimit&quot;</span><span class="p">:</span> <span class="s2">&quot;120045&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;drawingLimit&quot;</span><span class="p">:</span> <span class="s2">&quot;20000&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;Pending&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">20</span>
+                        <span class="p">},</span>
+                        <span class="nt">&quot;currentBalance&quot;</span><span class="p">:</span> <span class="s2">&quot;175614.64&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;INR&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;exchgeRate&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;balanceDateTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2004-04-12T18:20:00.000+0000&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACTIVE&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;schemaLocation&quot;</span><span class="p">:</span> <span class="s2">&quot;http://api.rebit.org.in/FISchema/deposit ../FISchema/deposit.xsd&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;Profile&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;Holders&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;JOINT&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;Holder&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Gopika Nikam&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;dob&quot;</span><span class="p">:</span> <span class="s2">&quot;1994-09-24&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;9834795713&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;nominee&quot;</span><span class="p">:</span> <span class="s2">&quot;NOT-REGISTERED&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;gopikan@fourcloud.in&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;pan&quot;</span><span class="p">:</span> <span class="s2">&quot;APS415263&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;ckycCompliance&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;fipId&quot;</span><span class="p">:</span> <span class="s2">&quot;BARB0KIMXXX&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;custId&quot;</span><span class="p">:</span> <span class="s2">&quot;gopika@finvu&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;consentId&quot;</span><span class="p">:</span> <span class="s2">&quot;654401e2-9db2-4d6e-b23a-129c169dad81&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;sessionId&quot;</span><span class="p">:</span> <span class="s2">&quot;eb9db8e2-3f9a-42c1-ba12-e7cc0fe637d5&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 
@@ -747,7 +1424,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../get_started/" title="Get Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -756,19 +1433,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Get Started
+                Integration with Finvu AA
               </span>
             </div>
           </a>
         
         
-          <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../how_to/" title="How-To" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Integration with Finvu AA
+                How-To
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

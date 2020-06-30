@@ -200,8 +200,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../finvu_fiu_integration/" title="Integrating with Finvu FIU" class="md-nav__link">
-      Integrating with Finvu FIU
+    <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-nav__link">
+      Integration with Finvu AA
     </a>
   </li>
 
@@ -212,8 +212,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../finvu_aa_integration/" title="Integration with Finvu AA" class="md-nav__link">
-      Integration with Finvu AA
+    <a href="../finvu_fiu_integration/" title="Integrating with Finvu FIU" class="md-nav__link">
+      Integrating with Finvu FIU
     </a>
   </li>
 
@@ -275,15 +275,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-user-account" title="Adding User Account" class="md-nav__link">
-    Adding User Account
+  <a href="#step-1-adding-customer-account" title="Step 1. Adding Customer Account" class="md-nav__link">
+    Step 1. Adding Customer Account
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-user-account-transaction" title="Adding User Account Transaction" class="md-nav__link">
-    Adding User Account Transaction
+  <a href="#step-2-adding-customer-account-transactions" title="Step 2. Adding Customer Account Transactions" class="md-nav__link">
+    Step 2. Adding Customer Account Transactions
   </a>
   
 </li>
@@ -332,15 +332,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-user-account" title="Adding User Account" class="md-nav__link">
-    Adding User Account
+  <a href="#step-1-adding-customer-account" title="Step 1. Adding Customer Account" class="md-nav__link">
+    Step 1. Adding Customer Account
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-user-account-transaction" title="Adding User Account Transaction" class="md-nav__link">
-    Adding User Account Transaction
+  <a href="#step-2-adding-customer-account-transactions" title="Step 2. Adding Customer Account Transactions" class="md-nav__link">
+    Step 2. Adding Customer Account Transactions
   </a>
   
 </li>
@@ -367,8 +367,8 @@
 <p>These can be used to add accounts for the discovery &amp; linking flows in the AA and the associated account transactions, balance, etc for consumption in the FIU. </p>
 <p>These are proprietary set of APIs to enter test data, however the account structure confirm to the <a href="https://api.rebit.org.in/schema">ReBIT FIType Schemas</a></p>
 <p><a href="https://www.getpostman.com">Postman</a> or any other appropriate tool can be used for execution. </p>
-<h2 id="adding-user-account">Adding User Account</h2>
-<p>This API adds the customer financial account and associated information passed such as mobile no, pan, account no serve as identifiers during the discovery and linking process of the AA flows. The mobile no is a strong identifier and hence required for discovery and linking.</p>
+<h2 id="step-1-adding-customer-account">Step 1. Adding Customer Account</h2>
+<p>This API adds the customer's financial account and maps the associated information for that account such as Mobile No, PAN, Account No which serve as identifiers during the discovery and linking process of the AA flows. The Mobile No is a strong identifier and hence should be a valid mobile no that is required for discovery and linking.</p>
 <table>
 <thead>
 <tr>
@@ -485,7 +485,7 @@
 </pre></div>
 
 
-<h2 id="adding-user-account-transaction">Adding User Account Transaction</h2>
+<h2 id="step-2-adding-customer-account-transactions">Step 2. Adding Customer Account Transactions</h2>
 <p>This api adds the financial transaction information for a particular account. This should be used in sequence to the Add User Account API with valid values as per the account.</p>
 <table>
 <thead>
