@@ -938,7 +938,7 @@
 <p>This API is used to approve a previously created consent template. </p>
 <p>The API to call:
 <code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/ApproveConsentTemplate</code></p>
-<p>Method : <code>POST</code></p>
+<p>Method: <code>POST</code></p>
 <p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
 <thead>
@@ -954,11 +954,6 @@
 <td><code>application/json</code></td>
 <td>API request and response are in JSON format</td>
 </tr>
-<tr>
-<td><code>Authorization</code></td>
-<td><code>Bearer: token received after calling /User/Login</code></td>
-<td>The token that was received after the <code>/User/Login</code> API was called.</td>
-</tr>
 </tbody>
 </table>
 <div class="admonition note">
@@ -966,16 +961,16 @@
 <p>This should be the bearer token of the approver user. </p>
 </div>
 <p>Sample Template approval Request</p>
-<div class="codehilite"><pre><span></span>{
-    &quot;header&quot;: {
-        &quot;rid&quot;: &quot;f871126b-dd3f-4bb4-be8c-b1911b57a893&quot;,
-        &quot;ts&quot;: &quot;2020-01-13T12:58:33.501+0000&quot;,
-        &quot;channelId&quot;: null
-    },
-    &quot;body&quot;: {
-        &quot;templateName&quot;: &quot;PERIDOIC_DAILY_CONSENT&quot;
-    }
-}
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;f871126b-dd3f-4bb4-be8c-b1911b57a893&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-13T12:58:33.501+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;templateName&quot;</span><span class="p">:</span> <span class="s2">&quot;PERIDOIC_DAILY_CONSENT&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -997,8 +992,8 @@
 </table>
 <h3 id="request-consent-for-user-to-approve">Request Consent for user to approve</h3>
 <p>This API is used to raise a consent request that customer can approve on the Finvu Mobile or Web application.</p>
-<p>API to call
-https://finsense.finvu.in/ConnectHub/FIU/API/V1/SubmitConsentRequest</p>
+<p>API to call:
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/SubmitConsentRequest</code></p>
 <p>Method : <code>POST</code></p>
 <p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
@@ -1074,10 +1069,11 @@ https://finsense.finvu.in/ConnectHub/FIU/API/V1/SubmitConsentRequest</p>
 <h3 id="check-status-of-consent-request">Check status of Consent Request</h3>
 <p>This API is used to check the status of a previously raised consent request that is awaiting customer approval. </p>
 <p>API to call
-https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/<custAAId></p>
-<p>Method : <code>GET</code></p>
-<p>PARAMETERS: <code>consentHandleId</code> The consentHandleId when raising a consent Request
-<code>custAAId</code> The Customer AA id</p>
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/&lt;consentHandleId&gt;/&lt;custAAId&gt;</code></p>
+<p>Method: <code>GET</code></p>
+<p>PARAMETERS: </p>
+<p><code>consentHandleId</code> The consentHandleId when raising a consent Request</p>
+<p><code>custAAId</code> The Customer AA id</p>
 <p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
 <thead>
@@ -1105,7 +1101,7 @@ https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/
     <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;5c9d403d-d9c1-4177-b27e-3aca5a660938&quot;</span><span class="p">,</span>
         <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-07-15T11:03:44.427+0000&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span>  <span class="s2">&quot;netbanking&quot;</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span>  <span class="s2">&quot;finsense&quot;</span>
     <span class="p">},</span>
     <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;consentStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
@@ -1116,14 +1112,28 @@ https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/
 
 
 <p>The <code>consentStatus</code> are as below </p>
-<div class="codehilite"><pre><span></span>|  Return Status            |   Description |
-| -------------             |-------------|
-| PENDING                   | Status is pending and consentId is not generated at AA side.
-| ACCEPTED                  | Status is approved and consentId is generated at AA side and available in the response
-| REJECTED                  | Status is rejected. User has rejected the consent request. Consent id is not generated at AA side.
-</pre></div>
-
-
+<table>
+<thead>
+<tr>
+<th>consentStatus</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>Status is pending and consentId is not generated at AA side</td>
+</tr>
+<tr>
+<td>ACCEPTED</td>
+<td>Status is approved and consentId is generated at AA side and available in the response</td>
+</tr>
+<tr>
+<td>REJECTED</td>
+<td>Status is rejected. User has rejected the consent request. Consent id is not generated at AA side</td>
+</tr>
+</tbody>
+</table>
 <h3 id="data-request">Data request</h3>
 <p>If consent is ACCEPTED then a data request can be made. When the FI DataRquest is called, the request goes to FIRquest of AA then AA sends notification when Data is ready to FIU. In the response it sends sessionId using which data fetch api can be called.</p>
 <p>URL to call 
@@ -1235,10 +1245,11 @@ https://finsense.finvu.in/ConnectHub/FIU/API/V1/ConsentStatus/<consentHandleId>/
 <p>FIStatus api is called to check whether data is ready or not. If data is ready fiRequestStatus is set to READY or else fiRequestStatus is set to PENDING.</p>
 <p>When the fiRequestStatus is READY, it means that the AA has sent the data to Finsense FIU and FIU has stored the data and ready for channel to fetch. The channel can then call the FIFetch API to retrieve the data into channel.</p>
 <p>API to call
-https://finsense.finvu.in/ConnectHub/FIU/API/V1/<consentId>/<sessionId>/<consentHandle>/<custId></p>
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/&lt;consentId&gt;/&lt;sessionId&gt;/&lt;consentHandle&gt;/&lt;custId&gt;</code></p>
 <p>Method : <code>GET</code></p>
-<p>PARAMETERS: <code>consentId</code> The consentHandleId when raising a consent Request
-<code>custAAId</code> The Customer AA id</p>
+<p>PARAMETERS: </p>
+<p><code>consentId</code> The consentHandleId when raising a consent Request</p>
+<p><code>custAAId</code> The Customer AA id</p>
 <p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
 <thead>
@@ -1276,13 +1287,24 @@ https://finsense.finvu.in/ConnectHub/FIU/API/V1/<consentId>/<sessionId>/<consent
 
 
 <p>The <code>fiRequestStatus</code> are as below </p>
-<div class="codehilite"><pre><span></span>|  Return Status |  Description |
-| -------------  |------------- |
-| `PENDING` | Requested data IS NOT ready to fetch.|
-| `READY`   | Requested data IS ready to fetch.|
-</pre></div>
-
-
+<table>
+<thead>
+<tr>
+<th>fiRequestStatus</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PENDING</td>
+<td>Requested data IS NOT ready to fetch.</td>
+</tr>
+<tr>
+<td>READY</td>
+<td>Requested data IS ready to fetch</td>
+</tr>
+</tbody>
+</table>
 <h3 id="fetch-data">Fetch data</h3>
 <p>This API is used to fetch the data from Finsense FIU when the call to FIStatus API returns READY in the fiRequestStatus field.</p>
 <p>API to call
@@ -1311,12 +1333,33 @@ https://finsense.finvu.in/ConnectHub/FIU/API/V1/<consentId>/<sessionId>/<consent
 </tr>
 </tbody>
 </table>
-<p>The request parameters
-  |  Field          |   Value       |   Description |
-  | ------------- |-------------|-------------|
-  | <code>custId</code> | A valid customer AA id | This is the virtual AA id of the customer e.g. customer1@finvu
-  | <code>consentId</code> | An ACCEPTED consent by the customer. | This is the consent Id received when a consent request is ACCEPTED.
-  | <code>sessionId</code> | The sessionId returned for a submitted data request | The session id used to track the data request for a previously submitted data request.</p>
+<p>The request parameters</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custId</code></td>
+<td>A valid customer AA id</td>
+<td>This is the virtual AA id of the customer e.g. customer1@finvu</td>
+</tr>
+<tr>
+<td><code>consentId</code></td>
+<td>An ACCEPTED consent by the customer.</td>
+<td>This is the consent Id received when a consent request is ACCEPTED.</td>
+</tr>
+<tr>
+<td><code>sessionId</code></td>
+<td>The sessionId returned for a submitted data request</td>
+<td>The session id used to track the data request for a previously submitted data request.</td>
+</tr>
+</tbody>
+</table>
 <p>Sample Response of the fetch returns the decrypted data</p>
 <div class="codehilite"><pre><span></span><span class="err">Response:</span>
 <span class="p">{</span>
