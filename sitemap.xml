@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2020-07-01</lastmod>
+     <lastmod>2020-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/get_started/</loc>
-     <lastmod>2020-07-01</lastmod>
+     <lastmod>2020-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/finvu_aa_integration/</loc>
-     <lastmod>2020-07-01</lastmod>
+     <lastmod>2020-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/finvu_fiu_integration/</loc>
-     <lastmod>2020-07-01</lastmod>
+     <lastmod>2020-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/how_to/</loc>
-     <lastmod>2020-07-01</lastmod>
+     <lastmod>2020-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guidelines/</loc>
-     <lastmod>2020-07-01</lastmod>
+     <lastmod>2020-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/fip_data_api/</loc>
-     <lastmod>2020-07-01</lastmod>
+     <lastmod>2020-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/fip_simulator/</loc>
-     <lastmod>2020-07-01</lastmod>
+     <lastmod>2020-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
