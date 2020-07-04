@@ -107,7 +107,7 @@
         },
         {
             "location": "/finvu_aa_register/",
-            "text": "Registering with Finvu AA & Manage Consents\n\n\nRegistering with Finvu AA and providing consent on sandbox is extremely simple. \n\n\nThis will allow you to test your APIs.\n\n\nStep 1. Register to get AA handle\n\n\nYou need to first register with Finvu AA and get an AA handle. Go to our web URL. \n\n\nhttps://finvu.in/webview/onboarding/webview-register\n \n\n\nA. Enter your choice of a Finvu AA handle e.g. customer1 or 9999977777\n\n\nB. Enter your mobile no\n\n\nC. Set a 4 digit PIN\n\n\nOn proceeding with Registration an OTP will be sent to your mobile no. Once authenticated , you registration is complete !. \n\n\n\n\nSample data before linking\n\n\nRefer to the \nSample Test Data\n to add your test accounts before proceeding with Linking. You can also add these before registration\n\n\n\n\nSelect the Data Providers to link your accounts with Finvu AA\n\n\nA. For Sandbox select \nBank of Baroda\n or \nICICI Bank\n .\n\n\nB. An OTP will be sent to your registered mobile no.\n\n\nC. Once authenticated your linking is now complete.\n\n\nProviding Consent\n\n\nA. Login to the Finvu Web with your aa id and PIN\n\n\nhttps://finvu.in/webview/onboarding/webview-login\n\n\ne.g. \ncustomer1@finvu\n\n\nA. Once the consent request is raised from FIU. You can view pending consents in the web url\n\n\nB. Accept or Reject any pending Consent Requests.\n\n\nManaging Consents\n\n\nIf you wish to manage linked accounts and consents, you need to download Finvu App. Please reach out to us on \nsupport@cookiejar.co.in\n for information. \n\n\n\n\nMobile Support\n\n\nCurrently we support Android users only, our iOS is underway and should be available soon. Please bear with us !.",
+            "text": "Registering with Finvu AA & Manage Consents\n\n\nRegistering with Finvu AA and providing consent on sandbox is extremely simple. \n\n\nThis will allow you to test your APIs.\n\n\nStep 1. Register to get AA handle\n\n\nYou need to first register with Finvu AA and get an AA handle. Go to our web URL. \n\n\nhttps://finvu.in/webview/onboarding/webview-register\n \n\n\nA. Enter your choice of a Finvu AA handle e.g. customer1 or 9999977777\n\n\nB. Enter your mobile no\n\n\nC. Set a 4 digit PIN\n\n\nOn proceeding with Registration an OTP will be sent to your mobile no. Once authenticated , you registration is complete !. \n\n\n\n\nSample data before linking\n\n\nRefer to the \nSample Test Data\n to add your test accounts before proceeding with Linking. You can also add these before registration\n\n\n\n\nStep 2. Select your Account Providers to link your accounts with Finvu AA\n\n\nA. For Sandbox select \nBank of Baroda\n or \nICICI Bank\n .\n\n\nB. An OTP will be sent to your registered mobile no.\n\n\nC. Once authenticated your linking is now complete.\n\n\nStep 3. Accept/Reject Consent Requests\n\n\nA. Login to the Finvu Web with your aa id and PIN\n\n\nhttps://finvu.in/webview/onboarding/webview-login\n\n\ne.g. \ncustomer1@finvu\n\n\nA. Once the consent request is raised from FIU. You can view pending consents in the web url\n\n\nB. Accept or Reject any pending Consent Requests.\n\n\nManaging Accounts and Consents\n\n\nIf you wish to manage linked accounts and consents, you need to download Finvu App. Please reach out to us on \nsupport@cookiejar.co.in\n for information. \n\n\n\n\nMobile Support\n\n\nCurrently we support Android users only, our iOS is underway and should be available soon. Please bear with us !.",
             "title": "Registering with Finvu AA"
         },
         {
@@ -136,9 +136,9 @@
             "title": "C. Set a 4 digit PIN"
         },
         {
-            "location": "/finvu_aa_register/#select-the-data-providers-to-link-your-accounts-with-finvu-aa",
+            "location": "/finvu_aa_register/#step-2-select-your-account-providers-to-link-your-accounts-with-finvu-aa",
             "text": "",
-            "title": "Select the Data Providers to link your accounts with Finvu AA"
+            "title": "Step 2. Select your Account Providers to link your accounts with Finvu AA"
         },
         {
             "location": "/finvu_aa_register/#a-for-sandbox-select-bank-of-baroda-or-icici-bank",
@@ -156,9 +156,9 @@
             "title": "C. Once authenticated your linking is now complete."
         },
         {
-            "location": "/finvu_aa_register/#providing-consent",
+            "location": "/finvu_aa_register/#step-3-acceptreject-consent-requests",
             "text": "",
-            "title": "Providing Consent"
+            "title": "Step 3. Accept/Reject Consent Requests"
         },
         {
             "location": "/finvu_aa_register/#a-login-to-the-finvu-web-with-your-aa-id-and-pin",
@@ -176,9 +176,9 @@
             "title": "B. Accept or Reject any pending Consent Requests."
         },
         {
-            "location": "/finvu_aa_register/#managing-consents",
+            "location": "/finvu_aa_register/#managing-accounts-and-consents",
             "text": "If you wish to manage linked accounts and consents, you need to download Finvu App. Please reach out to us on  support@cookiejar.co.in  for information.    Mobile Support  Currently we support Android users only, our iOS is underway and should be available soon. Please bear with us !.",
-            "title": "Managing Consents"
+            "title": "Managing Accounts and Consents"
         },
         {
             "location": "/finvu_aa_integration/",
