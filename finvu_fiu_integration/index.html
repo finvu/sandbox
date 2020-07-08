@@ -958,10 +958,13 @@
 <tr>
 <td><code>dataRangeStartMonths</code></td>
 <td><code>dataRangeEndMonths</code></td>
-<td>The datarange field is used to specify the data range of the financial information that will be requested. As part of the consent request the data range should be within the consent start and expiry dates. Both these fields are used in conjunction with each other and specify the data range.  Example: <code>dataRangeStartMonths</code> if 0 and <code>dataRangeEndMonths</code> if 5 is interpreted as the dataRangeStart from currentMonth and until next 5 months.</td>
+<td>The datarange field is used to specify the data range of the financial information that will be requested. As part of the consent request the data range should be within the consent start and expiry dates. Both these fields are used in conjunction with each other and specify the data range.</td>
 </tr>
 </tbody>
 </table>
+<p>Example: <code>dataRangeStartMonths</code> if 0 and <code>dataRangeEndMonths</code> if 5 is interpreted as the dataRangeStart from currentMonth and until next 5 months. </p>
+<p>A data range to get last 6 months historic data plus for the next 12 months in the future values can be as below <br />
+<code>dataRangeStartMonths</code> = 6 and <code>dataRangeEndMonths</code> = 12      </p>
 <h4 id="step-2-approve-the-consent-template">Step 2. Approve the consent template</h4>
 <p>This API is used to approve a previously created consent template. </p>
 <p>The API to call:
@@ -1344,7 +1347,7 @@
 <p>This API is used to fetch the data from Finsense FIU when the call to FIStatus API returns READY in the fiRequestStatus field.</p>
 <p>API to call
 <code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/FIFetch/&lt;custId&gt;/&lt;consentId&gt;/&lt;sessionId&gt;</code></p>
-<p>e.g. https://finsense.finvu.in/ConnectHub/FIU/API/V1/FIFetch/customer1@finvu.in/117e8942-1605-4b75-b2db-4b8c953abeae/eeb30580-3740-42c4-887b-3f08b929be58</p>
+<p>e.g. https://finsense.finvu.in/ConnectHub/FIU/API/V1/FIFetch/customer1@finvu/117e8942-1605-4b75-b2db-4b8c953abeae/eeb30580-3740-42c4-887b-3f08b929be58</p>
 <p>METHOD: <code>GET</code></p>
 <p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
