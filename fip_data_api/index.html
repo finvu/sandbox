@@ -449,12 +449,12 @@
 <tr>
 <td>mobile</td>
 <td>The Registered Mobile No of the account holder. OTP will be sent to this mobile during linking</td>
-<td>None, should be valid mobile no</td>
+<td>Should be valid mobile no</td>
 </tr>
 <tr>
 <td>email</td>
 <td>The Registered email of the account holder. OTP will be sent to this email during linking</td>
-<td>None, should be valid email id</td>
+<td>Should be valid email id</td>
 </tr>
 <tr>
 <td>aadhar</td>
@@ -475,6 +475,29 @@
 <td></td>
 <td></td>
 <td>RECURRING_DEPOSIT</td>
+</tr>
+</tbody>
+</table>
+<p>Mapping of the <code>FITYPE</code> and associated <code>accountTypeEnum</code> </p>
+<table>
+<thead>
+<tr>
+<th>FIType</th>
+<th>AccountTypes (Enum values)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEPOSIT</td>
+<td><code>SAVINGS</code> or <code>CURRENT</code></td>
+</tr>
+<tr>
+<td>TERM-DEPOSIT</td>
+<td>DEFAULT</td>
+</tr>
+<tr>
+<td>RECURRING_DEPOSIT</td>
+<td>DEFAULT</td>
 </tr>
 </tbody>
 </table>
@@ -565,11 +588,38 @@
 </tr>
 </tbody>
 </table>
+<p>Mapping of the <code>FITYPE</code> and associated <code>accountTypeEnum</code> </p>
+<table>
+<thead>
+<tr>
+<th>FIType</th>
+<th>AccountTypes (Enum values)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEPOSIT</td>
+<td><code>SAVINGS</code> or <code>CURRENT</code></td>
+</tr>
+<tr>
+<td>TERM-DEPOSIT</td>
+<td>DEFAULT</td>
+</tr>
+<tr>
+<td>RECURRING_DEPOSIT</td>
+<td>DEFAULT</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Values in the CDATA section</p>
-<p>The <strong>linkedAccRef</strong> and <strong>maskedAccNumber</strong> should be unique refNo. Other appropriate details in the Holder section should be valid. Following should match the values provided in the Add account api. </p>
-<p>In the <code>Holder</code> section email, mobile, pan should match that entered in the Add account api.</p>
-<p>Summary section; <strong>type</strong> should have same value as <strong>accountTypeEnum</strong></p>
+<p>In the <code>&lt;Account&gt;</code> Xml tag below values to be changed
+The <strong>linkedAccRef</strong> and <strong>maskedAccNumber</strong> should be unique refNo. 
+The type="deposit" for the FIType <code>DEPOSIT</code>
+    type="term_deposit" for the FIType <code>TERM-DEPOSIT</code>
+    type="recurring_deposit" for the FIType <code>RECURRING_DEPOSIT</code></p>
+<p>Modify the details in the <Holder> xml tag email, mobile, pan should match that entered in the Add account api.
+In the <code>&lt;Summary&gt;</code> tag the <code>type</code> should be one of the type enum value based on the FIType. Refer to the <a href="https://api.rebit.org.in/schema">ReBIT Schema</a></p>
 </div>
 <p>Sample Request Body</p>
 <div class="codehilite"><pre><span></span><span class="nt">&lt;UserAccountTrans&gt;</span>
