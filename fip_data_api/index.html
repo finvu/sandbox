@@ -391,7 +391,7 @@
 <p>These can be used to add accounts for the discovery &amp; linking flows in the AA and the associated account transactions, balance, etc for consumption in the FIU. </p>
 <p>These are proprietary set of APIs to enter test data, however the account structure confirm to the <a href="https://api.rebit.org.in/schema">ReBIT FIType Schemas</a></p>
 <p><a href="https://www.getpostman.com">Postman</a> or any other appropriate tool can be used for execution. </p>
-<p>We support the <code>DEPOSIT</code>, <code>TERM-DEPOSIT</code>, <code>RECURRING_DEPOSIT</code> FI Types to add sample account data in our sandbox environment. </p>
+<p>We support the <code>DEPOSIT</code>, <code>TERM-DEPOSIT</code>, <code>RECURRING_DEPOSIT</code>, <code>MUTUAL_FUNDS</code> FI Types to add sample account data in our sandbox environment. </p>
 <p>You can also play with multiple simulated FIPs. </p>
 <p>We have simulated two Banks </p>
 <p><strong>Bank of Baroda</strong> url : <code>http://api.finvu.in</code></p>
@@ -476,6 +476,11 @@
 <td></td>
 <td>RECURRING_DEPOSIT</td>
 </tr>
+<tr>
+<td></td>
+<td></td>
+<td>MUTUAL_FUNDS</td>
+</tr>
 </tbody>
 </table>
 <p>Mapping of the <code>FITYPE</code> and associated <code>accountTypeEnum</code> </p>
@@ -497,6 +502,10 @@
 </tr>
 <tr>
 <td>RECURRING_DEPOSIT</td>
+<td>DEFAULT</td>
+</tr>
+<tr>
+<td>MUTUAL_FUNDS</td>
 <td>DEFAULT</td>
 </tr>
 </tbody>
@@ -583,6 +592,11 @@
 <td>RECURRING_DEPOSIT</td>
 </tr>
 <tr>
+<td></td>
+<td></td>
+<td>MUTUAL_FUNDS</td>
+</tr>
+<tr>
 <td>accountData</td>
 <td>This contains the account transactions, balance, summary information of the account. This is embedded in a CDATA section and structure confirms to the <a href="https://api.rebit.org.in/schema">ReBIT FIType Schema</a> .</td>
 <td>The complete XML based on the FIType</td>
@@ -610,6 +624,10 @@
 <td>RECURRING_DEPOSIT</td>
 <td>DEFAULT</td>
 </tr>
+<tr>
+<td>MUTUAL_FUNDS</td>
+<td>DEFAULT</td>
+</tr>
 </tbody>
 </table>
 <div class="admonition note">
@@ -618,7 +636,8 @@
 The <strong>linkedAccRef</strong> and <strong>maskedAccNumber</strong> should be unique refNo. 
 The type="deposit" for the FIType <code>DEPOSIT</code>
     type="term_deposit" for the FIType <code>TERM-DEPOSIT</code>
-    type="recurring_deposit" for the FIType <code>RECURRING_DEPOSIT</code></p>
+    type="recurring_deposit" for the FIType <code>RECURRING_DEPOSIT</code>
+    type="mutualfunds" for the FIType <code>MUTUAL_FUNDS</code></p>
 <p>Modify the details in the <Holder> xml tag email, mobile, pan should match that entered in the Add account api.
 In the <code>&lt;Summary&gt;</code> tag the <code>type</code> should be one of the type enum value based on the FIType. Refer to the <a href="https://api.rebit.org.in/schema">ReBIT Schema</a></p>
 </div>
