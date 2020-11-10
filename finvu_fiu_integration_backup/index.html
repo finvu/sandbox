@@ -14,7 +14,7 @@
     
     
       
-        <title>Integrating with Finvu FIU - Finvu API Docs</title>
+        <title>Integrating with Finvu FIU module - Finvu API Docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Integrating with Finvu FIU
+              Integrating with Finvu FIU module
             
           </span>
         </div>
@@ -221,111 +221,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Integrating with Finvu FIU
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../finvu_fiu_integration/" class="md-nav__link">
       Integrating with Finvu FIU
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#finvu-fiu-endpoint" class="md-nav__link">
-    Finvu FIU Endpoint
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-consent-template" class="md-nav__link">
-    Create a Consent Template
-  </a>
-  
-    <nav class="md-nav" aria-label="Create a Consent Template">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-create-a-consent-template" class="md-nav__link">
-    Step 1. Create a consent template
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-approve-the-consent-template" class="md-nav__link">
-    Step 2. Approve the consent template
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#request-consent-for-user-to-approve" class="md-nav__link">
-    Request Consent for user to approve
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-status-of-consent-request" class="md-nav__link">
-    Check status of Consent Request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-request" class="md-nav__link">
-    Data request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-status-of-data-request" class="md-nav__link">
-    Check status of Data Request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fetch-data" class="md-nav__link">
-    Fetch data
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -404,6 +304,59 @@
   <a href="#finvu-fiu-endpoint" class="md-nav__link">
     Finvu FIU Endpoint
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites-registration-for-api-access" class="md-nav__link">
+    Pre-Requisites (Registration for API Access)
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-Requisites (Registration for API Access)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-registration-of-user" class="md-nav__link">
+    Step 1. Registration of user
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1. Registration of user">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-headers-to-be-set-for-every-api-request" class="md-nav__link">
+    Request headers (To be set for every API request)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-login-user-to-get-the-api-token" class="md-nav__link">
+    Step 2. Login user to get the API token
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2. Login user to get the API token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-headers-to-be-set-for-every-api-request_1" class="md-nav__link">
+    Request headers (To be set for every API request)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -488,28 +441,170 @@
 <p>The FIU sandbox is AA agnostic and can interface with any account aggregator, this is done on basis of the handle of the AA user e.g. customer1@finvu will redirect to the 'Finvu AA', customer2@otheraa will redirect requests to the 'Other AA'</p>
 <h3 id="finvu-fiu-endpoint">Finvu FIU Endpoint</h3>
 <p>The Finvu FIU API root endpoint <code>https://finsense.finvu.in/ConnectHub/FIU/API/V1</code></p>
-<p>Proceed to CREATE A CONSENT TEMPLATE or USE Below PRE-CREATED TEMPLATES</p>
+<h3 id="pre-requisites-registration-for-api-access">Pre-Requisites (Registration for API Access)</h3>
+<p>There are some pre-requisites to be done once before the APIs can be used. </p>
+<div class="admonition note">
+<p class="admonition-title">One Time Registration for getting Token</p>
+<p>Step 1 and 2 are required only for accessing the APIs and are a one-time setup.</p>
+</div>
+<h4 id="step-1-registration-of-user">Step 1. Registration of user</h4>
+<p>The URL to call : 
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/registerUser</code></p>
+<p>Method : <code>POST</code></p>
+<h5 id="request-headers-to-be-set-for-every-api-request">Request headers (To be set for every API request)</h5>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
 <table>
 <thead>
 <tr>
-<th>CONSENT TEMPLATE</th>
-<th>CONSENT TYPE</th>
-<th>Template Description</th>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>ONETIME_DEV_TEMPLATE</code></td>
-<td><code>ONETIME</code></td>
-<td>Template used for One time consent to fetch PROFILE, SUMMARY &amp; TRANSACTIONSget for last 6 months</td>
-</tr>
-<tr>
-<td><code>PERIODIC_DEV_TEMPLATE</code></td>
-<td><code>PERIODIC</code></td>
-<td>Periodic Template where data request and fetch can be done 100 times a day to fetch PROFILE, SUMMARY &amp; TRANSACTIONS</td>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
 </tr>
 </tbody>
 </table>
+<p>Sample Request body</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;42c06b9f-cc5b-4a53-9119-9ca9d8e9acdb&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span>  <span class="s2">&quot;2020-06-15T11:03:44.427+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span> <span class="s2">&quot;finsense&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;userName&quot;</span><span class="p">:</span> <span class="s2">&quot;finvutester&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;confirmPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Values to be changed in the body</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>userName</code></td>
+<td>Any value</td>
+<td>Registration User Name</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>Any value</td>
+<td>Initital registration password</td>
+</tr>
+<tr>
+<td><code>confirmPassword</code></td>
+<td>Any value</td>
+<td>Initial Registration password confirmation</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Save the userName and password</p>
+<p>Save userName and password as this is required in Step 2. to get the API token.</p>
+</div>
+<p>Sample Response returns the success message if user is registered. Failure can occur if user is already registered or some other. </p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;42c06b9f-cc5b-4a53-9119-9ca9d8e9acdb&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-06-28T07:35:21.798+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span> <span class="s2">&quot;finsense&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;User registered successfully&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="step-2-login-user-to-get-the-api-token">Step 2. Login user to get the API token</h4>
+<p>The URL to call 
+<code>https://finsense.finvu.in/ConnectHub/FIU/API/V1/User/Login</code></p>
+<p>Method : <code>POST</code></p>
+<h5 id="request-headers-to-be-set-for-every-api-request_1">Request headers (To be set for every API request)</h5>
+<p>Below <code>HTTP</code> headers need to be set when calling the API</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td><code>application/json</code></td>
+<td>API request and response are in JSON format</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;42c06b9f-cc5b-4a53-9119-9ca9d8e9acdb&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span>  <span class="s2">&quot;2019-07-15T11:03:44.427+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span> <span class="s2">&quot;finsense&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;userId&quot;</span><span class="p">:</span> <span class="s2">&quot;developer1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Values to be changed in the body</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>userId</code></td>
+<td>Should be valid registered user from Step 1.</td>
+<td>This is the userName used during registration in Step 1.</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>The valid password set in Step 1.</td>
+<td>This is the password set in registration in Step 1.</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Response returns the token to be used in the header for subsequent API calls </p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;header&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;42c06b9f-cc5b-4a53-9119-9ca9d8e9acdb&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ts&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-06-28T07:08:05.118+0000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;channelId&quot;</span><span class="p">:</span> <span class="s2">&quot;finsense&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE1OTMzMjk4ODUsImp0aSI6ImFfUE54Z2JnOVJNZXNubWFTZnBoQ2ciLCJpYXQiOjE1OTMzMjgwODUsIm5iZiI6MTU5MzMyODA4NSwic3ViIjoibXVuaXNoZGVtbyIsInJvbCI6ImRldmVsb3BlciJ9.HmAGw5RgmTOeZV99baZ5iK_rkPtpJr-Ly19dHxoxyZSsRiLhcvqxdJFqYyidzaOnX7YIhMzXS-H1_RDD3XQSMDfHq0PgtptL7Bphg0EfSIaqVlmXEZxnSHFgXyhK-aIiLR4crDhya9sLx-brApr6OrHXH896r9tiyNALxyQpMFomyMIHh3MRzcLNobJzm7RKyi2GR7sLjePKYL48CfOweDlfGP-rmIgQ0ZpOXmgvv-rz95IyTCusMWxeoLfa0KSQ6zunXRQQURJpFwbhNwJe_9cY-aVG4TwS1YkDymsdnlnPuJ6VidifC2TxFyl0yIFz8zwi38e4NdKQzDgH2NK9yw&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Save the token</p>
+<p>Save the token received in the response body for further API calls.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Token Validity</p>
+<p>The token is valid for a period of 3 months. </p>
+</div>
 <h3 id="create-a-consent-template">Create a Consent Template</h3>
 <p>Whenever a consent request is raised, the consent parameters and information needs to be provided. In order to reduce repetitive work, errors and also give flexibility for different customers or channels, a consent template can be created once and be for raising a consent request. This provides ease and flexibility when interaction with the customer and AA. We have provided an API to create a consent template. </p>
 <p>We have built-in structural and valid value validations however to further reduce errors, once the consent template is created, the template would require an approval and allow a four-eye check to avoid errors, etc. The approval of the template can be done via an API call.  </p>
@@ -534,8 +629,8 @@
 </tr>
 <tr>
 <td><code>Authorization</code></td>
-<td><code>Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2MzY1Mzc5NjcsImp0aSI6ImxIUjZhTWZxN2tWTWhVcWs1eThmN3ciLCJpYXQiOjE2MDUwMDE5NjcsIm5iZiI6MTYwNTAwMTk2Nywic3ViIjoiZmludnVkZW1vIiwicm9sIjoiYWRtaW4ifQ.LTyCAtkCoT--dMb-AjVN4qkCvxgLFAPT0yNSeXdjvItUNWCctaCrhE3Mc9taVtlCKM2F4ImoekvYJK2uWY2NAIhoDraXs27vAMxAFbgJFKoKxIRrIpj7oRbEEYx22kWocPP1xhgYWj3BFkEgiHEzeDf99HvN54MqCDzV54BvZ2mZ1QR1GljLVSisy7ljbmbXgQZqDogBRyaAxtfv6oMpcXlq1UqaqOPcaWULU7AJ-SMgK2iTF1Msrth54z9x4ia963PfHthZ_GItmvBC3fQpyT4Rissqdjk4PMi2RUScUdRDjNLDU_m0EtIzI0TtsnwkaK_DRtVQ2HS_xS75bfgalw</code></td>
-<td>The token to be used when calling the APIs</td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
 </tr>
 </tbody>
 </table>
@@ -720,14 +815,14 @@
 </tr>
 <tr>
 <td><code>Authorization</code></td>
-<td><code>Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2MzY1MzkwNTQsImp0aSI6ImI1UGpMZ0EtMGNWWjBoaXRnUmc2LXciLCJpYXQiOjE2MDUwMDMwNTQsIm5iZiI6MTYwNTAwMzA1NCwic3ViIjoiZmludnVkZW1vIiwicm9sIjoiYWRtaW4ifQ.c4GqrGY3UNq2VoVu4hevan_TlQFetIz4uji7Era_AlYfaQJCEECspc_tXXA5gUPv8-gT0qqffHuQ_fcHCpii-59gXyn41YMnRI7v2V3o9dI62Lud85VzUyZ2FrhNwyD7F_Qn9DCX5yqHprlB6EYfkqdOyHvdJIz9czFiFqODDKQqEiGzpB4nGLXnyxxhDdoQsNuPV36l3O_WcZdwUpT7bjF0ufM8ErRynZBtqikZBvQZSqWBdKxD_3uuT0gDIMM7hplmekaPOPSFuZPZ5EWWnIIc8z4WIMM-V_gc-R_1FJ8QT1djXgmgKlTq6P2SWwMrWA_gi7bcnjx7eTENbs6Elw</code></td>
-<td>The token to be used for approving the consent template</td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Bearer Token of the User</p>
-<p>This should be the bearer token of the approver. </p>
+<p>This should be the bearer token of the approver user. </p>
 </div>
 <p>Sample Template approval Request</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
@@ -780,8 +875,8 @@
 </tr>
 <tr>
 <td><code>Authorization</code></td>
-<td><code>Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2MzY1Mzc5NjcsImp0aSI6ImxIUjZhTWZxN2tWTWhVcWs1eThmN3ciLCJpYXQiOjE2MDUwMDE5NjcsIm5iZiI6MTYwNTAwMTk2Nywic3ViIjoiZmludnVkZW1vIiwicm9sIjoiYWRtaW4ifQ.LTyCAtkCoT--dMb-AjVN4qkCvxgLFAPT0yNSeXdjvItUNWCctaCrhE3Mc9taVtlCKM2F4ImoekvYJK2uWY2NAIhoDraXs27vAMxAFbgJFKoKxIRrIpj7oRbEEYx22kWocPP1xhgYWj3BFkEgiHEzeDf99HvN54MqCDzV54BvZ2mZ1QR1GljLVSisy7ljbmbXgQZqDogBRyaAxtfv6oMpcXlq1UqaqOPcaWULU7AJ-SMgK2iTF1Msrth54z9x4ia963PfHthZ_GItmvBC3fQpyT4Rissqdjk4PMi2RUScUdRDjNLDU_m0EtIzI0TtsnwkaK_DRtVQ2HS_xS75bfgalw</code></td>
-<td>The token to be used when calling the APIs</td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
 </tr>
 </tbody>
 </table>
@@ -874,8 +969,8 @@
 </tr>
 <tr>
 <td><code>Authorization</code></td>
-<td><code>Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2MzY1Mzc5NjcsImp0aSI6ImxIUjZhTWZxN2tWTWhVcWs1eThmN3ciLCJpYXQiOjE2MDUwMDE5NjcsIm5iZiI6MTYwNTAwMTk2Nywic3ViIjoiZmludnVkZW1vIiwicm9sIjoiYWRtaW4ifQ.LTyCAtkCoT--dMb-AjVN4qkCvxgLFAPT0yNSeXdjvItUNWCctaCrhE3Mc9taVtlCKM2F4ImoekvYJK2uWY2NAIhoDraXs27vAMxAFbgJFKoKxIRrIpj7oRbEEYx22kWocPP1xhgYWj3BFkEgiHEzeDf99HvN54MqCDzV54BvZ2mZ1QR1GljLVSisy7ljbmbXgQZqDogBRyaAxtfv6oMpcXlq1UqaqOPcaWULU7AJ-SMgK2iTF1Msrth54z9x4ia963PfHthZ_GItmvBC3fQpyT4Rissqdjk4PMi2RUScUdRDjNLDU_m0EtIzI0TtsnwkaK_DRtVQ2HS_xS75bfgalw</code></td>
-<td>The token to be used when calling the APIs</td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
 </tr>
 </tbody>
 </table>
@@ -938,8 +1033,8 @@
 </tr>
 <tr>
 <td><code>Authorization</code></td>
-<td><code>Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2MzY1Mzc5NjcsImp0aSI6ImxIUjZhTWZxN2tWTWhVcWs1eThmN3ciLCJpYXQiOjE2MDUwMDE5NjcsIm5iZiI6MTYwNTAwMTk2Nywic3ViIjoiZmludnVkZW1vIiwicm9sIjoiYWRtaW4ifQ.LTyCAtkCoT--dMb-AjVN4qkCvxgLFAPT0yNSeXdjvItUNWCctaCrhE3Mc9taVtlCKM2F4ImoekvYJK2uWY2NAIhoDraXs27vAMxAFbgJFKoKxIRrIpj7oRbEEYx22kWocPP1xhgYWj3BFkEgiHEzeDf99HvN54MqCDzV54BvZ2mZ1QR1GljLVSisy7ljbmbXgQZqDogBRyaAxtfv6oMpcXlq1UqaqOPcaWULU7AJ-SMgK2iTF1Msrth54z9x4ia963PfHthZ_GItmvBC3fQpyT4Rissqdjk4PMi2RUScUdRDjNLDU_m0EtIzI0TtsnwkaK_DRtVQ2HS_xS75bfgalw</code></td>
-<td>The token to be used when calling the APIs</td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
 </tr>
 </tbody>
 </table>
@@ -1049,8 +1144,8 @@
 </tr>
 <tr>
 <td><code>Authorization</code></td>
-<td><code>Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2MzY1Mzc5NjcsImp0aSI6ImxIUjZhTWZxN2tWTWhVcWs1eThmN3ciLCJpYXQiOjE2MDUwMDE5NjcsIm5iZiI6MTYwNTAwMTk2Nywic3ViIjoiZmludnVkZW1vIiwicm9sIjoiYWRtaW4ifQ.LTyCAtkCoT--dMb-AjVN4qkCvxgLFAPT0yNSeXdjvItUNWCctaCrhE3Mc9taVtlCKM2F4ImoekvYJK2uWY2NAIhoDraXs27vAMxAFbgJFKoKxIRrIpj7oRbEEYx22kWocPP1xhgYWj3BFkEgiHEzeDf99HvN54MqCDzV54BvZ2mZ1QR1GljLVSisy7ljbmbXgQZqDogBRyaAxtfv6oMpcXlq1UqaqOPcaWULU7AJ-SMgK2iTF1Msrth54z9x4ia963PfHthZ_GItmvBC3fQpyT4Rissqdjk4PMi2RUScUdRDjNLDU_m0EtIzI0TtsnwkaK_DRtVQ2HS_xS75bfgalw</code></td>
-<td>The token to be used when calling the APIs</td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
 </tr>
 </tbody>
 </table>
@@ -1109,8 +1204,8 @@
 </tr>
 <tr>
 <td><code>Authorization</code></td>
-<td><code>Bearer: eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJjb29raWVqYXIiLCJhdWQiOiJjb29raWVqYXIiLCJleHAiOjE2MzY1Mzc5NjcsImp0aSI6ImxIUjZhTWZxN2tWTWhVcWs1eThmN3ciLCJpYXQiOjE2MDUwMDE5NjcsIm5iZiI6MTYwNTAwMTk2Nywic3ViIjoiZmludnVkZW1vIiwicm9sIjoiYWRtaW4ifQ.LTyCAtkCoT--dMb-AjVN4qkCvxgLFAPT0yNSeXdjvItUNWCctaCrhE3Mc9taVtlCKM2F4ImoekvYJK2uWY2NAIhoDraXs27vAMxAFbgJFKoKxIRrIpj7oRbEEYx22kWocPP1xhgYWj3BFkEgiHEzeDf99HvN54MqCDzV54BvZ2mZ1QR1GljLVSisy7ljbmbXgQZqDogBRyaAxtfv6oMpcXlq1UqaqOPcaWULU7AJ-SMgK2iTF1Msrth54z9x4ia963PfHthZ_GItmvBC3fQpyT4Rissqdjk4PMi2RUScUdRDjNLDU_m0EtIzI0TtsnwkaK_DRtVQ2HS_xS75bfgalw</code></td>
-<td>The token to be used when calling the APIs</td>
+<td><code>Bearer: token received after calling /User/Login</code></td>
+<td>The token that was received after the <code>/User/Login</code> API was called.</td>
 </tr>
 </tbody>
 </table>
@@ -1242,41 +1337,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../finvu_ui_integration/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                UI Integration with Finvu AA
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../how_to/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                How-To
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

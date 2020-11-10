@@ -1,0 +1,587 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
+    
+    
+      
+        <title>Central Trust Store - Finvu API Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.358818c7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f0267088.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="blue">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#central-trust-store" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Finvu API Docs" class="md-header-nav__button md-logo" aria-label="Finvu API Docs">
+      
+  <img src="../images/finvu_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Finvu API Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Central Trust Store
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Finvu API Docs" class="md-nav__button md-logo" aria-label="Finvu API Docs">
+      
+  <img src="../images/finvu_logo.png" alt="logo">
+
+    </a>
+    Finvu API Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../get_started/" class="md-nav__link">
+      Get Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_aa_register/" class="md-nav__link">
+      Registering with Finvu AA
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_aa_integration/" class="md-nav__link">
+      Integration with Finvu AA
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_ui_integration/" class="md-nav__link">
+      UI Integration with Finvu AA
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finvu_fiu_integration/" class="md-nav__link">
+      Integrating with Finvu FIU
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../how_to/" class="md-nav__link">
+      How-To
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_data_api/" class="md-nav__link">
+      Sample Test Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fip_simulator/" class="md-nav__link">
+      FIP API Sandbox
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-new-entity-aa-fip-fiu" class="md-nav__link">
+    Add New Entity (AA, FIP, FIU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-entity-aa-fip-fiu" class="md-nav__link">
+    Updating Entity (AA, FIP, FIU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extracting-entity-aa-fip-fiu" class="md-nav__link">
+    Extracting Entity (AA, FIP, FIU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extracting-entity-list-aa-fip-fiu" class="md-nav__link">
+    Extracting Entity List (AA, FIP, FIU)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="central-trust-store">Central Trust Store</h1>
+<p>This is a Central Trust Store for the Account Aggregator Ecosystem and is a prototype based on current ReBIT API defnition for the Central Trust Store.  </p>
+<h3 id="add-new-entity-aa-fip-fiu">Add New Entity (AA, FIP, FIU)</h3>
+<p>Below is the API for adding details on FIP, AA or FIU. </p>
+<p>Note: In case of AA and FIU currently fitypes needs to be provided when adding details, although it would be ignored when used.</p>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>//aactsuat.finvu.in/saveEntity/&lt;Entity Type&gt;</code></p>
+<p>e.g.: https://aactsuat.finvu.in/saveEntity/FIP</p>
+<p>e.g.: https://aactsuat.finvu.in/saveEntity/AA</p>
+<p>e.g.: https://aactsuat.finvu.in/saveEntity/FIU</p>
+<p>Request Body</p>
+<div class="codehilite"><pre><span></span><code><span class="err">{</span>
+  <span class="ss">&quot;ver&quot;</span><span class="p">:</span> <span class="ss">&quot;1.0&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;timestamp&quot;</span><span class="p">:</span> <span class="ss">&quot;2019-06-16T03:01:53.410Z&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;txnid&quot;</span><span class="p">:</span> <span class="ss">&quot;29ae-11e8-a8d7-0289&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;requester&quot;</span><span class="p">:</span> <span class="err">{</span>
+    <span class="ss">&quot;name&quot;</span><span class="p">:</span> <span class="ss">&quot;Finvu&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;id&quot;</span><span class="p">:</span> <span class="ss">&quot;AA010001&quot;</span>
+  <span class="err">}</span><span class="p">,</span>
+  <span class="ss">&quot;entityinfo&quot;</span><span class="p">:</span> <span class="err">{</span>
+    <span class="ss">&quot;name&quot;</span><span class="p">:</span> <span class="ss">&quot;Cookiejar Technologies Private Limited&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;id&quot;</span><span class="p">:</span> <span class="ss">&quot;AA010001&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;code&quot;</span><span class="p">:</span> <span class="ss">&quot;CTPL&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;baseurl&quot;</span><span class="p">:</span> <span class="ss">&quot;https://aauat.finvu.in/API/V1&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;fitypes&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="ss">&quot;DEPOSIT&quot;</span><span class="p">,</span><span class="ss">&quot;EQUITY&quot;</span>
+    <span class="p">],</span>
+    <span class="ss">&quot;certificate&quot;</span><span class="p">:</span> <span class="err">{</span><span class="ss">&quot;keys&quot;</span><span class="p">:</span>
+       <span class="p">[</span>
+         <span class="err">{</span><span class="ss">&quot;kty&quot;</span><span class="p">:</span><span class="ss">&quot;EC&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;crv&quot;</span><span class="p">:</span><span class="ss">&quot;P-256&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;x&quot;</span><span class="p">:</span><span class="ss">&quot;MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;y&quot;</span><span class="p">:</span><span class="ss">&quot;4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;use&quot;</span><span class="p">:</span><span class="ss">&quot;enc&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;kid&quot;</span><span class="p">:</span><span class="ss">&quot;1&quot;</span><span class="err">}</span><span class="p">,</span>
+
+         <span class="err">{</span><span class="ss">&quot;kty&quot;</span><span class="p">:</span><span class="ss">&quot;RSA&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;n&quot;</span><span class="p">:</span> <span class="ss">&quot;0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;e&quot;</span><span class="p">:</span><span class="ss">&quot;AQAB&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;alg&quot;</span><span class="p">:</span><span class="ss">&quot;RS256&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;kid&quot;</span><span class="p">:</span><span class="ss">&quot;2011-04-29&quot;</span><span class="err">}</span>
+       <span class="p">]</span>
+     <span class="err">}</span><span class="p">,</span>
+    <span class="ss">&quot;tokeninfo&quot;</span><span class="p">:</span> <span class="err">{</span>
+      <span class="ss">&quot;url&quot;</span><span class="p">:</span> <span class="ss">&quot;https://aauat.finvu.in/API/V1&quot;</span><span class="p">,</span>
+      <span class="ss">&quot;maxcalls&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="ss">&quot;desc&quot;</span><span class="p">:</span> <span class="ss">&quot;string&quot;</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+
+<p>Response Expected: </p>
+<div class="codehilite"><pre><span></span><code><span class="err">Record save successfully with Entity Id AA</span>
+</code></pre></div>
+
+<h3 id="updating-entity-aa-fip-fiu">Updating Entity (AA, FIP, FIU)</h3>
+<p>Below is the API for updating details on FIP, AA or FIU. </p>
+<p>HTTP METHOD: <code>PUT</code></p>
+<p>URL: <code>//aactsuat.finvu.in/saveEntity</code></p>
+<p>Request Body</p>
+<div class="codehilite"><pre><span></span><code><span class="err">{</span>
+  <span class="ss">&quot;ver&quot;</span><span class="p">:</span> <span class="ss">&quot;1.0&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;timestamp&quot;</span><span class="p">:</span> <span class="ss">&quot;2019-06-16T03:01:53.410Z&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;txnid&quot;</span><span class="p">:</span> <span class="ss">&quot;29ae-11e8-a8d7-0289&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;requester&quot;</span><span class="p">:</span> <span class="err">{</span>
+    <span class="ss">&quot;name&quot;</span><span class="p">:</span> <span class="ss">&quot;Finvu&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;id&quot;</span><span class="p">:</span> <span class="ss">&quot;AA010001&quot;</span>
+  <span class="err">}</span><span class="p">,</span>
+  <span class="ss">&quot;entityinfo&quot;</span><span class="p">:</span> <span class="err">{</span>
+    <span class="ss">&quot;name&quot;</span><span class="p">:</span> <span class="ss">&quot;Cookiejar Technologies Private Limited&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;id&quot;</span><span class="p">:</span> <span class="ss">&quot;AA010001&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;code&quot;</span><span class="p">:</span> <span class="ss">&quot;CTPL&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;baseurl&quot;</span><span class="p">:</span> <span class="ss">&quot;https://aauat.finvu.in/API/V1&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;fitypes&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="ss">&quot;DEPOSIT&quot;</span><span class="p">,</span><span class="ss">&quot;EQUITY&quot;</span>
+    <span class="p">],</span>
+    <span class="ss">&quot;certificate&quot;</span><span class="p">:</span> <span class="err">{</span><span class="ss">&quot;keys&quot;</span><span class="p">:</span>
+       <span class="p">[</span>
+         <span class="err">{</span><span class="ss">&quot;kty&quot;</span><span class="p">:</span><span class="ss">&quot;EC&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;crv&quot;</span><span class="p">:</span><span class="ss">&quot;P-256&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;x&quot;</span><span class="p">:</span><span class="ss">&quot;MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;y&quot;</span><span class="p">:</span><span class="ss">&quot;4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;use&quot;</span><span class="p">:</span><span class="ss">&quot;enc&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;kid&quot;</span><span class="p">:</span><span class="ss">&quot;1&quot;</span><span class="err">}</span><span class="p">,</span>
+
+         <span class="err">{</span><span class="ss">&quot;kty&quot;</span><span class="p">:</span><span class="ss">&quot;RSA&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;n&quot;</span><span class="p">:</span> <span class="ss">&quot;0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;e&quot;</span><span class="p">:</span><span class="ss">&quot;AQAB&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;alg&quot;</span><span class="p">:</span><span class="ss">&quot;RS256&quot;</span><span class="p">,</span>
+          <span class="ss">&quot;kid&quot;</span><span class="p">:</span><span class="ss">&quot;2011-04-29&quot;</span><span class="err">}</span>
+       <span class="p">]</span>
+     <span class="err">}</span><span class="p">,</span>
+    <span class="ss">&quot;tokeninfo&quot;</span><span class="p">:</span> <span class="err">{</span>
+      <span class="ss">&quot;url&quot;</span><span class="p">:</span> <span class="ss">&quot;https://aauat.finvu.in/API/V1&quot;</span><span class="p">,</span>
+      <span class="ss">&quot;maxcalls&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="ss">&quot;desc&quot;</span><span class="p">:</span> <span class="ss">&quot;string&quot;</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+
+<p>Response Expected: </p>
+<div class="codehilite"><pre><span></span><code><span class="err">Record save successfully Modified with Entity Id :: AA010001</span>
+</code></pre></div>
+
+<h3 id="extracting-entity-aa-fip-fiu">Extracting Entity (AA, FIP, FIU)</h3>
+<p>HTTP METHOD: <code>GET</code></p>
+<p>URL: <code>//aactsuat.finvu.in/entityInfo/&lt;Entity Type&gt;/&lt;Entity ID&gt;</code></p>
+<p>e.g.
+https://aactsuat.finvu.in/entityInfo/AA/AA010001</p>
+<p>Response Expected: </p>
+<div class="codehilite"><pre><span></span><code><span class="err">{</span>
+<span class="err">    &quot;ver&quot;: &quot;1.0&quot;,</span>
+<span class="err">    &quot;timestamp&quot;: &quot;2019-06-17T10:20:56.537+0000&quot;,</span>
+<span class="err">    &quot;txnid&quot;: &quot;ff8b7364-d507-4898-a2c1-66f23e5e9753&quot;,</span>
+<span class="err">    &quot;requester&quot;: null,</span>
+<span class="err">    &quot;entityinfo&quot;: {</span>
+<span class="err">        &quot;name&quot;: &quot;Cookiejar Technologies Private Limited&quot;,</span>
+<span class="err">        &quot;id&quot;: &quot;AA010001&quot;,</span>
+<span class="err">        &quot;code&quot;: &quot;CTPL&quot;,</span>
+<span class="err">        &quot;baseurl&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,</span>
+<span class="err">        &quot;fitypes&quot;: [</span>
+<span class="err">            &quot;DEPOSIT&quot;,</span>
+<span class="err">            &quot;EQUITY&quot;</span>
+<span class="err">        ],</span>
+<span class="err">        &quot;certificate&quot;: {</span>
+<span class="err">            &quot;keys&quot;: [</span>
+<span class="err">                &quot;{kty=EC, crv=P-256, x=MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4, y=4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM, use=enc, kid=1}&quot;,</span>
+<span class="err">                &quot;{kty=RSA, n=0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw, e=AQAB, alg=RS256, kid=2011-04-29}&quot;</span>
+<span class="err">            ]</span>
+<span class="err">        },</span>
+<span class="err">        &quot;tokeninfo&quot;: {</span>
+<span class="err">            &quot;url&quot;: &quot;https://aauat.finvu.in/API/V1&quot;,</span>
+<span class="err">            &quot;maxcalls&quot;: 1,</span>
+<span class="err">            &quot;desc&quot;: &quot;string&quot;</span>
+<span class="err">        }</span>
+<span class="err">    }</span>
+<span class="err">}</span>
+</code></pre></div>
+
+<h3 id="extracting-entity-list-aa-fip-fiu">Extracting Entity List (AA, FIP, FIU)</h3>
+<p>HTTP METHOD: <code>GET</code></p>
+<p>URL: <code>//aactsuat.finvu.in/entityInfo/&lt;Entity Type&gt;</code></p>
+<p>e.g. https://aactsuat.finvu.in/entityInfo/FIP</p>
+<p>e.g. https://aactsuat.finvu.in/entityInfo/AA</p>
+<p>e.g. https://aactsuat.finvu.in/entityInfo/FIU</p>
+<p>Response Expected: </p>
+<div class="codehilite"><pre><span></span><code><span class="err">[</span>
+<span class="err">    {</span>
+<span class="err">        &quot;name&quot;: &quot;Cookiejar Technologies Private Limited&quot;,</span>
+<span class="err">        &quot;id&quot;: &quot;AA010001&quot;,</span>
+<span class="err">        &quot;code&quot;: &quot;FINVUTPL&quot;,</span>
+<span class="err">        &quot;baseurl&quot;: &quot;https://finvu.in/API/V1&quot;,</span>
+<span class="err">        &quot;fitypes&quot;: [</span>
+<span class="err">            &quot;DEPOSIT&quot;,</span>
+<span class="err">            &quot;EQUITY&quot;</span>
+<span class="err">        ],</span>
+<span class="err">        &quot;certificate&quot;: {</span>
+<span class="err">            &quot;keys&quot;: [</span>
+<span class="err">                &quot;{kty=EC, crv=P-256, x=MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4, y=4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM, use=enc, kid=1}&quot;,</span>
+<span class="err">                &quot;{kty=RSA, n=0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgwz, e=AQAB, alg=RS256, kid=2011-04-29}&quot;</span>
+<span class="err">            ]</span>
+<span class="err">        },</span>
+<span class="err">        &quot;tokeninfo&quot;: {</span>
+<span class="err">            &quot;url&quot;: &quot;https://finvu.in/API/V1&quot;,</span>
+<span class="err">            &quot;maxcalls&quot;: 1,</span>
+<span class="err">            &quot;desc&quot;: &quot;string&quot;</span>
+<span class="err">        }</span>
+<span class="err">    },</span>
+<span class="err">    {</span>
+<span class="err">        &quot;name&quot;: &quot;Finvu Technologies Private Limited&quot;,</span>
+<span class="err">        &quot;id&quot;: &quot;AA010002&quot;,</span>
+<span class="err">        &quot;code&quot;: &quot;FINVUTPL&quot;,</span>
+<span class="err">        &quot;baseurl&quot;: &quot;https://finvu.in/API/V1&quot;,</span>
+<span class="err">        &quot;fitypes&quot;: [</span>
+<span class="err">            &quot;DEPOSIT&quot;,</span>
+<span class="err">            &quot;EQUITY&quot;</span>
+<span class="err">        ],</span>
+<span class="err">        &quot;certificate&quot;: {</span>
+<span class="err">            &quot;keys&quot;: [</span>
+<span class="err">                &quot;{kty=EC, crv=P-256, x=MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4, y=4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM, use=enc, kid=1}&quot;,</span>
+<span class="err">                &quot;{kty=RSA, n=0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgwz, e=AQAB, alg=RS256, kid=2011-04-29}&quot;</span>
+<span class="err">            ]</span>
+<span class="err">        },</span>
+<span class="err">        &quot;tokeninfo&quot;: {</span>
+<span class="err">            &quot;url&quot;: &quot;https://finvu.in/API/V1&quot;,</span>
+<span class="err">            &quot;maxcalls&quot;: 1,</span>
+<span class="err">            &quot;desc&quot;: &quot;string&quot;</span>
+<span class="err">        }</span>
+<span class="err">    }</span>
+<span class="err">]</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Cookiejar Technologies Pvt Ltd.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

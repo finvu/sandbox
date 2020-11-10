@@ -14,7 +14,7 @@
     
     
       
-        <title>How-To - Finvu API Docs</title>
+        <title>AA API Sandbox - Finvu API Docs</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to" class="md-skip">
+        <a href="#aa-api-sandbox" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              How-To
+              AA API Sandbox
             
           </span>
         </div>
@@ -233,76 +233,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        How-To
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../how_to/" class="md-nav__link">
       How-To
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#generate-key-and-sign-the-apis" class="md-nav__link">
-    Generate key and Sign the APIs
-  </a>
-  
-    <nav class="md-nav" aria-label="Generate key and Sign the APIs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-keys" class="md-nav__link">
-    Generate keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sign-the-api-requestresponse" class="md-nav__link">
-    Sign the API request/response
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-a-uuid" class="md-nav__link">
-    Generate a UUID
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -366,35 +301,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#generate-key-and-sign-the-apis" class="md-nav__link">
-    Generate key and Sign the APIs
-  </a>
-  
-    <nav class="md-nav" aria-label="Generate key and Sign the APIs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-keys" class="md-nav__link">
-    Generate keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sign-the-api-requestresponse" class="md-nav__link">
-    Sign the API request/response
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-a-uuid" class="md-nav__link">
-    Generate a UUID
+  <a href="#api-request" class="md-nav__link">
+    API Request
   </a>
   
 </li>
@@ -412,54 +320,10 @@
               
                 
                 
-                <h1 id="how-to">How-To</h1>
-<p>We have compiled some how-tos, hope these would be helpful when building your product.</p>
-<h2 id="generate-key-and-sign-the-apis">Generate key and Sign the APIs</h2>
-<h3 id="generate-keys">Generate keys</h3>
-<p>The ReBIT API specification requires API calls to be signed. For this purpose, JSON Web Signature (JWS) is used. </p>
-<p>All API request/responses will have to include a header called <code>x-jws-signature</code> with the 'detached content' JWS signature value. </p>
-<p>The receiver of the request/response verifies the JWS against the <code>https</code> request/response data. </p>
-<p>However, since the JWS signatures do not include the certificates to verify the signature, there is a need to distribute the public keys with the ecosystem partners so that they can verify signatures. The ecosystem partners can thus verify the signature using the public key.</p>
-<div class="admonition note">
-<p class="admonition-title">Sharing of Public Key</p>
-<p>If you are building your FIU or FIP modules, public key needs to be shared with the ecosystem partners, FIU/FIP to share with AA and vice versa. In the future this will be centralized so communication with ecosystem partners would be seamless for key retrieval, updates, etc.</p>
-</div>
-<div class="admonition attention">
-<p class="admonition-title">Saving the Public and Private Key Pair</p>
-<p>In order to sign the APIs the Public and Private Key pair is used for signing of the APIs. The Public Key portion will be shared with the AA for verifying the signature. See below section on how to Sign the API request/response</p>
-</div>
-<p>Follow below steps to generate a public key to be shared with AA </p>
-<ol>
-<li>
-<p>Go to the <a href="https://mkjwk.org/">mkjws site</a></p>
-</li>
-<li>
-<p>Use the <strong>RSA tab</strong> which is default option</p>
-</li>
-<li>
-<p>Enter the following fields</p>
-<p>a.  Key Size: <strong>2048</strong> (the default)</p>
-<p>b.  Key Use: Select <strong>Signature</strong> in the dropdown</p>
-<p>c.  Algorithm: Select dropdown option corresponding to <strong>RS256...</strong> using <strong>SHA-256</strong></p>
-<p>d.  Key ID: Goto to <a href="https://www.uuidgenerator.net/">Online UUID Generator</a> and select the version 4 UUID which is generated by default when the page loads. </p>
-<div class="codehilite"><pre><span></span><code><span class="err">Paste that UUID into the Key ID field</span>
-</code></pre></div>
-
-</li>
-<li>
-<p>Finally, click on <strong>Generate</strong>.</p>
-</li>
-<li>
-<p>Copy the contents of the <strong>Public Key</strong> text area that is to be shared with ecosystem partner to verify the signature.</p>
-</li>
-</ol>
-<h3 id="sign-the-api-requestresponse">Sign the API request/response</h3>
-<p>All API request/responses will have to include a header called <code>x-jws-signature</code> with the 'detached content' JWS signature value. The receiver of the request/response verifies the JWS against the https request/response data. </p>
-<p>More details on the signature security can be found at our github with sample programs on how to generate and verify detached signature</p>
-<p><a href="https://github.com/finvu/finvu-rebit-aa-jws">Signature Security Github</a></p>
-<h2 id="generate-a-uuid">Generate a UUID</h2>
-<p>A UUID is being used for several fields in the API requests, if you wish to generate one during testing see the 
-<a href="https://www.uuidgenerator.net/">Online UUI Generator</a></p>
+                <h1 id="aa-api-sandbox">AA API Sandbox</h1>
+<p>This is a Sandbox implementation of the AA API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
+<h2 id="api-request">API Request</h2>
+<p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT AA API Specs.</p>
                 
               
               
@@ -474,41 +338,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../finvu_fiu_integration/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Integrating with Finvu FIU
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../guidelines/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Guidelines
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
