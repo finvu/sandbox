@@ -1,8 +1,27 @@
 site_name: Finvu API Docs
-theme: 'material'
+# Copyright
+copyright: 'Copyright &copy; 2019 - 2020 Cookiejar Technologies Pvt Ltd.'
+
+theme: 
+ name: 'material'
+ logo: 'images/finvu_logo.png'
+ palette:
+    primary: 'white'
+    accent: 'blue'
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.mark
 
 # Page tree
 pages:
   - Overview: index.md
-  - FIP API (Simulator): fip_simulator.md
-  - FIP Data API: fip_data_api.md
+  - Get Started: get_started.md
+  - Registering with Finvu AA: finvu_aa_register.md
+  - Integration with Finvu AA: finvu_aa_integration.md
+  - UI Integration with Finvu AA: finvu_ui_integration.md
+  - Integrating with Finvu FIU: finvu_fiu_integration.md
+  - How-To: how_to.md
+  - Guidelines: guidelines.md
+  - Sample Test Data: fip_data_api.md
+  - FIP API Sandbox: fip_simulator.md
