@@ -560,29 +560,13 @@
 <p>Follow below steps.</p>
 <ol>
 <li>
-<p>Share your root endpoint with us on <code>support@cookiejar.co.in</code></p>
-<p>e.g. <code>https://api.fiu.com</code></p>
+<p>Send email to <code>services@sahamati.org.in</code> for further information to get an entry into the Central Registry and receive the client id and key.</p>
 </li>
 <li>
-<p>Share the public key portion only on <code>support@cookiejar.co.in</code> of your generated key for signature verification and authorization. </p>
-<p>Refer to the <strong><a href="/how_to/">How-To</a></strong> section for more details on JSON Web key generation and signing.</p>
-</li>
-<li>
-<p>In order to use the AA api, a token has to be acquired that needs to be passed in the API header. Reach out to us on <code>support@cookiejar.co.in</code> to request for the  API token. </p>
+<p>Please reach out to <code>services@sahamati.org.in</code> for token issuance which needs to be passed in the API header. </p>
 <p>This needs to be set in the <code>client_api_key</code> header when calling our AA apis.</p>
-<div class="admonition attention">
-<p class="admonition-title">Token expiry</p>
-<p>The token will have a <strong>expiry of 6 months</strong> in the sandbox environment following which API calls would fail.</p>
-</div>
-</li>
-<li>
-<p>Generate a token and share with us on <code>support@cookiejar.co.in</code> . We will use this token in header <code>aa_api_key</code> when we call your FIU notification apis. </p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Sharing of Metadata Information</p>
-<p>In the future this process will be automated and centralized so communication would be seamless for token generation, public key retrieval, updates, token expiration notifications, etc.</p>
-</div>
 <h2 id="finvu-aa-endpoint">Finvu AA Endpoint</h2>
 <p>The Finvu AA api endpoint is <code>https://aauat.finvu.in/API/V1</code></p>
 <h2 id="request-headers-to-be-set-for-every-api-request">Request headers (To be set for every API request)</h2>
@@ -609,7 +593,7 @@
 <tr>
 <td><code>client_api_key</code></td>
 <td>Sample <code>eyJraWQiOiJqYXlAZmludnUuaW4iLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJjb29raWVqYXIiLCJleHAiOjE1OTEyNjMwMDMsImp0aSI6IjRxeXFpWV9aZGJpTW1qQ2lqT0ZMckEiLCJpYXQiOjE1NTk3MjcwMDMsIm5iZiI6MTU1OTcyNzAwMywic3ViIjoiamF5QGZpbnZ1LmluIiwiZ3JvdXBzIjpbImFnZ3JlZ2F0b3IiXX0.Ctd9EUpn0CrfEG8b9ouBcG8ilVuPWzXkxZFOhuTCRdpiVzi6M05ABJ9THJ1QE4n__r74r8KHSxDgdeV1L-8mek68i9m5BYgqaka5VKoCLiN0B22Xvy2QFski1ZLQhm7Va2NioVvilGGWBDlpW_csuChA2yobml1jqomr8SGya6MFbDURRmJjdL6oRTysoCYxeFzU2_JCud2ljMvaWsjSlnrYXQWaWaoJBAhz3AWNXdzU0u6mhq1mvksRl3xXJDiAVkY0KvZXRNjsJDYQfVJjavh9n0fZelJIWMHznp9mLpxRfrr_qo6hiTkX2QtbbmKfhc0_BXsKNOdxEXJmieOPSA</code></td>
-<td>The AA token that was shared by us and shared with you. Reference to Step 3.</td>
+<td>The AA token as received from the Central Registry</td>
 </tr>
 <tr>
 <td><code>x-jws-signature</code></td>
