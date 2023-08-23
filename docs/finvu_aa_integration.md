@@ -7,7 +7,7 @@ Once you have built out the API and respective FIU functionality , you can start
 Before that there are certain pre-requisites that need to be done for security and authentication when calling the APIs. 
 
 ## Pre-Requisites before testing
-Follow below steps.
+Follow below steps for integration
 
 1. Share your root endpoint with us on `support@cookiejar.co.in`
 
